@@ -32,7 +32,35 @@ export class MapPage {
 
       let map = new google.maps.Map(mapEle, {
         center: {lat: 43.074640, lng: -89.384103},
-        zoom: 13
+        zoom: 13,
+        styles: [
+          {
+            "featureType": "poi",
+            "elementType": "labels.icon",
+            "stylers": [
+              {
+                "visibility": "off"
+              }
+            ]
+          },
+          {
+            "featureType": "poi.park",
+            "elementType": "labels",
+            "stylers": [
+              {
+                "visibility": "off"
+              }
+            ]
+          },
+          {
+            "featureType": "transit",
+            "stylers": [
+              {
+                "visibility": "off"
+              }
+            ]
+          }
+        ]
       });
       let infoWindow = new google.maps.InfoWindow();
       let infoWindowListener = {};
