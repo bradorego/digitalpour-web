@@ -1,6 +1,7 @@
 import { Component, ViewChild } from '@angular/core';
 
 import { App, List, NavController, ToastController, LoadingController, Refresher } from 'ionic-angular';
+import { Geolocation } from '@ionic-native/geolocation';
 
 /*
   To learn how to use third party libs in an
@@ -26,13 +27,15 @@ export class SchedulePage {
 
   queryText = '';
   storeList:any = [];
+  private coords: any;
 
   constructor(
     public app: App,
     public loadingCtrl: LoadingController,
     public navCtrl: NavController,
     public toastCtrl: ToastController,
-    public stores: StoresData
+    public stores: StoresData,
+    public geolocation: Geolocation
   ) {}
 
   ionViewDidLoad() {
@@ -41,8 +44,17 @@ export class SchedulePage {
   }
 
   updateSchedule() {
-    this.stores.getListData().subscribe((data: any) => {
-      this.storeList = data;
+    this.geolocation.getCurrentPosition().then((resp) => {
+      this.coords = resp.coords;
+      this.stores.getListData(this.coords, false).subscribe((data: any) => {
+        data.sort((a: any, b: any) => {
+          if (a.distance > b.distance) {
+            return 1;
+          }
+          return -1;
+        });
+        this.storeList = data;
+      });
     });
   }
 
@@ -66,7 +78,7 @@ export class SchedulePage {
   }
 
   doRefresh(refresher: Refresher) {
-    this.stores.getListData(true).subscribe((data: any) => {
+    this.stores.getListData(this.coords, true).subscribe((data: any) => {
       this.storeList = data;
       // simulate a network request that would take longer
       // than just pulling from out local json file

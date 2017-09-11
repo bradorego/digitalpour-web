@@ -16,6 +16,16 @@ export class StoresData {
   data: any;
   constructor(public http: Http) { }
 
+  private distance(lat1: number, lon1: number, lat2: number, lon2: number) {
+    let p:number = 0.017453292519943295;    // Math.PI / 180
+    let c = Math.cos;
+    let a:number = 0.5 - c((lat2 - lat1) * p)/2 +
+            c(lat1 * p) * c(lat2 * p) *
+            (1 - c((lon2 - lon1) * p))/2;
+
+    return (12742 * Math.asin(Math.sqrt(a))) * 0.62137; // 2 * R; R = 6371 km; /// converting km to mi
+  }
+
   load(force:boolean = false): any {
     if (this.data && !force) {
       return Observable.of(this.data);
@@ -32,15 +42,14 @@ export class StoresData {
     return this.data;
   }
 
-  getListData(force?: boolean) {
+  getListData(coords: any, force?: boolean) {
     let listData:any = [];
     return this.load(force).map((data: any) => {
       data.forEach((item:any) => {
         listData.push({
           "id": item.CompanyId,
           "name": item.StoreName,
-          "lat": item.Latitude,
-          "lng": item.Longitude,
+          "distance": this.distance(coords.latitude, coords.longitude, item.Latitude, item.Longitude),
           "address": `${item.Address}, ${item.City}, ${item.State} ${item.ZipCode}`,
           "imgUrl": item.BarLogoUrl,
           "hours": item.StoreHours,
