@@ -1,7 +1,6 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavParams, App, LoadingController } from 'ionic-angular';
 
-import { ConferenceData } from '../../providers/conference-data';
 import {MenuData} from '../../providers/menu';
 
 @IonicPage({
@@ -16,7 +15,6 @@ export class SessionDetailPage {
   loading: any;
 
   constructor(
-    public dataProvider: ConferenceData,
     public menuProvider: MenuData,
     public navParams: NavParams,
     public loadingCtrl: LoadingController,

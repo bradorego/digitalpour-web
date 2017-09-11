@@ -8,7 +8,6 @@ import { App, List, NavController, ToastController, LoadingController, Refresher
 */
 // import moment from 'moment';
 
-import { ConferenceData } from '../../providers/conference-data';
 import {StoresData} from '../../providers/stores';
 
 import { SessionDetailPage } from '../session-detail/session-detail';
@@ -33,7 +32,6 @@ export class SchedulePage {
     public loadingCtrl: LoadingController,
     public navCtrl: NavController,
     public toastCtrl: ToastController,
-    public confData: ConferenceData,
     public stores: StoresData
   ) {}
 

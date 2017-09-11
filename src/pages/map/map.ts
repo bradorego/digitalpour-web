@@ -90,7 +90,7 @@ export class MapPage {
               domObj.addEventListener("click", function(e: Event) {
                 e.stopPropagation();
                 e.preventDefault();
-                console.log(markerData.id);
+                // console.log(markerData.id);
                 thisNavCtrl.push(SessionDetailPage, { sessionId: markerData.id, name: markerData.name });
               });
             }
