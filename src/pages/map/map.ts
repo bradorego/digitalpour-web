@@ -1,7 +1,5 @@
 import { Component, ViewChild, ElementRef } from '@angular/core';
 
-import { ConferenceData } from '../../providers/conference-data';
-
 import {StoresData} from '../../providers/stores';
 
 import { Platform, NavController} from 'ionic-angular';
@@ -19,7 +17,6 @@ export class MapPage {
 
   @ViewChild('mapCanvas') mapElement: ElementRef;
   constructor(
-     public confData: ConferenceData,
      public platform: Platform,
      public storesData: StoresData,
      public navCtrl: NavController
