@@ -71,7 +71,8 @@ export class MapPage {
           position: {lat: markerData.lat, lng: markerData.lng},
           map: map,
           title: markerData.name,
-          html: `<h5>${markerData.name}</h5>
+          html: `<img src="${markerData.imgUrl}" />
+            <h5>${markerData.name}</h5>
             <p>${markerData.address}</p>
             <p>Bottles? ${markerData.bottles ? "Yes" : "No"}, Taps? ${markerData.taps ? "Yes" : "No"}</p>
             <a class="bjo-map-button" href="/#/tabs-page/conference-schedule/sessionDetail/${markerData.id}">See Menu</button>`
