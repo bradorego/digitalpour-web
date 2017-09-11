@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavParams, LoadingController } from 'ionic-angular';
+import { IonicPage, NavParams, App, LoadingController } from 'ionic-angular';
 
 import { ConferenceData } from '../../providers/conference-data';
 import {MenuData} from '../../providers/menu';
@@ -19,7 +19,8 @@ export class SessionDetailPage {
     public dataProvider: ConferenceData,
     public menuProvider: MenuData,
     public navParams: NavParams,
-    public loadingCtrl: LoadingController
+    public loadingCtrl: LoadingController,
+    public app: App
   ) {}
 
   ionViewWillEnter() {
@@ -46,6 +47,7 @@ export class SessionDetailPage {
         return item.MenuItemProductDetail;
       });
       this.menu.name = params.get("name");
+      this.app.setTitle(this.menu.name);
     });
   }
 

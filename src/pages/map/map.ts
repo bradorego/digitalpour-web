@@ -2,7 +2,7 @@ import { Component, ViewChild, ElementRef } from '@angular/core';
 
 import {StoresData} from '../../providers/stores';
 
-import { Platform, NavController} from 'ionic-angular';
+import { Platform, NavController, App} from 'ionic-angular';
 
 import {SessionDetailPage} from '../session-detail/session-detail';
 
@@ -19,10 +19,12 @@ export class MapPage {
   constructor(
      public platform: Platform,
      public storesData: StoresData,
-     public navCtrl: NavController
+     public navCtrl: NavController,
+     public app:App
   ) {}
 
   ionViewDidLoad() {
+    this.app.setTitle('Map');
     this.storesData.getMapData().subscribe((data: any) => {
       // console.log(data);
       let mapEle = this.mapElement.nativeElement;
