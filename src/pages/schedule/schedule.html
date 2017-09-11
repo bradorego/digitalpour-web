@@ -9,30 +9,20 @@
     <ion-refresher-content></ion-refresher-content>
   </ion-refresher>
 
-  <ion-list #scheduleList [hidden]="shownSessions === 0">
-    <ion-item-group *ngFor="let group of groups" [hidden]="group.hide">
-      <ion-item *ngFor="let session of group.sessions" #slidingItem [attr.track]="session.tracks[0] | lowercase" [hidden]="session.hide">
-        <button ion-item (click)="goToSessionDetail(session)">
-          <h3>{{session.name}}</h3>
-          <p>
-            {{session.timeStart}} &mdash;
-            {{session.timeEnd}}:
-            {{session.location}}
-          </p>
-        </button>
-      </ion-item>
-    </ion-item-group>
+  <ion-list #scheduleList>
+    <ion-item *ngFor="let item of storeList" (click)="goToSessionDetail(item)">
+      <ion-avatar item-start>
+        <img *ngIf="item.imgUrl" [src]="item.imgUrl" />
+      </ion-avatar>
+      {{item.name}} {{item.address}}
+    </ion-item>
   </ion-list>
-
-  <ion-list-header [hidden]="shownSessions > 0">
-      No Sessions Found
-  </ion-list-header>
 </ion-content>
 <ion-footer>
   <ion-toolbar>
     <ion-searchbar color="primary"
        [(ngModel)]="queryText"
-       (ionInput)="updateSchedule()"
+       (ionInput)="searchItems($event)"
        placeholder="Search">
     </ion-searchbar>
   </ion-toolbar>

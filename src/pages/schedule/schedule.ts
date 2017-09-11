@@ -1,6 +1,6 @@
 import { Component, ViewChild } from '@angular/core';
 
-import { AlertController, App, List, ModalController, NavController, ToastController, LoadingController, Refresher } from 'ionic-angular';
+import { App, List, NavController, ToastController, LoadingController, Refresher } from 'ionic-angular';
 
 /*
   To learn how to use third party libs in an
@@ -9,7 +9,7 @@ import { AlertController, App, List, ModalController, NavController, ToastContro
 // import moment from 'moment';
 
 import { ConferenceData } from '../../providers/conference-data';
-import { UserData } from '../../providers/user-data';
+import {StoresData} from '../../providers/stores';
 
 import { SessionDetailPage } from '../session-detail/session-detail';
 
@@ -25,23 +25,16 @@ export class SchedulePage {
   // the List and not a reference to the element
   @ViewChild('scheduleList', { read: List }) scheduleList: List;
 
-  dayIndex = 0;
   queryText = '';
-  segment = 'all';
-  excludeTracks: any = [];
-  shownSessions: any = [];
-  groups: any = [];
-  confDate: string;
+  storeList:any = [];
 
   constructor(
-    public alertCtrl: AlertController,
     public app: App,
     public loadingCtrl: LoadingController,
-    public modalCtrl: ModalController,
     public navCtrl: NavController,
     public toastCtrl: ToastController,
     public confData: ConferenceData,
-    public user: UserData,
+    public stores: StoresData
   ) {}
 
   ionViewDidLoad() {
@@ -50,37 +43,42 @@ export class SchedulePage {
   }
 
   updateSchedule() {
-    // Close any open sliding items when the schedule updates
-    this.scheduleList && this.scheduleList.closeSlidingItems();
-
-    this.confData.getTimeline(this.dayIndex, this.queryText, this.excludeTracks, this.segment).subscribe((data: any) => {
-      this.shownSessions = data.shownSessions;
-      this.groups = data.groups;
+    this.stores.getListData().subscribe((data: any) => {
+      this.storeList = data;
     });
   }
 
-  goToSessionDetail(sessionData: any) {
+  searchItems() {
+    // Reset items back to all of the items
+    this.updateSchedule();
+
+    // if the value is an empty string don't filter the items
+    if (this.queryText && this.queryText.trim() != '') {
+      this.storeList = this.storeList.filter((item: any) => {
+        let searchTerm = `${item.name} ${item.address}`;
+        return (searchTerm.toLowerCase().indexOf(this.queryText.toLowerCase()) > -1);
+      })
+    }
+  }
+
+  goToSessionDetail(item: any) {
     // go to the session detail page
     // and pass in the session data
-    this.navCtrl.push(SessionDetailPage, { sessionId: sessionData.id, name: sessionData.name });
+    this.navCtrl.push(SessionDetailPage, { sessionId: item.id, name: item.name });
   }
 
   doRefresh(refresher: Refresher) {
-    this.confData.getTimeline(this.dayIndex, this.queryText, this.excludeTracks, this.segment).subscribe((data: any) => {
-      this.shownSessions = data.shownSessions;
-      this.groups = data.groups;
-
+    this.stores.getListData(true).subscribe((data: any) => {
+      this.storeList = data;
       // simulate a network request that would take longer
       // than just pulling from out local json file
-      setTimeout(() => {
-        refresher.complete();
-
-        const toast = this.toastCtrl.create({
-          message: 'Sessions have been updated.',
-          duration: 3000
-        });
-        toast.present();
-      }, 1000);
+      refresher.complete();
+      const toast = this.toastCtrl.create({
+        message: 'Sessions have been updated.',
+        position: "top",
+        duration: 3000
+      });
+      toast.present();
     });
   }
 }
