@@ -16,8 +16,8 @@ export class StoresData {
   data: any;
   constructor(public http: Http) { }
 
-  load(): any {
-    if (this.data) {
+  load(force:boolean = false): any {
+    if (this.data && !force) {
       return Observable.of(this.data);
     } else {
       return this.http.get(STORE_URL)
@@ -27,13 +27,34 @@ export class StoresData {
 
   processData(data: any) {
     this.data = data.json();
+    // console.log(this.data);
     /// maybe do some manipulation here
     return this.data;
   }
 
-  getMapData() {
+  getListData(force?: boolean) {
+    let listData:any = [];
+    return this.load(force).map((data: any) => {
+      data.forEach((item:any) => {
+        listData.push({
+          "id": item.CompanyId,
+          "name": item.StoreName,
+          "lat": item.Latitude,
+          "lng": item.Longitude,
+          "address": `${item.Address}, ${item.City}, ${item.State} ${item.ZipCode}`,
+          "imgUrl": item.BarLogoUrl,
+          "hours": item.StoreHours,
+          "bottles": item.HasBottles,
+          "taps": item.HasTaps
+        });
+      });
+      return listData;
+    });
+  }
+
+  getMapData(force?: boolean) {
     let mapData:any = [];
-    return this.load().map((data:any) => {
+    return this.load(force).map((data:any) => {
       data.forEach((item: any) => {
         mapData.push({
           "id": item.CompanyId,
