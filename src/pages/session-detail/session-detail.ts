@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavParams } from 'ionic-angular';
+import { IonicPage, NavParams, LoadingController } from 'ionic-angular';
 
 import { ConferenceData } from '../../providers/conference-data';
 import {MenuData} from '../../providers/menu';
@@ -13,23 +13,36 @@ import {MenuData} from '../../providers/menu';
 })
 export class SessionDetailPage {
   menu: any;
+  loading: any;
 
   constructor(
     public dataProvider: ConferenceData,
     public menuProvider: MenuData,
-    public navParams: NavParams
+    public navParams: NavParams,
+    public loadingCtrl: LoadingController
   ) {}
 
   ionViewWillEnter() {
-    console.log(this.navParams.get('sessionId'));
+    // this.presentLoadingDefault();
     this.initializeItems(this.navParams);
+  }
+
+  presentLoadingDefault() {
+    this.loading = this.loadingCtrl.create({});
+    this.loading.onDidDismiss(() => {
+      this.loading = null;
+    });
+
+    this.loading.present();
   }
 
   initializeItems(params:NavParams) {
     this.menuProvider.load(params.get("sessionId")).subscribe((data: any) => {
-      console.log(data);
       this.menu = data.map((item: any) => {
         item.MenuItemProductDetail.DatePutOn = new Date(item.DatePutOn);
+        if (this.loading) {
+          this.loading.dismiss();
+        }
         return item.MenuItemProductDetail;
       });
       this.menu.name = params.get("name");
@@ -46,7 +59,6 @@ export class SessionDetailPage {
     // if the value is an empty string don't filter the items
     if (val && val.trim() != '') {
       this.menu = this.menu.filter((item: any) => {
-        console.log(item);
         let searchTerm = `${item.FullBeverageName} ${item.FullStyleName}`;
         return (searchTerm.toLowerCase().indexOf(val.toLowerCase()) > -1);
       })
