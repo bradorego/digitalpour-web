@@ -12,13 +12,13 @@
 <ion-content>
   <div *ngIf="menu">
     <ion-list>
-      <ion-item *ngFor="let beverage of menu">
+      <ion-item *ngFor="let beverage of menu" (click)="log(beverage)">
         <ion-avatar item-start>
           <img *ngIf="beverage.Beverage.ResolvedLogoImageUrl" [src]="beverage.Beverage.ResolvedLogoImageUrl" />
         </ion-avatar>
         <h2>{{beverage.Beverage.BeverageProducer.ProducerName}} - {{beverage.Beverage.BeverageName}}</h2>
-        <h4 *ngIf="beverage.Beverage.BeverageStyle">{{beverage.Beverage.BeverageStyle.CultureAwareStyleName}}</h4>
-        <h5>{{beverage.Beverage.BeverageProducer.LocationName}}<span>ABV</span>{{beverage.Beverage.Abv | number:'1.1-1'}}%<span>Keg</span>{{beverage.PercentFull | percent:'1.0-0'}}</h5>
+        <h4 *ngIf="beverage.FullStyleName">{{beverage.FullStyleName}}</h4>
+        <h5>{{beverage.Beverage.BeverageProducer.LocationName}}<span>ABV</span>{{beverage.Beverage.Abv | number:'1.1-1'}}%<span>Keg</span><span *ngIf="beverage.PercentFull > 0; else elseBlock">{{beverage.PercentFull | percent:'1.0-0'}}</span><ng-template #elseBlock>???%</ng-template></h5>
         <p><span *ngFor="let size of beverage.Prices">{{size.DisplayName}}: {{size.Price | currency:'USD':true:'1.2-2'}}</span></p>
       </ion-item>
     </ion-list>

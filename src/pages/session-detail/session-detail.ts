@@ -21,6 +21,10 @@ export class SessionDetailPage {
     public app: App
   ) {}
 
+
+  log(beverage: any) {
+    console.log(beverage);
+  }
   ionViewWillEnter() {
     // this.presentLoadingDefault();
     this.initializeItems(this.navParams);
