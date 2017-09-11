@@ -28,6 +28,8 @@ import { SupportPage } from '../pages/support/support';
 
 import { ConferenceData } from '../providers/conference-data';
 import { UserData } from '../providers/user-data';
+import {StoresData} from '../providers/stores';
+import {MenuData} from '../providers/menu';
 
 
 @NgModule({
@@ -93,7 +95,9 @@ import { UserData } from '../providers/user-data';
     ConferenceData,
     UserData,
     InAppBrowser,
-    SplashScreen
+    SplashScreen,
+    StoresData,
+    MenuData
   ]
 })
 export class AppModule { }

@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { IonicPage, NavParams } from 'ionic-angular';
 
 import { ConferenceData } from '../../providers/conference-data';
+import {MenuData} from '../../providers/menu';
 
 @IonicPage({
   segment: 'session/:sessionId'
@@ -11,32 +12,24 @@ import { ConferenceData } from '../../providers/conference-data';
   templateUrl: 'session-detail.html'
 })
 export class SessionDetailPage {
-  session: any;
+  menu: any;
 
   constructor(
     public dataProvider: ConferenceData,
+    public menuProvider: MenuData,
     public navParams: NavParams
   ) {}
 
   ionViewWillEnter() {
-    this.dataProvider.load().subscribe((data: any) => {
-      if (
-        data &&
-        data.schedule &&
-        data.schedule[0] &&
-        data.schedule[0].groups
-      ) {
-        for (const group of data.schedule[0].groups) {
-          if (group && group.sessions) {
-            for (const session of group.sessions) {
-              if (session && session.id === this.navParams.data.sessionId) {
-                this.session = session;
-                break;
-              }
-            }
-          }
-        }
-      }
+    console.log(this.navParams.get('sessionId'));
+    this.menuProvider.load(this.navParams.data.sessionId).subscribe((data: any) => {
+      console.log(data);
+      this.menu = data.map((item: any) => {
+        item.MenuItemProductDetail.DatePutOn = new Date(item.DatePutOn);
+        return item.MenuItemProductDetail;
+      });
+      this.menu.name = this.navParams.get("name");
     });
+
   }
 }

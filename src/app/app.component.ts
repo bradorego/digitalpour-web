@@ -18,6 +18,8 @@ import { SupportPage } from '../pages/support/support';
 
 import { ConferenceData } from '../providers/conference-data';
 import { UserData } from '../providers/user-data';
+import {StoresData} from '../providers/stores';
+import {MenuData} from '../providers/menu';
 
 export interface PageInterface {
   title: string;
@@ -66,7 +68,9 @@ export class ConferenceApp {
     public platform: Platform,
     public confData: ConferenceData,
     public storage: Storage,
-    public splashScreen: SplashScreen
+    public splashScreen: SplashScreen,
+    public storesData: StoresData,
+    public menuData: MenuData
   ) {
 
     // Check if the user has already seen the tutorial
