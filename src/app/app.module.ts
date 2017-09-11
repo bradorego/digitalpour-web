@@ -20,6 +20,8 @@ import { TabsPage } from '../pages/tabs-page/tabs-page';
 import {StoresData} from '../providers/stores';
 import {MenuData} from '../providers/menu';
 
+import { Geolocation } from '@ionic-native/geolocation';
+
 
 @NgModule({
   declarations: [
@@ -55,7 +57,8 @@ import {MenuData} from '../providers/menu';
     InAppBrowser,
     SplashScreen,
     StoresData,
-    MenuData
+    MenuData,
+    Geolocation
   ]
 })
 export class AppModule { }
