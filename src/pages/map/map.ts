@@ -23,6 +23,8 @@ export class MapPage {
      public geolocation: Geolocation
   ) {}
 
+  private currentLocationCircle: any = {};
+
   ionViewDidLoad() {
     this.app.setTitle('Map');
     this.storesData.getMapData().subscribe((data: any) => {
@@ -103,6 +105,21 @@ export class MapPage {
       });
       this.geolocation.getCurrentPosition().then((resp) => {
         map.setCenter({lat: resp.coords.latitude, lng: resp.coords.longitude});
+        this.currentLocationCircle = new google.maps.Marker({
+          map: map,
+          position: map.getCenter(),
+          title: "circle",
+          icon: {
+            strokeColor: '#FFFFFF',
+            strokeOpacity: 1.0,
+            strokeWeight: 2,
+            fillColor: '#689df6',
+            fillOpacity: 1.0,
+            path: google.maps.SymbolPath.CIRCLE,
+            scale: 7,
+            anchor: new google.maps.Point(0, 0)
+          }
+        });
       }, (err) => {
         console.error(err);
       });
