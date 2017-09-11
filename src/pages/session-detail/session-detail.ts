@@ -22,14 +22,34 @@ export class SessionDetailPage {
 
   ionViewWillEnter() {
     console.log(this.navParams.get('sessionId'));
-    this.menuProvider.load(this.navParams.data.sessionId).subscribe((data: any) => {
+    this.initializeItems(this.navParams);
+  }
+
+  initializeItems(params:NavParams) {
+    this.menuProvider.load(params.get("sessionId")).subscribe((data: any) => {
       console.log(data);
       this.menu = data.map((item: any) => {
         item.MenuItemProductDetail.DatePutOn = new Date(item.DatePutOn);
         return item.MenuItemProductDetail;
       });
-      this.menu.name = this.navParams.get("name");
+      this.menu.name = params.get("name");
     });
+  }
 
+  searchItems(ev: any) {
+    // Reset items back to all of the items
+    this.initializeItems(this.navParams);
+
+    // set val to the value of the searchbar
+    let val = ev.target.value;
+
+    // if the value is an empty string don't filter the items
+    if (val && val.trim() != '') {
+      this.menu = this.menu.filter((item: any) => {
+        console.log(item);
+        let searchTerm = `${item.FullBeverageName} ${item.FullStyleName}`;
+        return (searchTerm.toLowerCase().indexOf(val.toLowerCase()) > -1);
+      })
+    }
   }
 }
