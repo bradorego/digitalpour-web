@@ -4,13 +4,13 @@ import { IonicPage, NavParams, App, LoadingController } from 'ionic-angular';
 import {MenuData} from '../../providers/menu';
 
 @IonicPage({
-  segment: 'session/:sessionId'
+  segment: 'menu/:storeId'
 })
 @Component({
-  selector: 'page-session-detail',
-  templateUrl: 'session-detail.html'
+  selector: 'page-menu',
+  templateUrl: 'menu.html'
 })
-export class SessionDetailPage {
+export class MenuPage {
   menu: any;
   loading: any;
 
@@ -40,7 +40,7 @@ export class SessionDetailPage {
   }
 
   initializeItems(params:NavParams) {
-    this.menuProvider.load(params.get("sessionId")).subscribe((data: any) => {
+    this.menuProvider.load(params.get("storeId")).subscribe((data: any) => {
       this.menu = data.map((item: any) => {
         item.MenuItemProductDetail.DatePutOn = new Date(item.DatePutOn);
         if (this.loading) {

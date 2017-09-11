@@ -4,7 +4,7 @@ import {StoresData} from '../../providers/stores';
 
 import { Platform, NavController, App} from 'ionic-angular';
 
-import {SessionDetailPage} from '../session-detail/session-detail';
+import {MenuPage} from '../menu/menu';
 
 declare var google: any;
 
@@ -75,7 +75,7 @@ export class MapPage {
             <h5>${markerData.name}</h5>
             <p>${markerData.address}</p>
             <p>Bottles? ${markerData.bottles ? "Yes" : "No"}, Taps? ${markerData.taps ? "Yes" : "No"}</p>
-            <a class="bjo-map-button" href="/#/tabs-page/conference-schedule/sessionDetail/${markerData.id}">See Menu</button>`
+            <a class="bjo-map-button">See Menu</button>`
         });
 
         marker.addListener('click', () => {
@@ -91,7 +91,7 @@ export class MapPage {
                 e.stopPropagation();
                 e.preventDefault();
                 // console.log(markerData.id);
-                thisNavCtrl.push(SessionDetailPage, { sessionId: markerData.id, name: markerData.name });
+                thisNavCtrl.push(MenuPage, { storeId: markerData.id, name: markerData.name });
               });
             }
           });

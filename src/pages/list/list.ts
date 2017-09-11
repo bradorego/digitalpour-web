@@ -11,14 +11,14 @@ import { Geolocation } from '@ionic-native/geolocation';
 
 import {StoresData} from '../../providers/stores';
 
-import { SessionDetailPage } from '../session-detail/session-detail';
+import { MenuPage } from '../menu/menu';
 
 
 @Component({
-  selector: 'page-schedule',
-  templateUrl: 'schedule.html'
+  selector: 'page-list',
+  templateUrl: 'list.html'
 })
-export class SchedulePage {
+export class ListPage {
   // the list is a child of the schedule page
   // @ViewChild('scheduleList') gets a reference to the list
   // with the variable #scheduleList, `read: List` tells it to return
@@ -27,7 +27,7 @@ export class SchedulePage {
 
   queryText = '';
   storeList:any = [];
-  private coords: any;
+  private coords: any = {};
 
   constructor(
     public app: App,
@@ -39,20 +39,18 @@ export class SchedulePage {
   ) {}
 
   ionViewDidLoad() {
-    this.app.setTitle('List');
-    this.updateSchedule();
+    this.updateList();
   }
 
-  updateSchedule() {
+  updateList() {
     this.geolocation.getCurrentPosition().then((resp) => {
       this.coords = resp.coords;
       this.stores.getListData(this.coords, false).subscribe((data: any) => {
-        data.sort((a: any, b: any) => {
-          if (a.distance > b.distance) {
-            return 1;
-          }
-          return -1;
-        });
+        this.storeList = data;
+      });
+    }, (err) => {
+      console.error(err);
+      this.stores.getListData(this.coords, false).subscribe((data: any) => {
         this.storeList = data;
       });
     });
@@ -60,7 +58,7 @@ export class SchedulePage {
 
   searchItems() {
     // Reset items back to all of the items
-    this.updateSchedule();
+    this.updateList();
 
     // if the value is an empty string don't filter the items
     if (this.queryText && this.queryText.trim() != '') {
@@ -74,7 +72,7 @@ export class SchedulePage {
   goToSessionDetail(item: any) {
     // go to the session detail page
     // and pass in the session data
-    this.navCtrl.push(SessionDetailPage, { sessionId: item.id, name: item.name });
+    this.navCtrl.push(MenuPage, { storeId: item.id, name: item.name });
   }
 
   doRefresh(refresher: Refresher) {

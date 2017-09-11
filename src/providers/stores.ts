@@ -49,13 +49,19 @@ export class StoresData {
         listData.push({
           "id": item.CompanyId,
           "name": item.StoreName,
-          "distance": this.distance(coords.latitude, coords.longitude, item.Latitude, item.Longitude),
+          "distance": coords.latitude ? this.distance(coords.latitude, coords.longitude, item.Latitude, item.Longitude) : null,
           "address": `${item.Address}, ${item.City}, ${item.State} ${item.ZipCode}`,
           "imgUrl": item.BarLogoUrl,
           "hours": item.StoreHours,
           "bottles": item.HasBottles,
           "taps": item.HasTaps
         });
+      });
+      listData.sort((a: any, b: any) => {
+        if (a.distance > b.distance) {
+          return 1;
+        }
+        return -1;
       });
       return listData;
     });

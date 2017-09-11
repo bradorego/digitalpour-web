@@ -13,8 +13,8 @@ import { IonicStorageModule } from '@ionic/storage';
 import { ConferenceApp } from './app.component';
 
 import { MapPage } from '../pages/map/map';
-import { SchedulePage } from '../pages/schedule/schedule';
-import { SessionDetailPage } from '../pages/session-detail/session-detail';
+import { ListPage } from '../pages/list/list';
+import { MenuPage } from '../pages/menu/menu';
 import { TabsPage } from '../pages/tabs-page/tabs-page';
 
 import {StoresData} from '../providers/stores';
@@ -27,8 +27,8 @@ import { Geolocation } from '@ionic-native/geolocation';
   declarations: [
     ConferenceApp,
     MapPage,
-    SchedulePage,
-    SessionDetailPage,
+    ListPage,
+    MenuPage,
     TabsPage,
   ],
   imports: [
@@ -37,9 +37,8 @@ import { Geolocation } from '@ionic-native/geolocation';
     IonicModule.forRoot(ConferenceApp, {}, {
       links: [
         { component: TabsPage, name: 'TabsPage', segment: 'tabs-page' },
-        { component: SchedulePage, name: 'Schedule', segment: 'schedule' },
-        { component: SessionDetailPage, name: 'SessionDetail', segment: 'sessionDetail/:sessionId' },
-        { component: MapPage, name: 'Map', segment: 'map' },
+        { component: ListPage, name: 'List', segment: 'list' },
+        { component: MapPage, name: 'Map', segment: 'map' }
       ]
     }),
     IonicStorageModule.forRoot()
@@ -48,8 +47,8 @@ import { Geolocation } from '@ionic-native/geolocation';
   entryComponents: [
     ConferenceApp,
     MapPage,
-    SchedulePage,
-    SessionDetailPage,
+    ListPage,
+    MenuPage,
     TabsPage,
   ],
   providers: [

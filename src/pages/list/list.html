@@ -16,7 +16,8 @@
       </ion-avatar>
       <h2>{{item.name}}</h2>
       <h4>{{item.address}}</h4>
-      <h5>{{item.distance | number:'1.1-1'}} mi.</h5>
+      <h5 *ngIf="item.distance;else elseBlock">{{item.distance | number:'1.1-1'}} mi.</h5>
+      <ng-template #elseBlock><h5>Enable location services to show distance</h5></ng-template>
     </ion-item>
   </ion-list>
 </ion-content>

@@ -7,7 +7,7 @@ import { Storage } from '@ionic/storage';
 
 import { MapPage } from '../pages/map/map';
 import { TabsPage } from '../pages/tabs-page/tabs-page';
-import { SchedulePage } from '../pages/schedule/schedule';
+import { ListPage } from '../pages/list/list';
 
 import {StoresData} from '../providers/stores';
 import {MenuData} from '../providers/menu';
@@ -35,8 +35,8 @@ export class ConferenceApp {
   // the left menu only works after login
   // the login page disables the left menu
   appPages: PageInterface[] = [
-    { title: 'Schedule', name: 'TabsPage', component: TabsPage, tabComponent: SchedulePage, index: 0, icon: 'calendar' },
-    { title: 'Map', name: 'TabsPage', component: TabsPage, tabComponent: MapPage, index: 2, icon: 'map' },
+    { title: 'List', name: 'TabsPage', component: TabsPage, tabComponent: ListPage, index: 0, icon: 'list' },
+    { title: 'Map', name: 'TabsPage', component: TabsPage, tabComponent: MapPage, index: 1, icon: 'map' },
   ];
   rootPage: any;
 
