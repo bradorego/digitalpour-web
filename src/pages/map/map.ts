@@ -1,9 +1,8 @@
 import { Component, ViewChild, ElementRef } from '@angular/core';
+import { Platform, NavController, App} from 'ionic-angular';
+import { Geolocation } from '@ionic-native/geolocation';
 
 import {StoresData} from '../../providers/stores';
-
-import { Platform, NavController, App} from 'ionic-angular';
-
 import {MenuPage} from '../menu/menu';
 
 declare var google: any;
@@ -20,7 +19,8 @@ export class MapPage {
      public platform: Platform,
      public storesData: StoresData,
      public navCtrl: NavController,
-     public app:App
+     public app:App,
+     public geolocation: Geolocation
   ) {}
 
   ionViewDidLoad() {
@@ -100,6 +100,11 @@ export class MapPage {
 
       google.maps.event.addListenerOnce(map, 'idle', () => {
         mapEle.classList.add('show-map');
+      });
+      this.geolocation.getCurrentPosition().then((resp) => {
+        map.setCenter({lat: resp.coords.latitude, lng: resp.coords.longitude});
+      }, (err) => {
+        console.error(err);
       });
     });
   }
