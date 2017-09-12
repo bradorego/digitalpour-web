@@ -16,7 +16,7 @@ export class StoresData {
   data: any;
   constructor(public http: Http) { }
 
-  private distance(lat1: number, lon1: number, lat2: number, lon2: number) {
+  distance(lat1: number, lon1: number, lat2: number, lon2: number) {
     let p:number = 0.017453292519943295;    // Math.PI / 180
     let c = Math.cos;
     let a:number = 0.5 - c((lat2 - lat1) * p)/2 +
