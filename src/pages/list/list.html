@@ -9,7 +9,7 @@
     <ion-refresher-content></ion-refresher-content>
   </ion-refresher>
 
-  <ion-list #scheduleList>
+  <ion-list>
     <ion-item *ngFor="let item of storeList" (click)="goToSessionDetail(item)">
       <ion-avatar item-start>
         <img *ngIf="item.imgUrl" [src]="item.imgUrl" />
