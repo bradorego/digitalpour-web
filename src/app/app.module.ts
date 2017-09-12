@@ -35,7 +35,7 @@ import { Geolocation } from '@ionic-native/geolocation';
         { component: TabsPage, name: 'TabsPage', segment: 'tabs-page' },
         { component: ListPage, name: 'List', segment: 'list' },
         { component: MapPage, name: 'Map', segment: 'map' },
-        { component: MenuPage, name: 'Menu', segment: 'menu' }
+        { component: MenuPage, name: 'Menu', segment: 'menu/:storeId', defaultHistory: [TabsPage] }
       ]
     })
   ],
