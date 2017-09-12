@@ -4,13 +4,9 @@ import { HttpModule } from '@angular/http';
 import { NgModule, ErrorHandler } from '@angular/core';
 
 import { IonicApp, IonicModule, IonicErrorHandler } from 'ionic-angular';
-
-import { InAppBrowser } from '@ionic-native/in-app-browser';
 import { SplashScreen } from '@ionic-native/splash-screen';
 
-import { IonicStorageModule } from '@ionic/storage';
-
-import { ConferenceApp } from './app.component';
+import { DigitalPourApp } from './app.component';
 
 import { MapPage } from '../pages/map/map';
 import { ListPage } from '../pages/list/list';
@@ -25,7 +21,7 @@ import { Geolocation } from '@ionic-native/geolocation';
 
 @NgModule({
   declarations: [
-    ConferenceApp,
+    DigitalPourApp,
     MapPage,
     ListPage,
     MenuPage,
@@ -34,18 +30,18 @@ import { Geolocation } from '@ionic-native/geolocation';
   imports: [
     BrowserModule,
     HttpModule,
-    IonicModule.forRoot(ConferenceApp, {}, {
+    IonicModule.forRoot(DigitalPourApp, {}, {
       links: [
         { component: TabsPage, name: 'TabsPage', segment: 'tabs-page' },
         { component: ListPage, name: 'List', segment: 'list' },
-        { component: MapPage, name: 'Map', segment: 'map' }
+        { component: MapPage, name: 'Map', segment: 'map' },
+        { component: MenuPage, name: 'Menu', segment: 'menu' }
       ]
-    }),
-    IonicStorageModule.forRoot()
+    })
   ],
   bootstrap: [IonicApp],
   entryComponents: [
-    ConferenceApp,
+    DigitalPourApp,
     MapPage,
     ListPage,
     MenuPage,
@@ -53,7 +49,6 @@ import { Geolocation } from '@ionic-native/geolocation';
   ],
   providers: [
     { provide: ErrorHandler, useClass: IonicErrorHandler },
-    InAppBrowser,
     SplashScreen,
     StoresData,
     MenuData,
