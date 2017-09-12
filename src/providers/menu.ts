@@ -28,6 +28,7 @@ import 'rxjs/add/observable/of';
 @Injectable()
 export class MenuData {
   data: any;
+  upNext: any;
   lastId: string;
   constructor(public http: Http) { }
 
@@ -40,6 +41,23 @@ export class MenuData {
       return this.http.get(MENU_URL)
         .map(this.processData, this);
     }
+  }
+
+  getUpNext(id: string): any {
+    const URL = `http://mobile.digitalpour.com/DashboardServer/v4/MobileApp/MenuItems/${id}/1/KegQueue?allItems=1&ApiKey=574725e55e002c0b7cf0cf19`
+    if (this.upNext && this.lastId === id) {
+      return Observable.of(this.upNext);
+    } else {
+      this.lastId = id
+      return this.http.get(URL)
+        .map(this.processUpNext, this);
+    }
+  }
+
+  processUpNext(data: any) {
+    this.upNext = data.json();
+    /// maybe do some manipulation here
+    return this.upNext;
   }
 
   processData(data: any) {

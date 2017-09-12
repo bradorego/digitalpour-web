@@ -14,6 +14,8 @@ import {MenuData} from '../../providers/menu';
 })
 export class MenuPage {
   menu: any;
+  storeName: string;
+  upNext: any;
   loading: any;
 
   constructor(
@@ -29,6 +31,8 @@ export class MenuPage {
   }
   ionViewWillEnter() {
     this.initializeItems(this.navParams);
+    this.storeName = this.navParams.get("name");
+    this.app.setTitle(this.storeName);
     history.replaceState({}, this.navParams.get('name'), `#/menu/${this.navParams.get('storeId')}`);
   }
 
@@ -50,8 +54,12 @@ export class MenuPage {
         }
         return item.MenuItemProductDetail;
       });
-      this.menu.name = params.get("name");
-      this.app.setTitle(this.menu.name);
+    });
+    this.menuProvider.getUpNext(params.get("storeId")).subscribe((data: any) => {
+      this.upNext = data.map((item: any) => {
+        /// maybe manipulate - we'll see
+        return item;
+      });
     });
   }
 
