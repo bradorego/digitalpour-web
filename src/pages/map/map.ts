@@ -66,18 +66,17 @@ export class MapPage {
       });
       let infoWindow = new google.maps.InfoWindow();
       let infoWindowListener = {};
-      let thisNavCtrl = this.navCtrl;
 
-      data.forEach((markerData: any) => {
+      data.forEach((item: any) => {
 
         let marker = new google.maps.Marker({
-          position: {lat: markerData.lat, lng: markerData.lng},
+          position: {lat: item.lat, lng: item.lng},
           map: map,
-          title: markerData.name,
-          html: `<div class='dp-infowindow'><img src="${markerData.imgUrl}" />
-            <h5>${markerData.name}</h5>
-            <p>${markerData.address}</p>
-            <p>Bottles? ${markerData.bottles ? "Yes" : "No"}, Taps? ${markerData.taps ? "Yes" : "No"}</p>
+          title: item.name,
+          html: `<div class='dp-infowindow'><img src="${item.imgUrl}" />
+            <h5>${item.name}</h5>
+            <p>${item.address}</p>
+            <p>Bottles? ${item.bottles ? "Yes" : "No"}, Taps? ${item.taps ? "Yes" : "No"}</p>
             <button class="map-button">See Menu</button></div>`
         });
 
@@ -87,14 +86,14 @@ export class MapPage {
           google.maps.event.clearListeners(infoWindow);
           infoWindow.setContent(marker.html);
           infoWindow.open(map, marker);
-          infoWindowListener = google.maps.event.addListener(infoWindow, 'domready', function() {
+          infoWindowListener = google.maps.event.addListener(infoWindow, 'domready', () => {
             let domObj: any = document.querySelector('.map-button');
             if (domObj) {
-              domObj.addEventListener("click", function(e: Event) {
+              domObj.addEventListener("click", (e: Event) => {
                 e.stopPropagation();
                 e.preventDefault();
-                // console.log(markerData.id);
-                thisNavCtrl.push(MenuPage, { storeId: markerData.id, name: markerData.name });
+                // console.log(item.id);
+                this.app.getRootNavs()[0].push(MenuPage, { storeId: item.id, name: item.name }, {updateUrl: true});
               });
             }
           });

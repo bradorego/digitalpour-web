@@ -70,9 +70,7 @@ export class ListPage {
   }
 
   goToSessionDetail(item: any) {
-    // go to the session detail page
-    // and pass in the session data
-    this.navCtrl.push(MenuPage, { storeId: item.id, name: item.name });
+    this.app.getRootNavs()[0].push(MenuPage, { storeId: item.id, name: item.name }, {updateUrl: true});
   }
 
   doRefresh(refresher: Refresher) {
