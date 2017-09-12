@@ -26,8 +26,8 @@ export class MenuPage {
     console.log(beverage);
   }
   ionViewWillEnter() {
-    // this.presentLoadingDefault();
     this.initializeItems(this.navParams);
+    history.replaceState({}, this.navParams.get('name'), `#/menu/${this.navParams.get('storeId')}`);
   }
 
   presentLoadingDefault() {
