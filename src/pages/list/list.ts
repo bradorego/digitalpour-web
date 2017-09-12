@@ -43,7 +43,7 @@ export class ListPage {
   }
 
   updateList() {
-    this.geolocation.getCurrentPosition().then((resp) => {
+    this.geolocation.getCurrentPosition().then((resp: any) => {
       this.coords = resp.coords;
       this.stores.getListData(this.coords, false).subscribe((data: any) => {
         this.storeList = data;

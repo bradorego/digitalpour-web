@@ -29,9 +29,8 @@ export class MapPage {
     this.app.setTitle('Map');
     this.storesData.getMapData().subscribe((data: any) => {
       // console.log(data);
-      let mapEle = this.mapElement.nativeElement;
 
-      let map = new google.maps.Map(mapEle, {
+      let map = new google.maps.Map(this.mapElement.nativeElement, {
         center: {lat: 43.074640, lng: -89.384103},
         zoom: 13,
         styles: [
@@ -73,11 +72,11 @@ export class MapPage {
           position: {lat: markerData.lat, lng: markerData.lng},
           map: map,
           title: markerData.name,
-          html: `<img src="${markerData.imgUrl}" />
+          html: `<div class='dp-infowindow'><img src="${markerData.imgUrl}" />
             <h5>${markerData.name}</h5>
             <p>${markerData.address}</p>
             <p>Bottles? ${markerData.bottles ? "Yes" : "No"}, Taps? ${markerData.taps ? "Yes" : "No"}</p>
-            <a class="bjo-map-button">See Menu</button>`
+            <button class="map-button">See Menu</button></div>`
         });
 
         marker.addListener('click', () => {
@@ -87,7 +86,7 @@ export class MapPage {
           infoWindow.setContent(marker.html);
           infoWindow.open(map, marker);
           infoWindowListener = google.maps.event.addListener(infoWindow, 'domready', function() {
-            let domObj: any = document.querySelector('.bjo-map-button');
+            let domObj: any = document.querySelector('.map-button');
             if (domObj) {
               domObj.addEventListener("click", function(e: Event) {
                 e.stopPropagation();
@@ -101,7 +100,7 @@ export class MapPage {
       });
 
       google.maps.event.addListenerOnce(map, 'idle', () => {
-        mapEle.classList.add('show-map');
+        this.mapElement.nativeElement.classList.add('show-map');
       });
       this.geolocation.getCurrentPosition().then((resp) => {
         map.setCenter({lat: resp.coords.latitude, lng: resp.coords.longitude});
@@ -123,6 +122,9 @@ export class MapPage {
       }, (err) => {
         console.error(err);
       });
+    });
+    this.geolocation.watchPosition({timeout: 30000}).subscribe((resp) => {
+      this.currentLocationCircle.setPosition({lat: resp.coords.latitude, lng: resp.coords.longitude});
     });
   }
 }
