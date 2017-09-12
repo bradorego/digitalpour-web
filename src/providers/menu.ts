@@ -32,7 +32,7 @@ export class MenuData {
   lastId: string;
   constructor(public http: Http) { }
 
-  load(id: string): any {
+  public loadMenu(id: string): any {
     const MENU_URL = `http://mobile.digitalpour.com/DashboardServer/v4/MobileApp/MenuItems/${id}/1/Tap?ApiKey=574725e55e002c0b7cf0cf19`;
     if (this.data && this.lastId === id) {
       return Observable.of(this.data);
@@ -52,6 +52,53 @@ export class MenuData {
       return this.http.get(URL)
         .map(this.processUpNext, this);
     }
+  }
+
+  sortBy(sortBy: any) {
+    return this.loadMenu(this.lastId).map((data: any) => {
+      let result = [];
+      switch (sortBy.sortBy) {
+        case "abv":
+          result = data.sort((a: any, b: any) => {
+            if (a.Beverage.Abv > b.Beverage.Abv) {
+              return -1;
+            }
+            return 1;
+          });
+        break;
+        case "alphabetical":
+          result = data.sort((a: any, b: any) => {
+            if (a.FullBeverageName > b.FullBeverageName) {
+              return -1;
+            }
+            return 1;
+          });
+        break;
+        case "keg-life":
+          result = data.sort((a: any, b: any) => {
+            if (a.PercentFull > b.PercentFull) {
+              return -1;
+            }
+            return 1;
+          });
+        break;
+        case "style":
+          result = data.sort((a: any, b: any) => {
+            if (a.FullStyleName > b.FullStyleName) {
+              return -1;
+            }
+            return 1;
+          });
+        break;
+        case "tap-number":
+          result = data;
+        break;
+        default:
+          result = data;
+        break;
+      }
+      return sortBy.ascending ? result : result.reverse();
+    });
   }
 
   processUpNext(data: any) {

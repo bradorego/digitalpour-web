@@ -1,0 +1,23 @@
+<ion-toggle [(ngModel)]="ascending">Ascending</ion-toggle>
+<ion-list radio-group [(ngModel)]="sortBy" (ionChange)="radioChange(sortBy, true)">
+  <ion-item>
+    <ion-label>Tap Number</ion-label>
+    <ion-radio value="tap-number"></ion-radio>
+  </ion-item>
+  <ion-item>
+    <ion-label>Alphabetical</ion-label>
+    <ion-radio value="alphabetical"></ion-radio>
+  </ion-item>
+  <ion-item>
+    <ion-label>ABV</ion-label>
+    <ion-radio value="ABV"></ion-radio>
+  </ion-item>
+  <ion-item>
+    <ion-label>Keg Life</ion-label>
+    <ion-radio value="keg-life"></ion-radio>
+  </ion-item>
+  <ion-item>
+    <ion-label>Style</ion-label>
+    <ion-radio value="style"></ion-radio>
+  </ion-item>
+</ion-list>

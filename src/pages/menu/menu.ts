@@ -1,7 +1,8 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavParams, App, LoadingController } from 'ionic-angular';
+import { IonicPage, NavParams, App, LoadingController, PopoverController } from 'ionic-angular';
 
 import {MenuData} from '../../providers/menu';
+import {FilterPage} from "./filter";
 
 @IonicPage({
   name: 'menu',
@@ -17,23 +18,41 @@ export class MenuPage {
   storeName: string;
   upNext: any;
   loading: any;
+  private _id: string;
+  private _sortBy = "tap-number";
 
   constructor(
     public menuProvider: MenuData,
     public navParams: NavParams,
     public loadingCtrl: LoadingController,
-    public app: App
+    public app: App,
+    private _popover:PopoverController
   ) {}
 
+  ionViewWillEnter() {
+    this.app.setTitle(this.storeName);
+    this.storeName = this.navParams.get("name");
+    this._id = this.navParams.get("storeId");
+    history.replaceState({}, this.navParams.get('name'), `#/menu/${this._id}`);
+    this.initializeItems();
+  }
+
+  displayFilters(ev:Event) {
+    let popover = this._popover.create(FilterPage,{
+      sortBy: this._sortBy,
+      callback: (_data: any) => {
+        console.log(_data);
+        this._sortBy = _data;
+        this.menuProvider.sortBy(_data).subscribe((result: any) => {
+          this._handleData(result);
+        });
+      }
+    });
+    popover.present({ev});
+  }
 
   log(beverage: any) {
     console.log(beverage);
-  }
-  ionViewWillEnter() {
-    this.initializeItems(this.navParams);
-    this.storeName = this.navParams.get("name");
-    this.app.setTitle(this.storeName);
-    history.replaceState({}, this.navParams.get('name'), `#/menu/${this.navParams.get('storeId')}`);
   }
 
   presentLoadingDefault() {
@@ -45,17 +64,21 @@ export class MenuPage {
     this.loading.present();
   }
 
-  initializeItems(params:NavParams) {
-    this.menuProvider.load(params.get("storeId")).subscribe((data: any) => {
-      this.menu = data.map((item: any) => {
-        item.MenuItemProductDetail.DatePutOn = new Date(item.DatePutOn);
-        if (this.loading) {
-          this.loading.dismiss();
-        }
-        return item.MenuItemProductDetail;
-      });
+  private _handleData(data: any) {
+    this.menu = data.map((item: any) => {
+      item.MenuItemProductDetail.DatePutOn = new Date(item.DatePutOn);
+      if (this.loading) {
+        this.loading.dismiss();
+      }
+      return item.MenuItemProductDetail;
     });
-    this.menuProvider.getUpNext(params.get("storeId")).subscribe((data: any) => {
+  }
+
+  initializeItems() {
+    this.menuProvider.loadMenu(this._id).subscribe((data: any) => {
+      this._handleData(data);
+    });
+    this.menuProvider.getUpNext(this._id).subscribe((data: any) => {
       this.upNext = data.map((item: any) => {
         /// maybe manipulate - we'll see
         return item;
@@ -65,7 +88,7 @@ export class MenuPage {
 
   searchItems(ev: any) {
     // Reset items back to all of the items
-    this.initializeItems(this.navParams);
+    this.initializeItems();
 
     // set val to the value of the searchbar
     let val = ev.target.value;

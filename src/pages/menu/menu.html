@@ -2,8 +2,8 @@
   <ion-navbar no-border-top>
     <ion-title *ngIf="storeName">{{storeName}}</ion-title>
     <ion-buttons end>
-      <button ion-button icon-only>
-        <ion-icon name="funnel" (click)="displayFilters()"></ion-icon>
+      <button ion-button icon-only (click)="displayFilters($event)">
+        <ion-icon name="funnel"></ion-icon>
       </button>
     </ion-buttons>
   </ion-navbar>

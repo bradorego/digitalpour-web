@@ -5,6 +5,7 @@ import { NgModule, ErrorHandler } from '@angular/core';
 
 import { IonicApp, IonicModule, IonicErrorHandler } from 'ionic-angular';
 import { SplashScreen } from '@ionic-native/splash-screen';
+import { Geolocation } from '@ionic-native/geolocation';
 
 import { DigitalPourApp } from './app.component';
 
@@ -12,11 +13,11 @@ import { MapPage } from '../pages/map/map';
 import { ListPage } from '../pages/list/list';
 import { MenuPage } from '../pages/menu/menu';
 import { TabsPage } from '../pages/tabs-page/tabs-page';
+import {FilterPage} from "../pages/menu/filter";
 
 import {StoresData} from '../providers/stores';
 import {MenuData} from '../providers/menu';
 
-import { Geolocation } from '@ionic-native/geolocation';
 
 
 @NgModule({
@@ -26,6 +27,7 @@ import { Geolocation } from '@ionic-native/geolocation';
     ListPage,
     MenuPage,
     TabsPage,
+    FilterPage
   ],
   imports: [
     BrowserModule,
@@ -46,6 +48,7 @@ import { Geolocation } from '@ionic-native/geolocation';
     ListPage,
     MenuPage,
     TabsPage,
+    FilterPage
   ],
   providers: [
     { provide: ErrorHandler, useClass: IonicErrorHandler },
