@@ -34,7 +34,7 @@ export class MapPage {
 
       let map = new google.maps.Map(this.mapElement.nativeElement, {
         center: {lat: 43.074640, lng: -89.384103},
-        zoom: 13,
+        zoom: 11,
         styles: [
           {
             "featureType": "poi",
