@@ -1,12 +1,12 @@
 <ion-header>
-  <ion-toolbar no-border-top>
+  <ion-navbar no-border-top>
     <ion-title *ngIf="menu">{{menu.name}}</ion-title>
     <ion-buttons end>
       <button ion-button icon-only>
         <ion-icon name="funnel" (click)="displayFilters()"></ion-icon>
       </button>
     </ion-buttons>
-  </ion-toolbar>
+  </ion-navbar>
 </ion-header>
 
 <ion-content>
