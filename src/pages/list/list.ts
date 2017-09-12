@@ -27,7 +27,7 @@ export class ListPage {
 
   queryText = '';
   storeList:any = [];
-  private coords: any = {};
+  private _coords: any = {};
 
   constructor(
     public app: App,
@@ -44,13 +44,13 @@ export class ListPage {
 
   updateList() {
     this.geolocation.getCurrentPosition().then((resp: any) => {
-      this.coords = resp.coords;
-      this.stores.getListData(this.coords, false).subscribe((data: any) => {
+      this._coords = resp.coords;
+      this.stores.getListData(this._coords, false).subscribe((data: any) => {
         this.storeList = data;
       });
     }, (err) => {
       console.error(err);
-      this.stores.getListData(this.coords, false).subscribe((data: any) => {
+      this.stores.getListData(this._coords, false).subscribe((data: any) => {
         this.storeList = data;
       });
     });
@@ -76,7 +76,7 @@ export class ListPage {
   }
 
   doRefresh(refresher: Refresher) {
-    this.stores.getListData(this.coords, true).subscribe((data: any) => {
+    this.stores.getListData(this._coords, true).subscribe((data: any) => {
       this.storeList = data;
       // simulate a network request that would take longer
       // than just pulling from out local json file
