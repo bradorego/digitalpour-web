@@ -1,5 +1,5 @@
 import { Component, ViewChild, ElementRef } from '@angular/core';
-import { Platform, NavController, App} from 'ionic-angular';
+import { IonicPage, Platform, NavController, App} from 'ionic-angular';
 import { Geolocation } from '@ionic-native/geolocation';
 
 import {StoresData} from '../../providers/stores';
@@ -7,7 +7,9 @@ import {MenuPage} from '../menu/menu';
 
 declare var google: any;
 
-
+@IonicPage({
+  name: 'ds-map'
+})
 @Component({
   selector: 'page-map',
   templateUrl: 'map.html'

@@ -13,7 +13,7 @@ import {StoresData} from '../../providers/stores';
 
 import { MenuPage } from '../menu/menu';
 
-
+@IonicPage()
 @Component({
   selector: 'page-list',
   templateUrl: 'list.html'

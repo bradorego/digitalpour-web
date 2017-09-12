@@ -4,7 +4,9 @@ import { IonicPage, NavParams, App, LoadingController } from 'ionic-angular';
 import {MenuData} from '../../providers/menu';
 
 @IonicPage({
-  segment: 'menu/:storeId'
+  name: 'menu',
+  segment: 'menu/:storeId',
+  defaultHistory: ['ds-map']
 })
 @Component({
   selector: 'page-menu',

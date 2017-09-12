@@ -1,10 +1,14 @@
 import { Component } from '@angular/core';
 
-import { NavParams } from 'ionic-angular';
+import { NavParams, IonicPage } from 'ionic-angular';
 
 import { ListPage} from '../list/list';
 import { MapPage } from '../map/map';
 
+@IonicPage({
+  name: 'dp-tabs',
+  segment: 'tabs'
+})
 @Component({
   templateUrl: 'tabs-page.html'
 })
