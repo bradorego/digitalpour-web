@@ -23,7 +23,7 @@ export class MapPage {
      public geolocation: Geolocation
   ) {}
 
-  private currentLocationCircle: any = {};
+  private _currentLocationCircle: any = {};
 
   ionViewDidLoad() {
     this.app.setTitle('Map');
@@ -104,7 +104,7 @@ export class MapPage {
       });
       this.geolocation.getCurrentPosition().then((resp) => {
         map.setCenter({lat: resp.coords.latitude, lng: resp.coords.longitude});
-        this.currentLocationCircle = new google.maps.Marker({
+        this._currentLocationCircle = new google.maps.Marker({
           map: map,
           position: map.getCenter(),
           title: "circle",
@@ -124,7 +124,9 @@ export class MapPage {
       });
     });
     this.geolocation.watchPosition({timeout: 30000}).subscribe((resp) => {
-      this.currentLocationCircle.setPosition({lat: resp.coords.latitude, lng: resp.coords.longitude});
+      if (this._currentLocationCircle) {
+        this._currentLocationCircle.setPosition({lat: resp.coords.latitude, lng: resp.coords.longitude});
+      }
     });
   }
 }
