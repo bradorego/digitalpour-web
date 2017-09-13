@@ -20,6 +20,7 @@ export class MenuPage {
   loading: any;
   private _id: string;
   private _sortBy = "tap-number";
+  private _ascending = true;
 
   constructor(
     public menuProvider: MenuData,
@@ -40,9 +41,11 @@ export class MenuPage {
   displayFilters(ev:Event) {
     let popover = this._popover.create(FilterPage,{
       sortBy: this._sortBy,
+      ascending: this._ascending,
       callback: (_data: any) => {
         console.log(_data);
-        this._sortBy = _data;
+        this._sortBy = _data.sortBy;
+        this._ascending = _data.ascending;
         this.menuProvider.sortBy(_data).subscribe((result: any) => {
           this._handleData(result);
         });
