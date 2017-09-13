@@ -18,7 +18,15 @@
         </ion-avatar>
         <h2>{{beverage.Beverage.BeverageProducer.ProducerName}} - {{beverage.Beverage.BeverageName}}</h2>
         <h4 *ngIf="beverage.FullStyleName">{{beverage.FullStyleName}}</h4>
-        <h5>{{beverage.Beverage.BeverageProducer.LocationName}}<span>ABV</span>{{beverage.Beverage.Abv | number:'1.1-1'}}%<span>Keg</span><span *ngIf="beverage.PercentFull > 0; else elseBlock">{{beverage.PercentFull | percent:'1.0-0'}}</span><ng-template #elseBlock>???%</ng-template></h5>
+        <h5>
+          {{beverage.Beverage.BeverageProducer.LocationName}}
+          <label>ABV</label>
+          <span *ngIf="beverage.Beverage.Abv; else elseABV">{{beverage.Beverage.Abv | number:'1.1-1'}}%</span>
+          <ng-template #elseABV>???%</ng-template>
+          <label>Keg</label>
+          <span *ngIf="beverage.PercentFull > 0; else elsePercentFull">{{beverage.PercentFull | percent:'1.0-0'}}</span>
+          <ng-template #elsePercentFull>???%</ng-template>
+        </h5>
         <p><span *ngFor="let size of beverage.Prices">{{size.DisplayName}}: {{size.Price | currency:'USD':true:'1.2-2'}}</span></p>
       </ion-item>
     </ion-list>

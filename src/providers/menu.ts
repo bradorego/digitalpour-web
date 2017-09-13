@@ -54,49 +54,55 @@ export class MenuData {
     }
   }
 
-  sortBy(sortBy: any) {
+  private _comparator(item1: any, item2: any) {
+    if (item1 > item2) {
+      return 1;
+    }
+    return -1;
+  }
+
+  sortBy (sortBy: any) {
     return this.loadMenu(this.lastId).map((data: any) => {
-      let result = [];
-      switch (sortBy.sortBy) {
-        case "abv":
-          result = data.sort((a: any, b: any) => {
-            if (a.Beverage.Abv > b.Beverage.Abv) {
-              return -1;
-            }
-            return 1;
-          });
-        break;
-        case "alphabetical":
-          result = data.sort((a: any, b: any) => {
-            if (a.FullBeverageName > b.FullBeverageName) {
-              return -1;
-            }
-            return 1;
-          });
-        break;
-        case "keg-life":
-          result = data.sort((a: any, b: any) => {
-            if (a.PercentFull > b.PercentFull) {
-              return -1;
-            }
-            return 1;
-          });
-        break;
-        case "style":
-          result = data.sort((a: any, b: any) => {
-            if (a.FullStyleName > b.FullStyleName) {
-              return -1;
-            }
-            return 1;
-          });
-        break;
-        case "tap-number":
-          result = data;
-        break;
-        default:
-          result = data;
-        break;
-      }
+      let result = data.slice();
+      result.sort((a: any, b:any) => {
+        let tieBreaker = a.MenuItemDisplayDetail.DisplayOrder > b.MenuItemDisplayDetail.DisplayOrder ? 1 : -1
+        if (sortBy.sortBy === "abv") {
+          let aABV = a.MenuItemProductDetail.Beverage.Abv;
+          let bABV = b.MenuItemProductDetail.Beverage.Abv;
+          if (aABV === bABV) {
+            return tieBreaker;
+          }
+          return this._comparator(aABV, bABV);
+        }
+        if (sortBy.sortBy === "alphabetical") {
+          let aName = `${a.MenuItemProductDetail.Beverage.BeverageProducer.ProducerName} - ${a.MenuItemProductDetail.Beverage.BeverageName}`;
+          let bName = `${b.MenuItemProductDetail.Beverage.BeverageProducer.ProducerName} - ${b.MenuItemProductDetail.Beverage.BeverageName}`;
+          if (aName === bName) {
+            return tieBreaker;
+          }
+          return this._comparator(aName, bName);
+        }
+        if (sortBy.sortBy === "keg-life") {
+          let aPF = a.MenuItemProductDetail.PercentFull;
+          let bPF = b.MenuItemProductDetail.PercentFull;
+          if (aPF === bPF) {
+            return tieBreaker;
+          }
+          return this._comparator(aPF, bPF);
+        }
+        if (sortBy.sortBy === "style") {
+          let aStyle = a.MenuItemProductDetail.FullStyleName;
+          let bStyle = b.MenuItemProductDetail.FullStyleName;
+          if (aStyle === bStyle) {
+            return tieBreaker;
+          }
+          return this._comparator(aStyle, bStyle);
+        }
+        if (sortBy.sortBy === "tap-number") {
+          return tieBreaker;
+        }
+        return 0;
+      });
       return sortBy.ascending ? result : result.reverse();
     });
   }
