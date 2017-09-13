@@ -15,10 +15,8 @@ export class FilterPage {
     this._callback = this._params.get("callback");
     this.sortBy = this._params.get("sortBy");
     this.ascending = this._params.get("ascending");
-    console.log(this._params.get("sortBy"));
   }
   radioChange() {
-    console.log(this.sortBy, this.ascending);
     this._callback({sortBy: this.sortBy, ascending: this.ascending});
   }
 }

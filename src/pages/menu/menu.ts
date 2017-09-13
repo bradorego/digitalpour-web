@@ -43,7 +43,6 @@ export class MenuPage {
       sortBy: this._sortBy,
       ascending: this._ascending,
       callback: (_data: any) => {
-        console.log(_data);
         this._sortBy = _data.sortBy;
         this._ascending = _data.ascending;
         this.menuProvider.sortBy(_data).subscribe((result: any) => {

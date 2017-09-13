@@ -30,7 +30,6 @@ export class MapPage {
   ionViewDidLoad() {
     this.app.setTitle('Map');
     this.storesData.getMapData().subscribe((data: any) => {
-      // console.log(data);
 
       let map = new google.maps.Map(this.mapElement.nativeElement, {
         center: {lat: 43.074640, lng: -89.384103},
@@ -92,7 +91,6 @@ export class MapPage {
               domObj.addEventListener("click", (e: Event) => {
                 e.stopPropagation();
                 e.preventDefault();
-                // console.log(item.id);
                 this.app.getRootNavs()[0].push(MenuPage, { storeId: item.id, name: item.name }, {updateUrl: true});
               });
             }
