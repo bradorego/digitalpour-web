@@ -1,6 +1,6 @@
 <ion-item>
   <ion-label>Ascending</ion-label>
-  <ion-toggle [(ngModel)]="ascending"></ion-toggle>
+  <ion-toggle [(ngModel)]="ascending" (ionChange)="radioChange(sortBy, ascending)"></ion-toggle>
 </ion-item>
 <ion-list radio-group [(ngModel)]="sortBy" (ionChange)="radioChange(sortBy, ascending)">
   <ion-item>
