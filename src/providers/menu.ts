@@ -65,38 +65,32 @@ export class MenuData {
     return this.loadMenu(this.lastId).map((data: any) => {
       let result = data.slice();
       result.sort((a: any, b:any) => {
-        let tieBreaker = a.MenuItemDisplayDetail.DisplayOrder > b.MenuItemDisplayDetail.DisplayOrder ? 1 : -1
+        let tieBreaker = a.tapNumber > b.tapNumber ? 1 : -1
         if (sortBy.sortBy === "abv") {
-          let aABV = a.MenuItemProductDetail.Beverage.Abv;
-          let bABV = b.MenuItemProductDetail.Beverage.Abv;
-          if (aABV === bABV) {
+          if (a.abv === b.abv) {
             return tieBreaker;
           }
-          return this._comparator(aABV, bABV);
+          return this._comparator(a.abv, b.abv);
         }
         if (sortBy.sortBy === "alphabetical") {
-          let aName = `${a.MenuItemProductDetail.Beverage.BeverageProducer.ProducerName} - ${a.MenuItemProductDetail.Beverage.BeverageName}`;
-          let bName = `${b.MenuItemProductDetail.Beverage.BeverageProducer.ProducerName} - ${b.MenuItemProductDetail.Beverage.BeverageName}`;
+          let aName = `${a.producerName} - ${a.name}`;
+          let bName = `${b.producerName} - ${b.name}`;
           if (aName === bName) {
             return tieBreaker;
           }
           return this._comparator(aName, bName);
         }
         if (sortBy.sortBy === "keg-life") {
-          let aPF = a.MenuItemProductDetail.PercentFull;
-          let bPF = b.MenuItemProductDetail.PercentFull;
-          if (aPF === bPF) {
+          if (a.kegLife === b.kegLife) {
             return tieBreaker;
           }
-          return this._comparator(aPF, bPF);
+          return this._comparator(a.kegLife, b.kegLife);
         }
         if (sortBy.sortBy === "style") {
-          let aStyle = a.MenuItemProductDetail.FullStyleName;
-          let bStyle = b.MenuItemProductDetail.FullStyleName;
-          if (aStyle === bStyle) {
+          if (a.style === b.style) {
             return tieBreaker;
           }
-          return this._comparator(aStyle, bStyle);
+          return this._comparator(a.style, b.style);
         }
         if (sortBy.sortBy === "tap-number") {
           return tieBreaker;
@@ -124,7 +118,7 @@ export class MenuData {
         "name": item.MenuItemProductDetail.Beverage.BeverageName,
         "abv": item.MenuItemProductDetail.Beverage.Abv,
         "id": item.Id,
-        "number": item.MenuItemDisplayDetail.DisplayOrder,
+        "tapNumber": item.MenuItemDisplayDetail.DisplayOrder,
         "producerName": item.MenuItemProductDetail.Beverage.BeverageProducer.ProducerName,
         "nitro": item.MenuItemProductDetail.KegType === 'Nitro',
         "style": item.MenuItemProductDetail.FullStyleName,
