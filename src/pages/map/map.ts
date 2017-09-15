@@ -1,5 +1,5 @@
 import { Component, ViewChild, ElementRef } from '@angular/core';
-import { IonicPage, Platform, NavController, App} from 'ionic-angular';
+import { LoadingController, IonicPage, Platform, NavController, App} from 'ionic-angular';
 import { Geolocation } from '@ionic-native/geolocation';
 
 import {StoresData} from '../../providers/stores';
@@ -21,11 +21,22 @@ export class MapPage {
      public platform: Platform,
      public storesData: StoresData,
      public navCtrl: NavController,
+     private _loadingCtrl: LoadingController,
      public app:App,
      public geolocation: Geolocation
   ) {}
 
   private _currentLocationCircle: any = {};
+  private _loading: any;
+
+  presentLoadingDefault() {
+    this._loading = this._loadingCtrl.create({});
+    this._loading.present();
+  }
+
+  ionViewWillLoad() {
+    this.presentLoadingDefault();
+  }
 
   ionViewDidLoad() {
     this.app.setTitle('Map');
@@ -121,6 +132,7 @@ export class MapPage {
       }, (err) => {
         console.error(err);
       });
+      this._loading.dismiss();
     });
     this.geolocation.watchPosition({timeout: 30000}).subscribe((resp) => {
       if (this._currentLocationCircle) {

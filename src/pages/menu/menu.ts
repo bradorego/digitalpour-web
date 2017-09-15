@@ -18,7 +18,7 @@ export class MenuPage {
   menu: any;
   storeName: string;
   upNext: any;
-  loading: any;
+  private _loading: any;
   private _id: string;
   private _sortBy = "tap-number";
   private _ascending = true;
@@ -43,6 +43,7 @@ export class MenuPage {
     }
     history.replaceState({}, this.navParams.get('name'), `#/menu/${this._id}`);
     this.initializeItems();
+    this.presentLoadingDefault();
   }
 
   displayFilters(ev:Event) {
@@ -65,12 +66,8 @@ export class MenuPage {
   }
 
   presentLoadingDefault() {
-    this.loading = this.loadingCtrl.create({});
-    this.loading.onDidDismiss(() => {
-      this.loading = null;
-    });
-
-    this.loading.present();
+    this._loading = this.loadingCtrl.create({});
+    this._loading.present();
   }
 
   private _handleData(data: any) {

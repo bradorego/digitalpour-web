@@ -27,7 +27,8 @@ export class ListPage {
 
   queryText = '';
   storeList:any = [];
-  private _coords: any = {};
+  private _loading:any;
+  private _coords: any = {lat: 43.074751, lng: -89.384141};
 
   constructor(
     public app: App,
@@ -40,6 +41,12 @@ export class ListPage {
 
   ionViewDidLoad() {
     this.updateList();
+    this.presentLoadingDefault();
+  }
+
+  presentLoadingDefault() {
+    this._loading = this.loadingCtrl.create({});
+    this._loading.present();
   }
 
   updateList() {
@@ -53,7 +60,9 @@ export class ListPage {
       this.stores.getListData(this._coords, false).subscribe((data: any) => {
         this.storeList = data;
       });
-    });
+    }).then(() => {
+      this._loading.dismiss();
+    });;
   }
 
   searchItems() {
@@ -74,6 +83,7 @@ export class ListPage {
   }
 
   doRefresh(refresher: Refresher) {
+    this.presentLoadingDefault();
     this.stores.getListData(this._coords, true).subscribe((data: any) => {
       this.storeList = data;
       // simulate a network request that would take longer
@@ -84,6 +94,7 @@ export class ListPage {
         position: "top",
         duration: 3000
       });
+      this._loading.dismiss();
       toast.present();
     });
   }
