@@ -72,12 +72,12 @@ export class MenuPage {
 
   private _handleData(data: any) {
     this.menu = data.map((item: any) => {
-      item.MenuItemProductDetail.DatePutOn = new Date(item.DatePutOn);
-      if (this.loading) {
-        this.loading.dismiss();
-      }
-      return item.MenuItemProductDetail;
+      // item.MenuItemProductDetail.DatePutOn = new Date(item.DatePutOn);
+      return item;
     });
+    if (this._loading) {
+      this._loading.dismiss();
+    }
   }
 
   initializeItems() {

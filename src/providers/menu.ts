@@ -114,8 +114,26 @@ export class MenuData {
   }
 
   processData(data: any) {
+    let output:any = [];
     this.data = data.json();
+
+    this.data.forEach((item: any) => {
+      output.push({
+        "name": item.MenuItemProductDetail.Beverage.BeverageName,
+        "abv": item.MenuItemProductDetail.Beverage.Abv,
+        "id": item.Id,
+        "number": item.MenuItemDisplayDetail.DisplayOrder,
+        "producerName": item.MenuItemProductDetail.Beverage.BeverageProducer.ProducerName,
+        "nitro": item.MenuItemProductDetail.KegType === 'Nitro',
+        "style": item.MenuItemProductDetail.FullStyleName,
+        "kegLife": item.MenuItemProductDetail.PercentFull,
+        "city": item.MenuItemProductDetail.Beverage.BeverageProducer.Location,
+        "prices": item.MenuItemProductDetail.Prices,
+        "imgUrl": item.MenuItemProductDetail.Beverage.ResolvedLogoImageUrl,
+        "datePutOn": new Date(item.DatePutOn)
+      });
+    });
     /// maybe do some manipulation here
-    return this.data;
+    return output;
   }
 }
