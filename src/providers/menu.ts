@@ -35,7 +35,7 @@ export class MenuData {
   public loadMenu(id: string): any {
     const MENU_URL = `http://mobile.digitalpour.com/DashboardServer/v4/MobileApp/MenuItems/${id}/1/Tap?ApiKey=574725e55e002c0b7cf0cf19`;
     if (this.data && this.lastId === id) {
-      return Observable.of(this.data);
+      return Observable.of(this.data).map((data) => data, this);
     } else {
       this.lastId = id;
       return this.http.get(MENU_URL)
