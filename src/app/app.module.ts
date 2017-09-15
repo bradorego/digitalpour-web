@@ -11,9 +11,9 @@ import { DigitalPourApp } from './app.component';
 
 import { MapPage } from '../pages/map/map';
 import { ListPage } from '../pages/list/list';
-import { MenuPage } from '../pages/menu/menu';
 import { TabsPage } from '../pages/tabs-page/tabs-page';
-import {FilterPage} from "../pages/menu/filter";
+import {FilterPage} from '../pages/menu/filter';
+import {MenuPage} from '../pages/menu/menuPage';
 
 import {StoresData} from '../providers/stores';
 import {MenuData} from '../providers/menu';

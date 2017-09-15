@@ -3,7 +3,7 @@ import { LoadingController, IonicPage, Platform, NavController, App} from 'ionic
 import { Geolocation } from '@ionic-native/geolocation';
 
 import {StoresData} from '../../providers/stores';
-import {MenuPage} from '../menu/menu';
+import {MenuPage} from '../menu/menuPage';
 
 declare var google: any;
 
