@@ -28,7 +28,7 @@ export class StoresData {
 
   public load(force:boolean = false): any {
     if (this._data && !force) {
-      return Observable.of(this._data).map((data) => data, this);
+      return Observable.of(this._data).map(this.processData, this);
     } else {
       return this.http.get(STORE_URL)
         .map(this.processData, this);
@@ -36,7 +36,9 @@ export class StoresData {
   }
 
   processData(data: any) {
-    this._data = data.json();
+    if (data.json) {
+      this._data = data.json();
+    }
     /// maybe do some manipulation here
     return this._data;
   }

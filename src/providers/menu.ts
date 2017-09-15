@@ -35,7 +35,7 @@ export class MenuData {
   public loadMenu(id: string): any {
     const MENU_URL = `http://mobile.digitalpour.com/DashboardServer/v4/MobileApp/MenuItems/${id}/1/Tap?ApiKey=574725e55e002c0b7cf0cf19`;
     if (this.data && this.lastId === id) {
-      return Observable.of(this.data).map((data) => data, this);
+      return Observable.of(this.data).map(this.processData, this);
     } else {
       this.lastId = id;
       return this.http.get(MENU_URL)
@@ -46,7 +46,7 @@ export class MenuData {
   getUpNext(id: string): any {
     const URL = `http://mobile.digitalpour.com/DashboardServer/v4/MobileApp/MenuItems/${id}/1/KegQueue?allItems=1&ApiKey=574725e55e002c0b7cf0cf19`
     if (this.upNext && this.lastId === id) {
-      return Observable.of(this.upNext);
+      return Observable.of(this.upNext).map((data) => data, this);
     } else {
       this.lastId = id
       return this.http.get(URL)
@@ -115,7 +115,9 @@ export class MenuData {
 
   processData(data: any) {
     let output:any = [];
-    this.data = data.json();
+    if (data.json) {
+      this.data = data.json();
+    }
 
     this.data.forEach((item: any) => {
       output.push({
