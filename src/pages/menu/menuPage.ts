@@ -17,7 +17,9 @@ import {FilterPage} from "./filter";
 export class MenuPage {
   menu: any;
   storeName: string;
-  upNext: any;
+  private _upNext: any;
+  private _onTap: any;
+  list = "onTap";
   private _loading: any;
   private _id: string;
   private _sortBy = "tap-number";
@@ -43,8 +45,12 @@ export class MenuPage {
       });
     }
     history.replaceState({}, this.navParams.get('name'), `#/menu/${this._id}`);
-    this.initializeItems();
+    this.initializeItems(this.list);
     this.presentLoadingDefault();
+  }
+
+  toggleList(list: string) {
+    this.initializeItems(list);
   }
 
   displayFilters(ev:Event) {
@@ -54,8 +60,10 @@ export class MenuPage {
       callback: (_data: any) => {
         this._sortBy = _data.sortBy;
         this._ascending = _data.ascending;
+        _data.list = this.list; /// tell sortBy which list to work off of
         this.menuProvider.sortBy(_data).subscribe((result: any) => {
-          this._handleData(result);
+          // this._handleData(result);
+          this.menu = result.slice();
         });
       }
     });
@@ -71,31 +79,37 @@ export class MenuPage {
     this._loading.present();
   }
 
-  private _handleData(data: any) {
-    this.menu = data.map((item: any) => {
-      // item.MenuItemProductDetail.DatePutOn = new Date(item.DatePutOn);
-      return item;
-    });
-    if (this._loading) {
-      this._loading.dismiss();
-    }
-  }
+  // private _handleData(data: any) {
+  //   this.menu = data.map((item: any) => {
+  //     return item;
+  //   });
+  // }
 
-  initializeItems() {
+  initializeItems(list : string) {
     this.menuProvider.loadMenu(this._id).subscribe((data: any) => {
-      this._handleData(data);
-    });
-    this.menuProvider.getUpNext(this._id).subscribe((data: any) => {
-      this.upNext = data.map((item: any) => {
+      this._onTap = data.map((item: any) => {
         /// maybe manipulate - we'll see
         return item;
       });
+      if (list === "onTap") {
+        this.menu = this._onTap.slice();
+      }
+      this._loading.dismiss();
+    });
+    this.menuProvider.getUpNext(this._id).subscribe((data: any) => {
+      this._upNext = data.map((item: any) => {
+        /// maybe manipulate - we'll see
+        return item;
+      });
+      if (list === "upNext") {
+        this.menu = this._upNext.slice();
+      }
     });
   }
 
   searchItems(ev: any) {
     // Reset items back to all of the items
-    this.initializeItems();
+    this.initializeItems(this.list);
 
     // set val to the value of the searchbar
     let val = ev.target.value;

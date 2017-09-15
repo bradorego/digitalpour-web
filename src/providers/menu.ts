@@ -46,7 +46,7 @@ export class MenuData {
   getUpNext(id: string): any {
     const URL = `http://mobile.digitalpour.com/DashboardServer/v4/MobileApp/MenuItems/${id}/1/KegQueue?allItems=1&ApiKey=574725e55e002c0b7cf0cf19`
     if (this.upNext && this.lastId === id) {
-      return Observable.of(this.upNext).map((data) => data, this);
+      return Observable.of(this.upNext).map(this.processUpNext, this);
     } else {
       this.lastId = id
       return this.http.get(URL)
@@ -62,7 +62,8 @@ export class MenuData {
   }
 
   sortBy (sortBy: any) {
-    return this.loadMenu(this.lastId).map((data: any) => {
+    let dataHold = sortBy.list === "onTap" ? this.loadMenu(this.lastId) : this.getUpNext(this.lastId);     /// please tell me this is gonna work
+    return dataHold.map((data: any) => {
       let result = data.slice();
       result.sort((a: any, b:any) => {
         let tieBreaker = a.tapNumber > b.tapNumber ? 1 : -1
@@ -107,10 +108,33 @@ export class MenuData {
     });
   }
 
+  formatItem (item: any) {
+    return {
+      "name": item.MenuItemProductDetail.Beverage.BeverageName,
+      "abv": item.MenuItemProductDetail.Beverage.Abv,
+      "id": item.Id,
+      "tapNumber": item.MenuItemDisplayDetail.DisplayOrder,
+      "producerName": item.MenuItemProductDetail.Beverage.BeverageProducer.ProducerName,
+      "nitro": item.MenuItemProductDetail.KegType === 'Nitro',
+      "style": item.MenuItemProductDetail.FullStyleName,
+      "kegLife": item.MenuItemProductDetail.PercentFull,
+      "city": item.MenuItemProductDetail.Beverage.BeverageProducer.Location,
+      "prices": item.MenuItemProductDetail.Prices,
+      "imgUrl": item.MenuItemProductDetail.Beverage.ResolvedLogoImageUrl,
+      "datePutOn": new Date(item.DatePutOn)
+    }
+  }
+
   processUpNext(data: any) {
-    this.upNext = data.json();
+    let output:any = [];
+    if (data.json) {
+      this.upNext = data.json();
+    }
     /// maybe do some manipulation here
-    return this.upNext;
+    this.upNext.forEach((item:any) => {
+      output.push(this.formatItem(item));
+    });
+    return output;
   }
 
   processData(data: any) {
@@ -120,20 +144,7 @@ export class MenuData {
     }
 
     this.data.forEach((item: any) => {
-      output.push({
-        "name": item.MenuItemProductDetail.Beverage.BeverageName,
-        "abv": item.MenuItemProductDetail.Beverage.Abv,
-        "id": item.Id,
-        "tapNumber": item.MenuItemDisplayDetail.DisplayOrder,
-        "producerName": item.MenuItemProductDetail.Beverage.BeverageProducer.ProducerName,
-        "nitro": item.MenuItemProductDetail.KegType === 'Nitro',
-        "style": item.MenuItemProductDetail.FullStyleName,
-        "kegLife": item.MenuItemProductDetail.PercentFull,
-        "city": item.MenuItemProductDetail.Beverage.BeverageProducer.Location,
-        "prices": item.MenuItemProductDetail.Prices,
-        "imgUrl": item.MenuItemProductDetail.Beverage.ResolvedLogoImageUrl,
-        "datePutOn": new Date(item.DatePutOn)
-      });
+      output.push(this.formatItem(item));
     });
     /// maybe do some manipulation here
     return output;

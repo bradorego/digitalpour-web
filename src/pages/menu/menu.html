@@ -7,6 +7,14 @@
       </button>
     </ion-buttons>
   </ion-navbar>
+  <ion-segment [(ngModel)]="list" (ionChange)="toggleList(list)">
+    <ion-segment-button value="onTap">
+      On Tap
+    </ion-segment-button>
+    <ion-segment-button value="upNext">
+      Up Next
+    </ion-segment-button>
+  </ion-segment>
 </ion-header>
 
 <ion-content>
@@ -24,13 +32,13 @@
           <ion-badge>ABV</ion-badge>
           <span *ngIf="beverage.abv; else elseABV">{{beverage.abv | number:'1.1-1'}}%</span>
           <ng-template #elseABV>???%</ng-template>
-          <ion-badge color="secondary" *ngIf="beverage.kegLife >= 0.75">Keg</ion-badge>
-          <ion-badge *ngIf="beverage.kegLife > 0.25 && beverage.kegLife < 0.75">Keg</ion-badge>
-          <ion-badge color="danger" *ngIf="beverage.kegLife <= 0.25">Keg</ion-badge>
-          <span *ngIf="beverage.kegLife > 0; else elsePercentFull">{{beverage.kegLife | percent:'1.0-0'}}</span>
-          <ng-template #elsePercentFull>???%</ng-template>
-          <ion-badge>Tapped</ion-badge>
-          <span>{{beverage.datePutOn | date:'shortDate'}}</span>
+          <ion-badge color="secondary" *ngIf="beverage.kegLife >= 0.75 && list === 'onTap'">Keg</ion-badge>
+          <ion-badge *ngIf="beverage.kegLife > 0.25 && beverage.kegLife < 0.75 && list === 'onTap'">Keg</ion-badge>
+          <ion-badge color="danger" *ngIf="beverage.kegLife <= 0.25 && list === 'onTap'">Keg</ion-badge>
+          <span *ngIf="beverage.kegLife > 0 && list === 'onTap'; else elsePercentFull">{{beverage.kegLife | percent:'1.0-0'}}</span>
+          <ng-template #elsePercentFull *ngIf="list === 'onTap'">???%</ng-template>
+          <ion-badge *ngIf="list === 'onTap'">Tapped</ion-badge>
+          <span *ngIf="list === 'onTap'">{{beverage.datePutOn | date:'shortDate'}}</span>
         </h5>
         <p><span *ngFor="let size of beverage.prices">{{size.DisplayName}}: {{size.Price | currency:'USD':true:'1.2-2'}}</span></p>
       </ion-item>
