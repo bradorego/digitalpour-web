@@ -13,7 +13,7 @@ const STORE_URL = 'http://mobile.digitalpour.com/DashboardServer/v4/MobileApp/St
 
 @Injectable()
 export class StoresData {
-  data: any;
+  _data: any;
   constructor(public http: Http) { }
 
   distance(lat1: number, lon1: number, lat2: number, lon2: number) {
@@ -26,9 +26,9 @@ export class StoresData {
     return (12742 * Math.asin(Math.sqrt(a))) * 0.62137; // 2 * R; R = 6371 km; /// converting km to mi
   }
 
-  load(force:boolean = false): any {
-    if (this.data && !force) {
-      return Observable.of(this.data);
+  public load(force:boolean = false): any {
+    if (this._data && !force) {
+      return Observable.of(this._data).map((data) => data, this);
     } else {
       return this.http.get(STORE_URL)
         .map(this.processData, this);
@@ -36,10 +36,29 @@ export class StoresData {
   }
 
   processData(data: any) {
-    this.data = data.json();
-    // console.log(this.data);
+    this._data = data.json();
     /// maybe do some manipulation here
-    return this.data;
+    return this._data;
+  }
+
+  getById(id: string) {
+    return this.load(false).map((data: any) => {
+      let item = data.find((item:any) => {
+        return item.CompanyId === id;
+      });
+      if (item.Id) {
+        return {
+          "id": item.CompanyId,
+          "name": item.StoreName,
+          // "distance": coords.latitude ? this.distance(coords.latitude, coords.longitude, item.Latitude, item.Longitude) : null,
+          "address": `${item.Address}, ${item.City}, ${item.State} ${item.ZipCode}`,
+          "imgUrl": item.BarLogoUrl,
+          "hours": item.StoreHours,
+          "bottles": item.HasBottles,
+          "taps": item.HasTaps
+        }
+      }
+    });
   }
 
   getListData(coords: any, force?: boolean) {

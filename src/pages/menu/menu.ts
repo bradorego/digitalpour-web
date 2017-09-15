@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { IonicPage, NavParams, App, LoadingController, PopoverController } from 'ionic-angular';
 
 import {MenuData} from '../../providers/menu';
+import {StoresData} from '../../providers/stores';
 import {FilterPage} from "./filter";
 
 @IonicPage({
@@ -24,6 +25,7 @@ export class MenuPage {
 
   constructor(
     public menuProvider: MenuData,
+    public storesProvider: StoresData,
     public navParams: NavParams,
     public loadingCtrl: LoadingController,
     public app: App,
@@ -34,6 +36,11 @@ export class MenuPage {
     this.app.setTitle(this.storeName);
     this.storeName = this.navParams.get("name");
     this._id = this.navParams.get("storeId");
+    if (!this.storeName) {
+      this.storesProvider.getById(this._id).subscribe((store: any) => {
+        this.storeName = store.name;
+      });
+    }
     history.replaceState({}, this.navParams.get('name'), `#/menu/${this._id}`);
     this.initializeItems();
   }
