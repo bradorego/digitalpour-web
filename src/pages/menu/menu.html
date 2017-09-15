@@ -24,7 +24,9 @@
           <ion-badge>ABV</ion-badge>
           <span *ngIf="beverage.abv; else elseABV">{{beverage.abv | number:'1.1-1'}}%</span>
           <ng-template #elseABV>???%</ng-template>
-          <ion-badge>Keg</ion-badge>
+          <ion-badge color="secondary" *ngIf="beverage.kegLife >= 0.75">Keg</ion-badge>
+          <ion-badge *ngIf="beverage.kegLife > 0.25 && beverage.kegLife < 0.75">Keg</ion-badge>
+          <ion-badge color="danger" *ngIf="beverage.kegLife <= 0.25">Keg</ion-badge>
           <span *ngIf="beverage.kegLife > 0; else elsePercentFull">{{beverage.kegLife | percent:'1.0-0'}}</span>
           <ng-template #elsePercentFull>???%</ng-template>
           <ion-badge>Tapped</ion-badge>
