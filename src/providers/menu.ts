@@ -92,6 +92,12 @@ export class MenuData {
           }
           return this._comparator(a.style, b.style);
         }
+        if (sortBy.sortBy === "date-tapped") {
+          if (a.datePutOn === b.datePutOn) {
+            return tieBreaker;
+          }
+          return this._comparator(a.datePutOn, b.datePutOn)
+        }
         if (sortBy.sortBy === "tap-number") {
           return tieBreaker;
         }
