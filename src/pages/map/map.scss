@@ -16,11 +16,19 @@ page-map {
 
 
   .dp-infowindow {
+    color: #222;
     img {
       width: 100%;
       background: rgba(0,0,0,0.7);
     }
-    color: #222;
+    button {
+      display: block;
+      width: 100%;
+      font-size: 18px;
+      padding: 10px;
+      background: color($colors, primary, base);
+      color: white;
+    }
   }
 }
 

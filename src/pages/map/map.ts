@@ -135,7 +135,7 @@ export class MapPage {
       this._loading.dismiss();
     });
     this.geolocation.watchPosition({timeout: 30000}).subscribe((resp) => {
-      if (this._currentLocationCircle) {
+      if (this._currentLocationCircle && this._currentLocationCircle.setPosition) {
         this._currentLocationCircle.setPosition({lat: resp.coords.latitude, lng: resp.coords.longitude});
       }
     });
