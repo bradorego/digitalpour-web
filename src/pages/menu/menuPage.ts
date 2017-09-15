@@ -39,6 +39,7 @@ export class MenuPage {
     if (!this.storeName) {
       this.storesProvider.getById(this._id).subscribe((store: any) => {
         this.storeName = store.name;
+        this.app.setTitle(this.storeName);
       });
     }
     history.replaceState({}, this.navParams.get('name'), `#/menu/${this._id}`);
