@@ -40,6 +40,7 @@ export class ListPage {
   ) {}
 
   ionViewDidLoad() {
+    this.app.setTitle('List - Digital Pour');
     this.updateList();
     this.presentLoadingDefault();
   }
@@ -53,9 +54,6 @@ export class ListPage {
     this.geolocation.getCurrentPosition().then((resp: any) => {
       this._coords = resp.coords;
       this.stores.getListData(this._coords, false).subscribe((data: any) => {
-        data.forEach((item: any) => {
-          if (!item.todayHours) { console.log(item.todayHours); }
-        });
         this.storeList = data;
       });
     }, (err) => {

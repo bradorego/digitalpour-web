@@ -46,7 +46,6 @@ export class MenuPage {
     }
     history.replaceState({}, this.navParams.get('name'), `#/menu/${this._id}`);
     this.initializeItems(this.list);
-    this.presentLoadingDefault();
   }
 
   toggleList(list: string) {
@@ -86,6 +85,7 @@ export class MenuPage {
   // }
 
   initializeItems(list : string) {
+    this.presentLoadingDefault();
     this.menuProvider.loadMenu(this._id).subscribe((data: any) => {
       this._onTap = data.map((item: any) => {
         /// maybe manipulate - we'll see
@@ -94,7 +94,9 @@ export class MenuPage {
       if (list === "onTap") {
         this.menu = this._onTap.slice();
       }
-      this._loading.dismiss();
+      if (this._loading) {
+        this._loading.dismiss();
+      }
     });
     this.menuProvider.getUpNext(this._id).subscribe((data: any) => {
       this._upNext = data.map((item: any) => {
