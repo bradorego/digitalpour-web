@@ -1,0 +1,14 @@
+page-menu {
+  [col-sm-3],
+  [col-sm-6],
+  [col-6],
+  [col-12] {
+    padding: 0 0 4px;
+  }
+  .prices {
+    [col-sm-3],
+    [col-6] {
+      padding: 0;
+    }
+  }
+}
