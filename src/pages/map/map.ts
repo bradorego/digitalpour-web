@@ -1,6 +1,7 @@
 import { Component, ViewChild, ElementRef } from '@angular/core';
 import { LoadingController, IonicPage, Platform, NavController, App} from 'ionic-angular';
 import { Geolocation } from '@ionic-native/geolocation';
+import { DatePipe } from '@angular/common';
 
 import {StoresData} from '../../providers/stores';
 import {MenuPage} from '../menu/menuPage';
@@ -23,7 +24,8 @@ export class MapPage {
      public navCtrl: NavController,
      private _loadingCtrl: LoadingController,
      public app:App,
-     public geolocation: Geolocation
+     public geolocation: Geolocation,
+     private _datePipe: DatePipe
   ) {}
 
   private _coords: any = {lat: 43.074751, lng: -89.384141}; /// assume madison if no location data woo
@@ -40,7 +42,7 @@ export class MapPage {
   }
 
   ionViewDidLoad() {
-    this.app.setTitle('Map');
+    this.app.setTitle('Map - Digital Pour');
     this.storesData.getMapData(this._coords).subscribe((data: any) => {
       let map = new google.maps.Map(this.mapElement.nativeElement, {
         center: {lat: 43.074640, lng: -89.384103},
@@ -83,11 +85,16 @@ export class MapPage {
           position: {lat: item.lat, lng: item.lng},
           map: map,
           title: item.name,
-          html: `<div class='dp-infowindow'><img src="${item.imgUrl}" />
-            <h5>${item.name}</h5>
-            <p>${item.address}</p>
-            <p>Bottles? ${item.bottles ? "Yes" : "No"}, Taps? ${item.taps ? "Yes" : "No"}</p>
-            <button class="map-button">See Menu</button></div>`
+          html: `<div class='dp-infowindow'>
+            <div class="img-wrap"><img src="${item.imgUrl}" /></div>
+            <div class="text-wrap">
+              <h2>${item.name} ${item.distance ? `(${item.distance})` : ``}</h2>
+              <h4>${item.address}</h4>
+              <p>${this._datePipe.transform(item.todayOpen, 'shortTime')} - ${this._datePipe.transform(item.todayClose, 'shortTime')}</p>
+              <p>${item.wifi ? `WiFi Password: ${item.wifi}` : ``}</p>
+            </div>
+            <button class="map-button">See Menu</button>
+          </div>`
         });
 
         marker.addListener('click', () => {

@@ -2,6 +2,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { HttpModule } from '@angular/http';
 import { NgModule, ErrorHandler } from '@angular/core';
+import { DatePipe } from '@angular/common';
 
 import { IonicApp, IonicModule, IonicErrorHandler } from 'ionic-angular';
 import { SplashScreen } from '@ionic-native/splash-screen';
@@ -55,7 +56,8 @@ import {MenuData} from '../providers/menu';
     SplashScreen,
     StoresData,
     MenuData,
-    Geolocation
+    Geolocation,
+    DatePipe
   ]
 })
 export class AppModule { }
