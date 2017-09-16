@@ -86,6 +86,7 @@ export class MenuPage {
 
   initializeItems(list : string) {
     this.presentLoadingDefault();
+
     this.menuProvider.loadMenu(this._id).subscribe((data: any) => {
       this._onTap = data.map((item: any) => {
         /// maybe manipulate - we'll see
