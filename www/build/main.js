@@ -8,7 +8,7 @@ webpackJsonp([0],{
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(25);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ionic_native_geolocation__ = __webpack_require__(100);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_common__ = __webpack_require__(39);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_common__ = __webpack_require__(30);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__providers_stores__ = __webpack_require__(49);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__menu_menuPage__ = __webpack_require__(102);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
@@ -145,7 +145,7 @@ var MapPage = (function () {
 }());
 __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_13" /* ViewChild */])('mapCanvas'),
-    __metadata("design:type", typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_0__angular_core__["u" /* ElementRef */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_0__angular_core__["u" /* ElementRef */]) === "function" && _a || Object)
+    __metadata("design:type", __WEBPACK_IMPORTED_MODULE_0__angular_core__["u" /* ElementRef */])
 ], MapPage.prototype, "mapElement", void 0);
 MapPage = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* IonicPage */])({
@@ -154,10 +154,15 @@ MapPage = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
         selector: 'page-map',template:/*ion-inline-start:"/Users/bradorego/Development/ionic-test/test/src/pages/map/map.html"*/'<ion-header>\n  <ion-toolbar>\n    <ion-title>Map</ion-title>\n  </ion-toolbar>\n</ion-header>\n\n<ion-content class="map-page">\n  <div style="height: 100%; width: 100%" #mapCanvas id="map_canvas"></div>\n</ion-content>\n'/*ion-inline-end:"/Users/bradorego/Development/ionic-test/test/src/pages/map/map.html"*/
     }),
-    __metadata("design:paramtypes", [typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["j" /* Platform */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["j" /* Platform */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_4__providers_stores__["a" /* StoresData */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_4__providers_stores__["a" /* StoresData */]) === "function" && _c || Object, typeof (_d = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavController */]) === "function" && _d || Object, typeof (_e = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* LoadingController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* LoadingController */]) === "function" && _e || Object, typeof (_f = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["a" /* App */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["a" /* App */]) === "function" && _f || Object, typeof (_g = typeof __WEBPACK_IMPORTED_MODULE_2__ionic_native_geolocation__["a" /* Geolocation */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__ionic_native_geolocation__["a" /* Geolocation */]) === "function" && _g || Object, typeof (_h = typeof __WEBPACK_IMPORTED_MODULE_3__angular_common__["c" /* DatePipe */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_3__angular_common__["c" /* DatePipe */]) === "function" && _h || Object])
+    __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["j" /* Platform */],
+        __WEBPACK_IMPORTED_MODULE_4__providers_stores__["a" /* StoresData */],
+        __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavController */],
+        __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* LoadingController */],
+        __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["a" /* App */],
+        __WEBPACK_IMPORTED_MODULE_2__ionic_native_geolocation__["a" /* Geolocation */],
+        __WEBPACK_IMPORTED_MODULE_3__angular_common__["c" /* DatePipe */]])
 ], MapPage);
 
-var _a, _b, _c, _d, _e, _f, _g, _h;
 //# sourceMappingURL=map.js.map
 
 /***/ }),
@@ -293,10 +298,14 @@ MenuPage = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
         selector: 'page-menu',template:/*ion-inline-start:"/Users/bradorego/Development/ionic-test/test/src/pages/menu/menu.html"*/'<ion-header>\n  <ion-navbar no-border-top>\n    <ion-title *ngIf="storeName">{{storeName}}</ion-title>\n    <ion-buttons end>\n      <button ion-button icon-only (click)="displayFilters($event)">\n        <ion-icon name="funnel"></ion-icon>\n      </button>\n    </ion-buttons>\n  </ion-navbar>\n  <ion-segment [(ngModel)]="list" (ionChange)="toggleList(list)">\n    <ion-segment-button value="onTap">\n      On Tap\n    </ion-segment-button>\n    <ion-segment-button value="upNext">\n      Up Next\n    </ion-segment-button>\n  </ion-segment>\n</ion-header>\n\n<ion-content>\n  <div *ngIf="menu">\n    <ion-list>\n      <ion-item *ngFor="let beverage of menu" (click)="log(beverage)">\n        <ion-avatar item-start>\n          <img *ngIf="beverage.imgUrl" [src]="beverage.imgUrl" />\n        </ion-avatar>\n        <h2 color="secondary">{{beverage.producerName}} - {{beverage.name}}</h2>\n        <h4 *ngIf="beverage.style">{{beverage.style}}</h4>\n        <h6>{{beverage.city}}</h6>\n        <h5>\n          <ion-badge *ngIf="beverage.nitro" color="light">Nitro</ion-badge>\n          <ion-badge>ABV</ion-badge>\n          <span *ngIf="beverage.abv; else elseABV">{{beverage.abv | number:\'1.1-1\'}}%</span>\n          <ng-template #elseABV>???%</ng-template>\n          <ion-badge color="secondary" *ngIf="beverage.kegLife >= 0.75 && list === \'onTap\'">Keg</ion-badge>\n          <ion-badge *ngIf="beverage.kegLife > 0.25 && beverage.kegLife < 0.75 && list === \'onTap\'">Keg</ion-badge>\n          <ion-badge color="danger" *ngIf="beverage.kegLife <= 0.25 && list === \'onTap\'">Keg</ion-badge>\n          <span *ngIf="beverage.kegLife > 0 && list === \'onTap\'; else elsePercentFull">{{beverage.kegLife | percent:\'1.0-0\'}}</span>\n          <ng-template #elsePercentFull *ngIf="list === \'onTap\'">???%</ng-template>\n          <ion-badge *ngIf="list === \'onTap\'">Tapped</ion-badge>\n          <span *ngIf="list === \'onTap\'">{{beverage.datePutOn | date:\'shortDate\'}}</span>\n        </h5>\n        <p><span *ngFor="let size of beverage.prices">{{size.DisplayName}}: {{size.Price | currency:\'USD\':true:\'1.2-2\'}}</span></p>\n      </ion-item>\n    </ion-list>\n  </div>\n</ion-content>\n\n<ion-footer>\n  <ion-toolbar class="dp-searchbar">\n    <ion-searchbar (ionInput)="searchItems($event)"></ion-searchbar>\n  </ion-toolbar>\n</ion-footer>\n'/*ion-inline-end:"/Users/bradorego/Development/ionic-test/test/src/pages/menu/menu.html"*/
     }),
-    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_2__providers_menu__["a" /* MenuData */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__providers_menu__["a" /* MenuData */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_3__providers_stores__["a" /* StoresData */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_3__providers_stores__["a" /* StoresData */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavParams */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavParams */]) === "function" && _c || Object, typeof (_d = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* LoadingController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* LoadingController */]) === "function" && _d || Object, typeof (_e = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["a" /* App */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["a" /* App */]) === "function" && _e || Object, typeof (_f = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["k" /* PopoverController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["k" /* PopoverController */]) === "function" && _f || Object])
+    __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_2__providers_menu__["a" /* MenuData */],
+        __WEBPACK_IMPORTED_MODULE_3__providers_stores__["a" /* StoresData */],
+        __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavParams */],
+        __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* LoadingController */],
+        __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["a" /* App */],
+        __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["k" /* PopoverController */]])
 ], MenuPage);
 
-var _a, _b, _c, _d, _e, _f;
 //# sourceMappingURL=menuPage.js.map
 
 /***/ }),
@@ -412,10 +421,14 @@ ListPage = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
         selector: 'page-list',template:/*ion-inline-start:"/Users/bradorego/Development/ionic-test/test/src/pages/list/list.html"*/'<ion-header>\n  <ion-toolbar no-border-top>\n    <ion-title>List</ion-title>\n  </ion-toolbar>\n</ion-header>\n\n<ion-content>\n  <ion-refresher (ionRefresh)="doRefresh($event)">\n    <ion-refresher-content></ion-refresher-content>\n  </ion-refresher>\n\n  <ion-list>\n    <ion-item *ngFor="let item of storeList" (click)="goToSessionDetail(item)">\n      <ion-avatar item-start>\n        <img *ngIf="item.imgUrl" [src]="item.imgUrl" />\n      </ion-avatar>\n      <h2>{{item.name}} <span *ngIf="item.distance; else locationBlock">({{item.distance | number:\'1.1-1\'}} mi.)</span></h2>\n      <h4>{{item.address}}</h4>\n      <h5 *ngIf="item.todayOpen">\n        <ion-badge>Hours</ion-badge>\n        {{item.todayOpen | date:\'shortTime\'}} - {{item.todayClose | date:\'shortTime\'}}\n      </h5>\n      <p *ngIf="item.wifi"><ion-badge>WiFi Password</ion-badge> {{item.wifi}}</p>\n      <ng-template #locationBlock><h5>Enable location services to show distance</h5></ng-template>\n    </ion-item>\n  </ion-list>\n</ion-content>\n<ion-footer>\n  <ion-toolbar class="dp-searchbar">\n    <ion-searchbar\n       [(ngModel)]="queryText"\n       (ionInput)="searchItems()"\n       placeholder="Search">\n    </ion-searchbar>\n  </ion-toolbar>\n</ion-footer>\n'/*ion-inline-end:"/Users/bradorego/Development/ionic-test/test/src/pages/list/list.html"*/
     }),
-    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["a" /* App */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["a" /* App */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* LoadingController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* LoadingController */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavController */]) === "function" && _c || Object, typeof (_d = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["l" /* ToastController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["l" /* ToastController */]) === "function" && _d || Object, typeof (_e = typeof __WEBPACK_IMPORTED_MODULE_3__providers_stores__["a" /* StoresData */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_3__providers_stores__["a" /* StoresData */]) === "function" && _e || Object, typeof (_f = typeof __WEBPACK_IMPORTED_MODULE_2__ionic_native_geolocation__["a" /* Geolocation */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__ionic_native_geolocation__["a" /* Geolocation */]) === "function" && _f || Object])
+    __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["a" /* App */],
+        __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* LoadingController */],
+        __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavController */],
+        __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["l" /* ToastController */],
+        __WEBPACK_IMPORTED_MODULE_3__providers_stores__["a" /* StoresData */],
+        __WEBPACK_IMPORTED_MODULE_2__ionic_native_geolocation__["a" /* Geolocation */]])
 ], ListPage);
 
-var _a, _b, _c, _d, _e, _f;
 //# sourceMappingURL=list.js.map
 
 /***/ }),
@@ -732,7 +745,7 @@ Object(__WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__["a" /* pl
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser__ = __webpack_require__(24);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_http__ = __webpack_require__(55);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_common__ = __webpack_require__(39);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_common__ = __webpack_require__(30);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_ionic_angular__ = __webpack_require__(25);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__ionic_native_splash_screen__ = __webpack_require__(195);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__ionic_native_geolocation__ = __webpack_require__(100);
