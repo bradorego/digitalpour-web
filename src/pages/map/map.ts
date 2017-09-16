@@ -26,6 +26,7 @@ export class MapPage {
      public geolocation: Geolocation
   ) {}
 
+  private _coords: any = {lat: 43.074751, lng: -89.384141}; /// assume madison if no location data woo
   private _currentLocationCircle: any = {};
   private _loading: any;
 
@@ -40,8 +41,7 @@ export class MapPage {
 
   ionViewDidLoad() {
     this.app.setTitle('Map');
-    this.storesData.getMapData().subscribe((data: any) => {
-
+    this.storesData.getMapData(this._coords).subscribe((data: any) => {
       let map = new google.maps.Map(this.mapElement.nativeElement, {
         center: {lat: 43.074640, lng: -89.384103},
         zoom: 11,
@@ -111,9 +111,11 @@ export class MapPage {
 
       google.maps.event.addListenerOnce(map, 'idle', () => {
         this.mapElement.nativeElement.classList.add('show-map');
+        this._loading.dismiss();
       });
       this.geolocation.getCurrentPosition().then((resp) => {
         map.setCenter({lat: resp.coords.latitude, lng: resp.coords.longitude});
+        this._coords = resp.coords;
         this._currentLocationCircle = new google.maps.Marker({
           map: map,
           position: map.getCenter(),
@@ -132,9 +134,9 @@ export class MapPage {
       }, (err) => {
         console.error(err);
       });
-      this._loading.dismiss();
     });
     this.geolocation.watchPosition({timeout: 30000}).subscribe((resp) => {
+      this._coords = resp.coords;
       if (this._currentLocationCircle && this._currentLocationCircle.setPosition) {
         this._currentLocationCircle.setPosition({lat: resp.coords.latitude, lng: resp.coords.longitude});
       }
