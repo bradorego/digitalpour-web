@@ -34,7 +34,7 @@
           <ng-template #elseABV>???%</ng-template>
           <ion-badge color="secondary" *ngIf="beverage.kegLife >= 0.75 && list === 'onTap'">Keg</ion-badge>
           <ion-badge *ngIf="beverage.kegLife > 0.25 && beverage.kegLife < 0.75 && list === 'onTap'">Keg</ion-badge>
-          <ion-badge color="danger" *ngIf="beverage.kegLife <= 0.25 && list === 'onTap'">Keg</ion-badge>
+          <ion-badge color="danger" *ngIf="beverage.kegLife <= 0.25 && beverage.kegLife > 0 && list === 'onTap'">Keg</ion-badge>
           <span *ngIf="beverage.kegLife > 0 && list === 'onTap'; else elsePercentFull">{{beverage.kegLife | percent:'1.0-0'}}</span>
           <ng-template #elsePercentFull *ngIf="list === 'onTap'">???%</ng-template>
           <ion-badge *ngIf="list === 'onTap'">Tapped</ion-badge>
