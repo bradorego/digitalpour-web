@@ -29,15 +29,16 @@ import 'rxjs/add/observable/of';
 export class MenuData {
   data: any;
   upNext: any;
-  lastId: string;
+  lastOnTapId: string;
+  lastUpNextId: string;
   constructor(public http: Http) { }
 
   public loadMenu(id: string): any {
     const MENU_URL = `http://mobile.digitalpour.com/DashboardServer/v4/MobileApp/MenuItems/${id}/1/Tap?ApiKey=574725e55e002c0b7cf0cf19`;
-    if (this.data && this.lastId === id) {
+    if (this.data && this.lastOnTapId === id) {
       return Observable.of(this.data).map(this.processData, this);
     } else {
-      this.lastId = id;
+      this.lastOnTapId = id;
       return this.http.get(MENU_URL)
         .map(this.processData, this);
     }
@@ -45,10 +46,10 @@ export class MenuData {
 
   getUpNext(id: string): any {
     const URL = `http://mobile.digitalpour.com/DashboardServer/v4/MobileApp/MenuItems/${id}/1/KegQueue?allItems=1&ApiKey=574725e55e002c0b7cf0cf19`
-    if (this.upNext && this.lastId === id) {
+    if (this.upNext && this.lastUpNextId === id) {
       return Observable.of(this.upNext).map(this.processUpNext, this);
     } else {
-      this.lastId = id
+      this.lastUpNextId = id
       return this.http.get(URL)
         .map(this.processUpNext, this);
     }
@@ -62,7 +63,7 @@ export class MenuData {
   }
 
   sortBy (sortBy: any) {
-    let dataHold = sortBy.list === "onTap" ? this.loadMenu(this.lastId) : this.getUpNext(this.lastId);     /// please tell me this is gonna work
+    let dataHold = sortBy.list === "onTap" ? this.loadMenu(this.lastOnTapId) : this.getUpNext(this.lastUpNextId);     /// please tell me this is gonna work
     return dataHold.map((data: any) => {
       let result = data.slice();
       result.sort((a: any, b:any) => {
