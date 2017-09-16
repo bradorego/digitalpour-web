@@ -28,7 +28,7 @@ export class ListPage {
   queryText = '';
   storeList:any = [];
   private _loading:any;
-  private _coords: any = {lat: 43.074751, lng: -89.384141};
+  private _coords: any = {lat: 43.074751, lng: -89.384141}; /// assume madison if no location data woo
 
   constructor(
     public app: App,
@@ -53,6 +53,9 @@ export class ListPage {
     this.geolocation.getCurrentPosition().then((resp: any) => {
       this._coords = resp.coords;
       this.stores.getListData(this._coords, false).subscribe((data: any) => {
+        data.forEach((item: any) => {
+          if (!item.todayHours) { console.log(item.todayHours); }
+        });
         this.storeList = data;
       });
     }, (err) => {

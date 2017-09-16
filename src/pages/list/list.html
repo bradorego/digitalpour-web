@@ -14,10 +14,14 @@
       <ion-avatar item-start>
         <img *ngIf="item.imgUrl" [src]="item.imgUrl" />
       </ion-avatar>
-      <h2>{{item.name}}</h2>
+      <h2>{{item.name}} <span *ngIf="item.distance; else locationBlock">({{item.distance | number:'1.1-1'}} mi.)</span></h2>
       <h4>{{item.address}}</h4>
-      <h5 *ngIf="item.distance;else elseBlock">{{item.distance | number:'1.1-1'}} mi.</h5>
-      <ng-template #elseBlock><h5>Enable location services to show distance</h5></ng-template>
+      <h5 *ngIf="item.todayOpen">
+        <ion-badge>Hours</ion-badge>
+        {{item.todayOpen | date:'shortTime'}} - {{item.todayClose | date:'shortTime'}}
+      </h5>
+      <p *ngIf="item.wifi"><ion-badge>WiFi Password</ion-badge> {{item.wifi}}</p>
+      <ng-template #locationBlock><h5>Enable location services to show distance</h5></ng-template>
     </ion-item>
   </ion-list>
 </ion-content>
