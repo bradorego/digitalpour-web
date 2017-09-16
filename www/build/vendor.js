@@ -355,7 +355,7 @@
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_rxjs_observable_merge___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_rxjs_observable_merge__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_operator_share__ = __webpack_require__(216);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_operator_share___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_rxjs_operator_share__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_rxjs_Subject__ = __webpack_require__(32);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_rxjs_Subject__ = __webpack_require__(33);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_rxjs_Subject___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_rxjs_Subject__);
 var __extends = (this && this.__extends) || function (d, b) {
     for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p];
@@ -17603,7 +17603,7 @@ exports.Observable = Observable;
 /* unused harmony export findTopNavs */
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_platform_browser__ = __webpack_require__(24);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__app_constants__ = __webpack_require__(33);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__app_constants__ = __webpack_require__(34);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__config_config__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__navigation_nav_util__ = __webpack_require__(20);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__menu_controller__ = __webpack_require__(26);
@@ -27339,7 +27339,7 @@ var IonicFormInput = (function () {
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return Item; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__button_button__ = __webpack_require__(34);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__button_button__ = __webpack_require__(35);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__config_config__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__util_form__ = __webpack_require__(16);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__icon_icon__ = __webpack_require__(63);
@@ -27889,7 +27889,7 @@ var /** @type {?} */ KEY_TAB = 9;
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__ion__ = __webpack_require__(4);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__navigation_nav_util__ = __webpack_require__(20);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__util_util__ = __webpack_require__(2);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__platform_keyboard__ = __webpack_require__(35);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__platform_keyboard__ = __webpack_require__(36);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__navigation_nav_controller__ = __webpack_require__(21);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__platform_platform__ = __webpack_require__(3);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__util_scroll_view__ = __webpack_require__(128);
@@ -30560,7 +30560,7 @@ function setControlCss(element, control) {
 /* unused harmony export ɵc */
 /* unused harmony export ɵd */
 /* unused harmony export ɵe */
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_common__ = __webpack_require__(39);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_common__ = __webpack_require__(30);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_core__ = __webpack_require__(0);
 var __extends = (this && this.__extends) || function (d, b) {
     for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p];
@@ -32558,7 +32558,7 @@ var BrowserPlatformLocation = (function (_super) {
      */
     BrowserPlatformLocation.prototype.back = function () { this._history.back(); };
     return BrowserPlatformLocation;
-}(__WEBPACK_IMPORTED_MODULE_0__angular_common__["g" /* PlatformLocation */]));
+}(__WEBPACK_IMPORTED_MODULE_0__angular_common__["h" /* PlatformLocation */]));
 BrowserPlatformLocation.decorators = [
     { type: __WEBPACK_IMPORTED_MODULE_1__angular_core__["B" /* Injectable */] },
 ];
@@ -34695,9 +34695,9 @@ var SafeResourceUrlImpl = (function (_super) {
  * found in the LICENSE file at https://angular.io/license
  */
 var INTERNAL_BROWSER_PLATFORM_PROVIDERS = [
-    { provide: __WEBPACK_IMPORTED_MODULE_1__angular_core__["U" /* PLATFORM_ID */], useValue: __WEBPACK_IMPORTED_MODULE_0__angular_common__["h" /* ɵPLATFORM_BROWSER_ID */] },
+    { provide: __WEBPACK_IMPORTED_MODULE_1__angular_core__["U" /* PLATFORM_ID */], useValue: __WEBPACK_IMPORTED_MODULE_0__angular_common__["i" /* ɵPLATFORM_BROWSER_ID */] },
     { provide: __WEBPACK_IMPORTED_MODULE_1__angular_core__["V" /* PLATFORM_INITIALIZER */], useValue: initDomAdapter, multi: true },
-    { provide: __WEBPACK_IMPORTED_MODULE_0__angular_common__["g" /* PlatformLocation */], useClass: BrowserPlatformLocation },
+    { provide: __WEBPACK_IMPORTED_MODULE_0__angular_common__["h" /* PlatformLocation */], useClass: BrowserPlatformLocation },
     { provide: DOCUMENT, useFactory: _document, deps: [] },
 ];
 /**
@@ -35050,7 +35050,7 @@ var VERSION = new __WEBPACK_IMPORTED_MODULE_1__angular_core__["_12" /* Version *
 /* unused harmony reexport Backdrop */
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__components_badge_badge__ = __webpack_require__(120);
 /* unused harmony reexport Badge */
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__components_button_button__ = __webpack_require__(34);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__components_button_button__ = __webpack_require__(35);
 /* unused harmony reexport Button */
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__components_card_card__ = __webpack_require__(121);
 /* unused harmony reexport Card */
@@ -35198,7 +35198,7 @@ var VERSION = new __WEBPACK_IMPORTED_MODULE_1__angular_core__["_12" /* Version *
 /* unused harmony reexport Slides */
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_85__components_spinner_spinner__ = __webpack_require__(175);
 /* unused harmony reexport Spinner */
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_86__components_split_pane_split_pane__ = __webpack_require__(37);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_86__components_split_pane_split_pane__ = __webpack_require__(38);
 /* unused harmony reexport SplitPane */
 /* unused harmony reexport RootNode */
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_87__components_tabs_tab__ = __webpack_require__(176);
@@ -35227,7 +35227,7 @@ var VERSION = new __WEBPACK_IMPORTED_MODULE_1__angular_core__["_12" /* Version *
 /* unused harmony reexport ToolbarItem */
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_99__components_toolbar_toolbar_title__ = __webpack_require__(184);
 /* unused harmony reexport ToolbarTitle */
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_100__components_toolbar_navbar__ = __webpack_require__(38);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_100__components_toolbar_navbar__ = __webpack_require__(39);
 /* unused harmony reexport Navbar */
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_101__components_thumbnail_thumbnail__ = __webpack_require__(185);
 /* unused harmony reexport Thumbnail */
@@ -35250,7 +35250,7 @@ var VERSION = new __WEBPACK_IMPORTED_MODULE_1__angular_core__["_12" /* Version *
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_109__platform_platform__ = __webpack_require__(3);
 /* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "j", function() { return __WEBPACK_IMPORTED_MODULE_109__platform_platform__["a"]; });
 /* unused harmony reexport setupPlatform */
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_110__tap_click_haptic__ = __webpack_require__(36);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_110__tap_click_haptic__ = __webpack_require__(37);
 /* unused harmony reexport Haptic */
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_111__navigation_deep_linker__ = __webpack_require__(14);
 /* unused harmony reexport DeepLinker */
@@ -35298,7 +35298,7 @@ var VERSION = new __WEBPACK_IMPORTED_MODULE_1__angular_core__["_12" /* Version *
 /* unused harmony reexport setupProvideEvents */
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_126__util_ionic_error_handler__ = __webpack_require__(258);
 /* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "c", function() { return __WEBPACK_IMPORTED_MODULE_126__util_ionic_error_handler__["a"]; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_127__platform_keyboard__ = __webpack_require__(35);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_127__platform_keyboard__ = __webpack_require__(36);
 /* unused harmony reexport Keyboard */
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_128__util_form__ = __webpack_require__(16);
 /* unused harmony reexport Form */
@@ -35309,7 +35309,7 @@ var VERSION = new __WEBPACK_IMPORTED_MODULE_1__angular_core__["_12" /* Version *
 /* unused harmony reexport normalizeURL */
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_130__animations_animation__ = __webpack_require__(11);
 /* unused harmony reexport Animation */
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_131__transitions_page_transition__ = __webpack_require__(30);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_131__transitions_page_transition__ = __webpack_require__(31);
 /* unused harmony reexport PageTransition */
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_132__transitions_transition__ = __webpack_require__(27);
 /* unused harmony reexport Transition */
@@ -35943,7 +35943,7 @@ var __extends = (this && this.__extends) || function (d, b) {
     d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
 };
 var isFunction_1 = __webpack_require__(50);
-var Subscription_1 = __webpack_require__(31);
+var Subscription_1 = __webpack_require__(32);
 var Observer_1 = __webpack_require__(108);
 var rxSubscriber_1 = __webpack_require__(52);
 /**
@@ -36206,2120 +36206,6 @@ var SafeSubscriber = (function (_super) {
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return PageTransition; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__animations_animation__ = __webpack_require__(11);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__transition__ = __webpack_require__(27);
-var __extends = (this && this.__extends) || (function () {
-    var extendStatics = Object.setPrototypeOf ||
-        ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
-        function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
-    return function (d, b) {
-        extendStatics(d, b);
-        function __() { this.constructor = d; }
-        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
-    };
-})();
-
-
-/**
- * @hidden
- */
-var PageTransition = (function (_super) {
-    __extends(PageTransition, _super);
-    function PageTransition() {
-        return _super !== null && _super.apply(this, arguments) || this;
-    }
-    /**
-     * @return {?}
-     */
-    PageTransition.prototype.init = function () {
-        var _this = this;
-        if (this.enteringView) {
-            this.enteringPage = new __WEBPACK_IMPORTED_MODULE_0__animations_animation__["a" /* Animation */](this.plt, this.enteringView.pageRef());
-            this.add(this.enteringPage.beforeAddClass('show-page'));
-            // Resize content before transition starts
-            this.beforeAddRead(function () {
-                _this.enteringView.readReady.emit();
-            });
-            this.beforeAddWrite(function () {
-                _this.enteringView.writeReady.emit();
-            });
-        }
-    };
-    /**
-     * @return {?}
-     */
-    PageTransition.prototype.destroy = function () {
-        _super.prototype.destroy.call(this);
-        this.enteringPage && this.enteringPage.destroy();
-        this.enteringPage = null;
-    };
-    return PageTransition;
-}(__WEBPACK_IMPORTED_MODULE_1__transition__["a" /* Transition */]));
-
-function PageTransition_tsickle_Closure_declarations() {
-    /** @type {?} */
-    PageTransition.prototype.enteringPage;
-}
-//# sourceMappingURL=page-transition.js.map
-
-/***/ }),
-/* 31 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-var isArray_1 = __webpack_require__(105);
-var isObject_1 = __webpack_require__(106);
-var isFunction_1 = __webpack_require__(50);
-var tryCatch_1 = __webpack_require__(107);
-var errorObject_1 = __webpack_require__(51);
-var UnsubscriptionError_1 = __webpack_require__(207);
-/**
- * Represents a disposable resource, such as the execution of an Observable. A
- * Subscription has one important method, `unsubscribe`, that takes no argument
- * and just disposes the resource held by the subscription.
- *
- * Additionally, subscriptions may be grouped together through the `add()`
- * method, which will attach a child Subscription to the current Subscription.
- * When a Subscription is unsubscribed, all its children (and its grandchildren)
- * will be unsubscribed as well.
- *
- * @class Subscription
- */
-var Subscription = (function () {
-    /**
-     * @param {function(): void} [unsubscribe] A function describing how to
-     * perform the disposal of resources when the `unsubscribe` method is called.
-     */
-    function Subscription(unsubscribe) {
-        /**
-         * A flag to indicate whether this Subscription has already been unsubscribed.
-         * @type {boolean}
-         */
-        this.closed = false;
-        this._parent = null;
-        this._parents = null;
-        this._subscriptions = null;
-        if (unsubscribe) {
-            this._unsubscribe = unsubscribe;
-        }
-    }
-    /**
-     * Disposes the resources held by the subscription. May, for instance, cancel
-     * an ongoing Observable execution or cancel any other type of work that
-     * started when the Subscription was created.
-     * @return {void}
-     */
-    Subscription.prototype.unsubscribe = function () {
-        var hasErrors = false;
-        var errors;
-        if (this.closed) {
-            return;
-        }
-        var _a = this, _parent = _a._parent, _parents = _a._parents, _unsubscribe = _a._unsubscribe, _subscriptions = _a._subscriptions;
-        this.closed = true;
-        this._parent = null;
-        this._parents = null;
-        // null out _subscriptions first so any child subscriptions that attempt
-        // to remove themselves from this subscription will noop
-        this._subscriptions = null;
-        var index = -1;
-        var len = _parents ? _parents.length : 0;
-        // if this._parent is null, then so is this._parents, and we
-        // don't have to remove ourselves from any parent subscriptions.
-        while (_parent) {
-            _parent.remove(this);
-            // if this._parents is null or index >= len,
-            // then _parent is set to null, and the loop exits
-            _parent = ++index < len && _parents[index] || null;
-        }
-        if (isFunction_1.isFunction(_unsubscribe)) {
-            var trial = tryCatch_1.tryCatch(_unsubscribe).call(this);
-            if (trial === errorObject_1.errorObject) {
-                hasErrors = true;
-                errors = errors || (errorObject_1.errorObject.e instanceof UnsubscriptionError_1.UnsubscriptionError ?
-                    flattenUnsubscriptionErrors(errorObject_1.errorObject.e.errors) : [errorObject_1.errorObject.e]);
-            }
-        }
-        if (isArray_1.isArray(_subscriptions)) {
-            index = -1;
-            len = _subscriptions.length;
-            while (++index < len) {
-                var sub = _subscriptions[index];
-                if (isObject_1.isObject(sub)) {
-                    var trial = tryCatch_1.tryCatch(sub.unsubscribe).call(sub);
-                    if (trial === errorObject_1.errorObject) {
-                        hasErrors = true;
-                        errors = errors || [];
-                        var err = errorObject_1.errorObject.e;
-                        if (err instanceof UnsubscriptionError_1.UnsubscriptionError) {
-                            errors = errors.concat(flattenUnsubscriptionErrors(err.errors));
-                        }
-                        else {
-                            errors.push(err);
-                        }
-                    }
-                }
-            }
-        }
-        if (hasErrors) {
-            throw new UnsubscriptionError_1.UnsubscriptionError(errors);
-        }
-    };
-    /**
-     * Adds a tear down to be called during the unsubscribe() of this
-     * Subscription.
-     *
-     * If the tear down being added is a subscription that is already
-     * unsubscribed, is the same reference `add` is being called on, or is
-     * `Subscription.EMPTY`, it will not be added.
-     *
-     * If this subscription is already in an `closed` state, the passed
-     * tear down logic will be executed immediately.
-     *
-     * @param {TeardownLogic} teardown The additional logic to execute on
-     * teardown.
-     * @return {Subscription} Returns the Subscription used or created to be
-     * added to the inner subscriptions list. This Subscription can be used with
-     * `remove()` to remove the passed teardown logic from the inner subscriptions
-     * list.
-     */
-    Subscription.prototype.add = function (teardown) {
-        if (!teardown || (teardown === Subscription.EMPTY)) {
-            return Subscription.EMPTY;
-        }
-        if (teardown === this) {
-            return this;
-        }
-        var subscription = teardown;
-        switch (typeof teardown) {
-            case 'function':
-                subscription = new Subscription(teardown);
-            case 'object':
-                if (subscription.closed || typeof subscription.unsubscribe !== 'function') {
-                    return subscription;
-                }
-                else if (this.closed) {
-                    subscription.unsubscribe();
-                    return subscription;
-                }
-                else if (typeof subscription._addParent !== 'function' /* quack quack */) {
-                    var tmp = subscription;
-                    subscription = new Subscription();
-                    subscription._subscriptions = [tmp];
-                }
-                break;
-            default:
-                throw new Error('unrecognized teardown ' + teardown + ' added to Subscription.');
-        }
-        var subscriptions = this._subscriptions || (this._subscriptions = []);
-        subscriptions.push(subscription);
-        subscription._addParent(this);
-        return subscription;
-    };
-    /**
-     * Removes a Subscription from the internal list of subscriptions that will
-     * unsubscribe during the unsubscribe process of this Subscription.
-     * @param {Subscription} subscription The subscription to remove.
-     * @return {void}
-     */
-    Subscription.prototype.remove = function (subscription) {
-        var subscriptions = this._subscriptions;
-        if (subscriptions) {
-            var subscriptionIndex = subscriptions.indexOf(subscription);
-            if (subscriptionIndex !== -1) {
-                subscriptions.splice(subscriptionIndex, 1);
-            }
-        }
-    };
-    Subscription.prototype._addParent = function (parent) {
-        var _a = this, _parent = _a._parent, _parents = _a._parents;
-        if (!_parent || _parent === parent) {
-            // If we don't have a parent, or the new parent is the same as the
-            // current parent, then set this._parent to the new parent.
-            this._parent = parent;
-        }
-        else if (!_parents) {
-            // If there's already one parent, but not multiple, allocate an Array to
-            // store the rest of the parent Subscriptions.
-            this._parents = [parent];
-        }
-        else if (_parents.indexOf(parent) === -1) {
-            // Only add the new parent to the _parents list if it's not already there.
-            _parents.push(parent);
-        }
-    };
-    Subscription.EMPTY = (function (empty) {
-        empty.closed = true;
-        return empty;
-    }(new Subscription()));
-    return Subscription;
-}());
-exports.Subscription = Subscription;
-function flattenUnsubscriptionErrors(errors) {
-    return errors.reduce(function (errs, err) { return errs.concat((err instanceof UnsubscriptionError_1.UnsubscriptionError) ? err.errors : err); }, []);
-}
-//# sourceMappingURL=Subscription.js.map
-
-/***/ }),
-/* 32 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-var __extends = (this && this.__extends) || function (d, b) {
-    for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p];
-    function __() { this.constructor = d; }
-    d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
-};
-var Observable_1 = __webpack_require__(6);
-var Subscriber_1 = __webpack_require__(29);
-var Subscription_1 = __webpack_require__(31);
-var ObjectUnsubscribedError_1 = __webpack_require__(219);
-var SubjectSubscription_1 = __webpack_require__(220);
-var rxSubscriber_1 = __webpack_require__(52);
-/**
- * @class SubjectSubscriber<T>
- */
-var SubjectSubscriber = (function (_super) {
-    __extends(SubjectSubscriber, _super);
-    function SubjectSubscriber(destination) {
-        _super.call(this, destination);
-        this.destination = destination;
-    }
-    return SubjectSubscriber;
-}(Subscriber_1.Subscriber));
-exports.SubjectSubscriber = SubjectSubscriber;
-/**
- * @class Subject<T>
- */
-var Subject = (function (_super) {
-    __extends(Subject, _super);
-    function Subject() {
-        _super.call(this);
-        this.observers = [];
-        this.closed = false;
-        this.isStopped = false;
-        this.hasError = false;
-        this.thrownError = null;
-    }
-    Subject.prototype[rxSubscriber_1.rxSubscriber] = function () {
-        return new SubjectSubscriber(this);
-    };
-    Subject.prototype.lift = function (operator) {
-        var subject = new AnonymousSubject(this, this);
-        subject.operator = operator;
-        return subject;
-    };
-    Subject.prototype.next = function (value) {
-        if (this.closed) {
-            throw new ObjectUnsubscribedError_1.ObjectUnsubscribedError();
-        }
-        if (!this.isStopped) {
-            var observers = this.observers;
-            var len = observers.length;
-            var copy = observers.slice();
-            for (var i = 0; i < len; i++) {
-                copy[i].next(value);
-            }
-        }
-    };
-    Subject.prototype.error = function (err) {
-        if (this.closed) {
-            throw new ObjectUnsubscribedError_1.ObjectUnsubscribedError();
-        }
-        this.hasError = true;
-        this.thrownError = err;
-        this.isStopped = true;
-        var observers = this.observers;
-        var len = observers.length;
-        var copy = observers.slice();
-        for (var i = 0; i < len; i++) {
-            copy[i].error(err);
-        }
-        this.observers.length = 0;
-    };
-    Subject.prototype.complete = function () {
-        if (this.closed) {
-            throw new ObjectUnsubscribedError_1.ObjectUnsubscribedError();
-        }
-        this.isStopped = true;
-        var observers = this.observers;
-        var len = observers.length;
-        var copy = observers.slice();
-        for (var i = 0; i < len; i++) {
-            copy[i].complete();
-        }
-        this.observers.length = 0;
-    };
-    Subject.prototype.unsubscribe = function () {
-        this.isStopped = true;
-        this.closed = true;
-        this.observers = null;
-    };
-    Subject.prototype._trySubscribe = function (subscriber) {
-        if (this.closed) {
-            throw new ObjectUnsubscribedError_1.ObjectUnsubscribedError();
-        }
-        else {
-            return _super.prototype._trySubscribe.call(this, subscriber);
-        }
-    };
-    Subject.prototype._subscribe = function (subscriber) {
-        if (this.closed) {
-            throw new ObjectUnsubscribedError_1.ObjectUnsubscribedError();
-        }
-        else if (this.hasError) {
-            subscriber.error(this.thrownError);
-            return Subscription_1.Subscription.EMPTY;
-        }
-        else if (this.isStopped) {
-            subscriber.complete();
-            return Subscription_1.Subscription.EMPTY;
-        }
-        else {
-            this.observers.push(subscriber);
-            return new SubjectSubscription_1.SubjectSubscription(this, subscriber);
-        }
-    };
-    Subject.prototype.asObservable = function () {
-        var observable = new Observable_1.Observable();
-        observable.source = this;
-        return observable;
-    };
-    Subject.create = function (destination, source) {
-        return new AnonymousSubject(destination, source);
-    };
-    return Subject;
-}(Observable_1.Observable));
-exports.Subject = Subject;
-/**
- * @class AnonymousSubject<T>
- */
-var AnonymousSubject = (function (_super) {
-    __extends(AnonymousSubject, _super);
-    function AnonymousSubject(destination, source) {
-        _super.call(this);
-        this.destination = destination;
-        this.source = source;
-    }
-    AnonymousSubject.prototype.next = function (value) {
-        var destination = this.destination;
-        if (destination && destination.next) {
-            destination.next(value);
-        }
-    };
-    AnonymousSubject.prototype.error = function (err) {
-        var destination = this.destination;
-        if (destination && destination.error) {
-            this.destination.error(err);
-        }
-    };
-    AnonymousSubject.prototype.complete = function () {
-        var destination = this.destination;
-        if (destination && destination.complete) {
-            this.destination.complete();
-        }
-    };
-    AnonymousSubject.prototype._subscribe = function (subscriber) {
-        var source = this.source;
-        if (source) {
-            return this.source.subscribe(subscriber);
-        }
-        else {
-            return Subscription_1.Subscription.EMPTY;
-        }
-    };
-    return AnonymousSubject;
-}(Subject));
-exports.AnonymousSubject = AnonymousSubject;
-//# sourceMappingURL=Subject.js.map
-
-/***/ }),
-/* 33 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return PORTAL_DEFAULT; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "c", function() { return PORTAL_MODAL; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "b", function() { return PORTAL_LOADING; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "d", function() { return PORTAL_TOAST; });
-var /** @type {?} */ PORTAL_DEFAULT = 1;
-var /** @type {?} */ PORTAL_MODAL = 2;
-var /** @type {?} */ PORTAL_LOADING = 3;
-var /** @type {?} */ PORTAL_TOAST = 4;
-//# sourceMappingURL=app-constants.js.map
-
-/***/ }),
-/* 34 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return Button; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__config_config__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ion__ = __webpack_require__(4);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__util_util__ = __webpack_require__(2);
-var __extends = (this && this.__extends) || (function () {
-    var extendStatics = Object.setPrototypeOf ||
-        ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
-        function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
-    return function (d, b) {
-        extendStatics(d, b);
-        function __() { this.constructor = d; }
-        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
-    };
-})();
-
-
-
-
-/**
- * \@name Button
- * \@module ionic
- * \@description
- * Buttons are simple components in Ionic. They can consist of text and icons
- * and be enhanced by a wide range of attributes.
- *
- * \@usage
- *
- * ```html
- *
- *  <!-- Colors -->
- *  <button ion-button>Default</button>
- *
- *  <button ion-button color="secondary">Secondary</button>
- *
- *  <button ion-button color="danger">Danger</button>
- *
- *  <button ion-button color="light">Light</button>
- *
- *  <button ion-button color="dark">Dark</button>
- *
- *  <!-- Shapes -->
- *  <button ion-button full>Full Button</button>
- *
- *  <button ion-button block>Block Button</button>
- *
- *  <button ion-button round>Round Button</button>
- *
- *  <!-- Outline -->
- *  <button ion-button full outline>Outline + Full</button>
- *
- *  <button ion-button block outline>Outline + Block</button>
- *
- *  <button ion-button round outline>Outline + Round</button>
- *
- *  <!-- Icons -->
- *  <button ion-button icon-start>
- *    <ion-icon name="star"></ion-icon>
- *    Left Icon
- *  </button>
- *
- *  <button ion-button icon-end>
- *    Right Icon
- *    <ion-icon name="star"></ion-icon>
- *  </button>
- *
- *  <button ion-button icon-only>
- *    <ion-icon name="star"></ion-icon>
- *  </button>
- *
- *  <!-- Sizes -->
- *  <button ion-button large>Large</button>
- *
- *  <button ion-button>Default</button>
- *
- *  <button ion-button small>Small</button>
- * ```
- *
- * \@advanced
- *
- * ```html
- *
- * <!-- Bind the color and outline inputs to an expression -->
- * <button ion-button [color]="isDanger ? 'danger' : 'primary'" [outline]="isOutline">
- *   Danger (Solid)
- * </button>
- *
- * <!-- Bind the color and round inputs to an expression -->
- * <button ion-button [color]="myColor" [round]="isRound">
- *   Secondary (Round)
- * </button>
- *
- * <!-- Bind the color and clear inputs to an expression -->
- * <button ion-button [color]="isSecondary ? 'secondary' : 'primary'"  [clear]="isClear">
- *   Primary (Clear)
- * </button>
- *
- * <!-- Bind the color, outline and round inputs to an expression -->
- * <button ion-button [color]="myColor2" [outline]="isOutline" [round]="isRound">
- *   Dark (Solid + Round)
- * </button>
- *
- * <!-- Bind the click event to a method -->
- * <button ion-button (click)="logEvent($event)">
- *   Click me!
- * </button>
- * ```
- *
- * ```ts
- * \@Component({
- *   templateUrl: 'main.html'
- * })
- * class E2EPage {
- *   isDanger: boolean = true;
- *   isSecondary: boolean = false;
- *   isRound: boolean = true;
- *   isOutline: boolean = false;
- *   isClear: boolean = true;
- *   myColor: string = 'secondary';
- *   myColor2: string = 'dark';
- *
- *   logEvent(event) {
- *     console.log(event)
- *   }
- * }
- *
- * ```
- *
- * \@demo /docs/demos/src/button/
- * @see {\@link /docs/components#buttons Button Component Docs}
- * @see {\@link /docs/components#fabs FabButton Docs}
- * @see {\@link ../../fab/FabButton FabButton API Docs}
- * @see {\@link ../../fab/FabContainer FabContainer API Docs}
- */
-var Button = (function (_super) {
-    __extends(Button, _super);
-    /**
-     * @param {?} ionButton
-     * @param {?} config
-     * @param {?} elementRef
-     * @param {?} renderer
-     */
-    function Button(ionButton, config, elementRef, renderer) {
-        var _this = _super.call(this, config, elementRef, renderer) || this;
-        /**
-         * @hidden
-         */
-        _this._role = 'button';
-        /**
-         * @hidden
-         */
-        _this._style = 'default';
-        _this._mode = config.get('mode');
-        if (config.get('hoverCSS') === false) {
-            _this.setElementClass('disable-hover', true);
-        }
-        if (ionButton.trim().length > 0) {
-            _this.setRole(ionButton);
-        }
-        return _this;
-    }
-    Object.defineProperty(Button.prototype, "large", {
-        /**
-         * \@input {boolean} If true, activates the large button size.
-         * @param {?} val
-         * @return {?}
-         */
-        set: function (val) {
-            this._attr('_size', 'large', val);
-        },
-        enumerable: true,
-        configurable: true
-    });
-    Object.defineProperty(Button.prototype, "small", {
-        /**
-         * \@input {boolean} If true, activates the small button size.
-         * @param {?} val
-         * @return {?}
-         */
-        set: function (val) {
-            this._attr('_size', 'small', val);
-        },
-        enumerable: true,
-        configurable: true
-    });
-    Object.defineProperty(Button.prototype, "default", {
-        /**
-         * \@input {boolean} If true, activates the default button size. Normally the default, useful for buttons in an item.
-         * @param {?} val
-         * @return {?}
-         */
-        set: function (val) {
-            this._attr('_size', 'default', val);
-        },
-        enumerable: true,
-        configurable: true
-    });
-    Object.defineProperty(Button.prototype, "outline", {
-        /**
-         * \@input {boolean} If true, activates a transparent button style with a border.
-         * @param {?} val
-         * @return {?}
-         */
-        set: function (val) {
-            this._attr('_style', 'outline', val);
-        },
-        enumerable: true,
-        configurable: true
-    });
-    Object.defineProperty(Button.prototype, "clear", {
-        /**
-         * \@input {boolean} If true, activates a transparent button style without a border.
-         * @param {?} val
-         * @return {?}
-         */
-        set: function (val) {
-            this._attr('_style', 'clear', val);
-        },
-        enumerable: true,
-        configurable: true
-    });
-    Object.defineProperty(Button.prototype, "solid", {
-        /**
-         * \@input {boolean} If true, activates a solid button style. Normally the default, useful for buttons in a toolbar.
-         * @param {?} val
-         * @return {?}
-         */
-        set: function (val) {
-            this._attr('_style', 'solid', val);
-        },
-        enumerable: true,
-        configurable: true
-    });
-    Object.defineProperty(Button.prototype, "round", {
-        /**
-         * \@input {boolean} If true, activates a button with rounded corners.
-         * @param {?} val
-         * @return {?}
-         */
-        set: function (val) {
-            this._attr('_shape', 'round', val);
-        },
-        enumerable: true,
-        configurable: true
-    });
-    Object.defineProperty(Button.prototype, "block", {
-        /**
-         * \@input {boolean} If true, activates a button style that fills the available width.
-         * @param {?} val
-         * @return {?}
-         */
-        set: function (val) {
-            this._attr('_display', 'block', val);
-        },
-        enumerable: true,
-        configurable: true
-    });
-    Object.defineProperty(Button.prototype, "full", {
-        /**
-         * \@input {boolean} If true, activates a button style that fills the available width without
-         * a left and right border.
-         * @param {?} val
-         * @return {?}
-         */
-        set: function (val) {
-            this._attr('_display', 'full', val);
-        },
-        enumerable: true,
-        configurable: true
-    });
-    Object.defineProperty(Button.prototype, "strong", {
-        /**
-         * \@input {boolean} If true, activates a button with a heavier font weight.
-         * @param {?} val
-         * @return {?}
-         */
-        set: function (val) {
-            this._attr('_decorator', 'strong', val);
-        },
-        enumerable: true,
-        configurable: true
-    });
-    Object.defineProperty(Button.prototype, "mode", {
-        /**
-         * \@input {string} The mode determines which platform styles to use.
-         * Possible values are: `"ios"`, `"md"`, or `"wp"`.
-         * For more information, see [Platform Styles](/docs/theming/platform-specific-styles).
-         * @param {?} val
-         * @return {?}
-         */
-        set: function (val) {
-            this._assignCss(false);
-            this._mode = val;
-            this._assignCss(true);
-        },
-        enumerable: true,
-        configurable: true
-    });
-    /**
-     * @hidden
-     * @param {?} type
-     * @param {?} attrName
-     * @param {?} attrValue
-     * @return {?}
-     */
-    Button.prototype._attr = function (type, attrName, attrValue) {
-        if (type === '_style') {
-            this._updateColor(this._color, false);
-        }
-        this._setClass(((this))[type], false);
-        if (Object(__WEBPACK_IMPORTED_MODULE_3__util_util__["o" /* isTrueProperty */])(attrValue)) {
-            ((this))[type] = attrName;
-            this._setClass(attrName, true);
-        }
-        else {
-            // Special handling for '_style' which defaults to 'default'.
-            ((this))[type] = (type === '_style' ? 'default' : null);
-            this._setClass(((this))[type], true);
-        }
-        if (type === '_style') {
-            this._updateColor(this._color, true);
-        }
-    };
-    Object.defineProperty(Button.prototype, "color", {
-        /**
-         * \@input {string} The color to use from your Sass `$colors` map.
-         * Default options are: `"primary"`, `"secondary"`, `"danger"`, `"light"`, and `"dark"`.
-         * For more information, see [Theming your App](/docs/theming/theming-your-app).
-         * @param {?} val
-         * @return {?}
-         */
-        set: function (val) {
-            this._updateColor(this._color, false);
-            this._updateColor(val, true);
-            this._color = val;
-        },
-        enumerable: true,
-        configurable: true
-    });
-    /**
-     * @hidden
-     * @return {?}
-     */
-    Button.prototype.ngAfterContentInit = function () {
-        this._init = true;
-        this._assignCss(true);
-    };
-    /**
-     * @hidden
-     * @param {?} val
-     * @return {?}
-     */
-    Button.prototype.setRole = function (val) {
-        this._assignCss(false);
-        this._role = val;
-        this._assignCss(true);
-    };
-    /**
-     * @hidden
-     * @param {?} assignCssClass
-     * @return {?}
-     */
-    Button.prototype._assignCss = function (assignCssClass) {
-        var /** @type {?} */ role = this._role;
-        if (role) {
-            this.setElementClass(role, assignCssClass); // button
-            this.setElementClass(role + "-" + this._mode, assignCssClass); // button
-            this._setClass(this._style, assignCssClass); // button-clear
-            this._setClass(this._shape, assignCssClass); // button-round
-            this._setClass(this._display, assignCssClass); // button-full
-            this._setClass(this._size, assignCssClass); // button-small
-            this._setClass(this._decorator, assignCssClass); // button-strong
-            this._updateColor(this._color, assignCssClass); // button-secondary, bar-button-secondary
-        }
-    };
-    /**
-     * @hidden
-     * @param {?} type
-     * @param {?} assignCssClass
-     * @return {?}
-     */
-    Button.prototype._setClass = function (type, assignCssClass) {
-        if (type && this._init) {
-            type = type.toLocaleLowerCase();
-            this.setElementClass(this._role + "-" + type, assignCssClass);
-            this.setElementClass(this._role + "-" + type + "-" + this._mode, assignCssClass);
-        }
-    };
-    /**
-     * @hidden
-     * @param {?} color
-     * @param {?} isAdd
-     * @return {?}
-     */
-    Button.prototype._updateColor = function (color, isAdd) {
-        if (color && this._init) {
-            // The class should begin with the button role
-            // button, bar-button
-            var /** @type {?} */ className = this._role;
-            // If the role is not a bar-button, don't apply the solid style
-            var /** @type {?} */ style = this._style;
-            style = (this._role !== 'bar-button' && style === 'solid' ? 'default' : style);
-            className += (style !== null && style !== '' && style !== 'default' ? '-' + style.toLowerCase() : '');
-            if (color !== null && color !== '') {
-                this.setElementClass(className + "-" + this._mode + "-" + color, isAdd);
-            }
-        }
-    };
-    return Button;
-}(__WEBPACK_IMPORTED_MODULE_2__ion__["a" /* Ion */]));
-
-Button.decorators = [
-    { type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */], args: [{
-                selector: '[ion-button]',
-                template: '<span class="button-inner">' +
-                    '<ng-content></ng-content>' +
-                    '</span>' +
-                    '<div class="button-effect"></div>',
-                changeDetection: __WEBPACK_IMPORTED_MODULE_0__angular_core__["j" /* ChangeDetectionStrategy */].OnPush,
-                encapsulation: __WEBPACK_IMPORTED_MODULE_0__angular_core__["_16" /* ViewEncapsulation */].None,
-            },] },
-];
-/**
- * @nocollapse
- */
-Button.ctorParameters = function () { return [
-    { type: undefined, decorators: [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["g" /* Attribute */], args: ['ion-button',] },] },
-    { type: __WEBPACK_IMPORTED_MODULE_1__config_config__["a" /* Config */], },
-    { type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["u" /* ElementRef */], },
-    { type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["_0" /* Renderer */], },
-]; };
-Button.propDecorators = {
-    'large': [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["E" /* Input */] },],
-    'small': [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["E" /* Input */] },],
-    'default': [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["E" /* Input */] },],
-    'outline': [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["E" /* Input */] },],
-    'clear': [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["E" /* Input */] },],
-    'solid': [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["E" /* Input */] },],
-    'round': [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["E" /* Input */] },],
-    'block': [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["E" /* Input */] },],
-    'full': [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["E" /* Input */] },],
-    'strong': [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["E" /* Input */] },],
-    'mode': [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["E" /* Input */] },],
-    'color': [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["E" /* Input */] },],
-};
-function Button_tsickle_Closure_declarations() {
-    /** @type {?} */
-    Button.decorators;
-    /**
-     * @nocollapse
-     * @type {?}
-     */
-    Button.ctorParameters;
-    /** @type {?} */
-    Button.propDecorators;
-    /**
-     * @hidden
-     * @type {?}
-     */
-    Button.prototype._role;
-    /**
-     * @hidden
-     * @type {?}
-     */
-    Button.prototype._size;
-    /**
-     * @hidden
-     * @type {?}
-     */
-    Button.prototype._style;
-    /**
-     * @hidden
-     * @type {?}
-     */
-    Button.prototype._shape;
-    /**
-     * @hidden
-     * @type {?}
-     */
-    Button.prototype._display;
-    /**
-     * @hidden
-     * @type {?}
-     */
-    Button.prototype._decorator;
-    /**
-     * @hidden
-     * @type {?}
-     */
-    Button.prototype._init;
-}
-//# sourceMappingURL=button.js.map
-
-/***/ }),
-/* 35 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return Keyboard; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__config_config__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__dom_controller__ = __webpack_require__(9);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__util_dom__ = __webpack_require__(10);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__key__ = __webpack_require__(18);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__platform__ = __webpack_require__(3);
-
-
-
-
-
-
-/**
- * \@name Keyboard
- * \@description
- * The `Keyboard` class allows you to work with the keyboard events provided
- * by the Ionic keyboard plugin.
- *
- * \@usage
- * ```ts
- * export class MyClass {
- *   constructor(public keyboard: Keyboard) {
- *
- *   }
- * }
- * ```
- */
-var Keyboard = (function () {
-    /**
-     * @param {?} config
-     * @param {?} _plt
-     * @param {?} _zone
-     * @param {?} _dom
-     */
-    function Keyboard(config, _plt, _zone, _dom) {
-        this._plt = _plt;
-        this._zone = _zone;
-        this._dom = _dom;
-        this.willShow = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["w" /* EventEmitter */]();
-        this.willHide = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["w" /* EventEmitter */]();
-        this.didShow = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["w" /* EventEmitter */]();
-        this.didHide = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["w" /* EventEmitter */]();
-        this.eventsAvailable = false;
-        this.focusOutline(config.get('focusOutline'));
-        var win = _plt.win();
-        if (config.getBoolean('keyboardResizes', false)) {
-            this.listenV2(win);
-        }
-        else {
-            this.listenV1(win);
-        }
-    }
-    /**
-     * @param {?} win
-     * @return {?}
-     */
-    Keyboard.prototype.listenV2 = function (win) {
-        var _this = this;
-        var /** @type {?} */ platform = this._plt;
-        platform.registerListener(win, 'keyboardWillShow', function () {
-            _this._zone.run(function () {
-                _this.willShow.emit();
-            });
-        }, { zone: false, passive: true });
-        platform.registerListener(win, 'keyboardWillHide', function () {
-            _this._zone.run(function () {
-                _this.willHide.emit();
-            });
-        }, { zone: false, passive: true });
-        platform.registerListener(win, 'keyboardDidShow', function () {
-            _this._zone.run(function () {
-                _this.didShow.emit();
-            });
-        }, { zone: false, passive: true });
-        platform.registerListener(win, 'keyboardDidHide', function () {
-            _this._zone.run(function () {
-                _this.didHide.emit();
-            });
-        }, { zone: false, passive: true });
-        this.eventsAvailable = true;
-    };
-    /**
-     * @param {?} win
-     * @return {?}
-     */
-    Keyboard.prototype.listenV1 = function (win) {
-        var _this = this;
-        var /** @type {?} */ platform = this._plt;
-        platform.registerListener(win, 'native.keyboardhide', function () {
-            _this.blurActiveInput(true);
-        }, { zone: false, passive: true });
-        platform.registerListener(win, 'native.keyboardshow', function () {
-            _this.blurActiveInput(false);
-        }, { zone: false, passive: true });
-    };
-    /**
-     * @param {?} shouldBlur
-     * @return {?}
-     */
-    Keyboard.prototype.blurActiveInput = function (shouldBlur) {
-        var _this = this;
-        var /** @type {?} */ platform = this._plt;
-        platform.cancelTimeout(this._tmr);
-        if (shouldBlur) {
-            this._tmr = platform.timeout(function () {
-                // this custom cordova plugin event fires when the keyboard will hide
-                // useful when the virtual keyboard is closed natively
-                // https://github.com/ionic-team/ionic-plugin-keyboard
-                if (_this.isOpen()) {
-                    platform.focusOutActiveElement();
-                }
-            }, 80);
-        }
-    };
-    /**
-     * Check to see if the keyboard is open or not.
-     *
-     * ```ts
-     * export class MyClass {
-     *   constructor(public keyboard: Keyboard) {
-     *
-     *   }
-     *
-     *   keyboardCheck() {
-     *     console.log('The keyboard is open:', this.keyboard.isOpen());
-     *   }
-     * }
-     * ```
-     *
-     * @return {?}
-     */
-    Keyboard.prototype.isOpen = function () {
-        return this.hasFocusedTextInput();
-    };
-    /**
-     * When the keyboard is closed, call any methods you want.
-     *
-     * ```ts
-     * export class MyClass {
-     *   constructor(public keyboard: Keyboard) {
-     *     this.keyboard.onClose(this.closeCallback);
-     *   }
-     *   closeCallback() {
-     *     // call what ever functionality you want on keyboard close
-     *     console.log('Closing time');
-     *   }
-     * }
-     * ```
-     *
-     * @param {?} callback
-     * @param {?=} pollingInternval
-     * @param {?=} pollingChecksMax
-     * @return {?}
-     */
-    Keyboard.prototype.onClose = function (callback, pollingInternval, pollingChecksMax) {
-        if (pollingInternval === void 0) { pollingInternval = KEYBOARD_CLOSE_POLLING; }
-        if (pollingChecksMax === void 0) { pollingChecksMax = KEYBOARD_POLLING_CHECKS_MAX; }
-        (void 0) /* console.debug */;
-        var /** @type {?} */ self = this;
-        var /** @type {?} */ checks = 0;
-        var /** @type {?} */ promise = null;
-        if (!callback) {
-            // a callback wasn't provided, so let's return a promise instead
-            promise = new Promise(function (resolve) { callback = resolve; });
-        }
-        /**
-         * @return {?}
-         */
-        function checkKeyboard() {
-            (void 0) /* console.debug */;
-            if (!self.isOpen() || checks > pollingChecksMax) {
-                self._plt.timeout(function () {
-                    self._zone.run(function () {
-                        (void 0) /* console.debug */;
-                        callback();
-                    });
-                }, 400);
-            }
-            else {
-                self._plt.timeout(checkKeyboard, pollingInternval);
-            }
-            checks++;
-        }
-        self._plt.timeout(checkKeyboard, pollingInternval);
-        return promise;
-    };
-    /**
-     * Programmatically close the keyboard.
-     * @return {?}
-     */
-    Keyboard.prototype.close = function () {
-        var _this = this;
-        this._dom.read(function () {
-            if (_this.isOpen()) {
-                // only focus out when a text input has focus
-                (void 0) /* console.debug */;
-                _this._dom.write(function () {
-                    _this._plt.focusOutActiveElement();
-                });
-            }
-        });
-    };
-    /**
-     * @hidden
-     * @param {?} setting
-     * @return {?}
-     */
-    Keyboard.prototype.focusOutline = function (setting) {
-        /* Focus Outline
-         * --------------------------------------------------
-         * By default, when a keydown event happens from a tab key, then
-         * the 'focus-outline' css class is added to the body element
-         * so focusable elements have an outline. On a mousedown or
-         * touchstart event, then the 'focus-outline' css class is removed.
-         *
-         * Config default overrides:
-         * focusOutline: true     - Always add the focus-outline
-         * focusOutline: false    - Do not add the focus-outline
-         */
-        var /** @type {?} */ self = this;
-        var /** @type {?} */ platform = self._plt;
-        var /** @type {?} */ doc = platform.doc();
-        var /** @type {?} */ isKeyInputEnabled = false;
-        var /** @type {?} */ unRegMouse;
-        var /** @type {?} */ unRegTouch;
-        var /** @type {?} */ evOpts = { passive: true, zone: false };
-        /**
-         * @return {?}
-         */
-        function cssClass() {
-            self._dom.write(function () {
-                ((platform.doc().body.classList))[isKeyInputEnabled ? 'add' : 'remove']('focus-outline');
-            });
-        }
-        if (setting === true) {
-            isKeyInputEnabled = true;
-            return cssClass();
-        }
-        else if (setting === false) {
-            return;
-        }
-        /**
-         * @param {?} ev
-         * @return {?}
-         */
-        function keyDown(ev) {
-            if (!isKeyInputEnabled && ev.keyCode === __WEBPACK_IMPORTED_MODULE_4__key__["g" /* KEY_TAB */]) {
-                isKeyInputEnabled = true;
-                enableKeyInput();
-            }
-        }
-        /**
-         * @return {?}
-         */
-        function pointerDown() {
-            isKeyInputEnabled = false;
-            enableKeyInput();
-        }
-        /**
-         * @return {?}
-         */
-        function enableKeyInput() {
-            cssClass();
-            unRegMouse && unRegMouse();
-            unRegTouch && unRegTouch();
-            if (isKeyInputEnabled) {
-                // listen for when a mousedown or touchstart event happens
-                unRegMouse = platform.registerListener(doc, 'mousedown', pointerDown, evOpts);
-                unRegTouch = platform.registerListener(doc, 'touchstart', pointerDown, evOpts);
-            }
-        }
-        // always listen for tab keydown events
-        platform.registerListener(platform.doc(), 'keydown', keyDown, evOpts);
-    };
-    /**
-     * @return {?}
-     */
-    Keyboard.prototype.hasFocusedTextInput = function () {
-        var /** @type {?} */ activeEle = this._plt.getActiveElement();
-        if (Object(__WEBPACK_IMPORTED_MODULE_3__util_dom__["e" /* isTextInput */])(activeEle)) {
-            return (activeEle.parentElement.querySelector(':focus') === activeEle);
-        }
-        return false;
-    };
-    return Keyboard;
-}());
-
-Keyboard.decorators = [
-    { type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["B" /* Injectable */] },
-];
-/**
- * @nocollapse
- */
-Keyboard.ctorParameters = function () { return [
-    { type: __WEBPACK_IMPORTED_MODULE_1__config_config__["a" /* Config */], },
-    { type: __WEBPACK_IMPORTED_MODULE_5__platform__["a" /* Platform */], },
-    { type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["P" /* NgZone */], },
-    { type: __WEBPACK_IMPORTED_MODULE_2__dom_controller__["a" /* DomController */], },
-]; };
-function Keyboard_tsickle_Closure_declarations() {
-    /** @type {?} */
-    Keyboard.decorators;
-    /**
-     * @nocollapse
-     * @type {?}
-     */
-    Keyboard.ctorParameters;
-    /** @type {?} */
-    Keyboard.prototype._tmr;
-    /** @type {?} */
-    Keyboard.prototype.willShow;
-    /** @type {?} */
-    Keyboard.prototype.willHide;
-    /** @type {?} */
-    Keyboard.prototype.didShow;
-    /** @type {?} */
-    Keyboard.prototype.didHide;
-    /** @type {?} */
-    Keyboard.prototype.eventsAvailable;
-    /** @type {?} */
-    Keyboard.prototype._plt;
-    /** @type {?} */
-    Keyboard.prototype._zone;
-    /** @type {?} */
-    Keyboard.prototype._dom;
-}
-var /** @type {?} */ KEYBOARD_CLOSE_POLLING = 150;
-var /** @type {?} */ KEYBOARD_POLLING_CHECKS_MAX = 100;
-//# sourceMappingURL=keyboard.js.map
-
-/***/ }),
-/* 36 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return Haptic; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__platform_platform__ = __webpack_require__(3);
-
-
-/**
- * \@name Haptic
- * \@description
- * The `Haptic` class interacts with a haptic engine on the device, if
- * available. Generally, Ionic components use this under the hood, but you're
- * welcome to get a bit crazy with it if you fancy.
- *
- * Currently, this uses the Taptic engine on iOS.
- *
- * \@usage
- * ```ts
- * export class MyClass{
- *  constructor(haptic: Haptic){
- *    haptic.selection();
- *  }
- * }
- *
- * ```
- */
-var Haptic = (function () {
-    /**
-     * @param {?} plt
-     */
-    function Haptic(plt) {
-        var _this = this;
-        if (plt) {
-            plt.ready().then(function () {
-                _this._p = plt.win().TapticEngine;
-            });
-        }
-    }
-    /**
-     * Check to see if the Haptic Plugin is available
-     *
-     * @return {?}
-     */
-    Haptic.prototype.available = function () {
-        return !!this._p;
-    };
-    /**
-     * Trigger a selection changed haptic event. Good for one-time events
-     * (not for gestures)
-     * @return {?}
-     */
-    Haptic.prototype.selection = function () {
-        this._p && this._p.selection();
-    };
-    /**
-     * Tell the haptic engine that a gesture for a selection change is starting.
-     * @return {?}
-     */
-    Haptic.prototype.gestureSelectionStart = function () {
-        this._p && this._p.gestureSelectionStart();
-    };
-    /**
-     * Tell the haptic engine that a selection changed during a gesture.
-     * @return {?}
-     */
-    Haptic.prototype.gestureSelectionChanged = function () {
-        this._p && this._p.gestureSelectionChanged();
-    };
-    /**
-     * Tell the haptic engine we are done with a gesture. This needs to be
-     * called lest resources are not properly recycled.
-     * @return {?}
-     */
-    Haptic.prototype.gestureSelectionEnd = function () {
-        this._p && this._p.gestureSelectionEnd();
-    };
-    /**
-     * Use this to indicate success/failure/warning to the user.
-     * options should be of the type `{ type: 'success' }` (or `warning`/`error`)
-     * @param {?} options
-     * @return {?}
-     */
-    Haptic.prototype.notification = function (options) {
-        this._p && this._p.notification(options);
-    };
-    /**
-     * Use this to indicate success/failure/warning to the user.
-     * options should be of the type `{ style: 'light' }` (or `medium`/`heavy`)
-     * @param {?} options
-     * @return {?}
-     */
-    Haptic.prototype.impact = function (options) {
-        this._p && this._p.impact(options);
-    };
-    return Haptic;
-}());
-
-Haptic.decorators = [
-    { type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["B" /* Injectable */] },
-];
-/**
- * @nocollapse
- */
-Haptic.ctorParameters = function () { return [
-    { type: __WEBPACK_IMPORTED_MODULE_1__platform_platform__["a" /* Platform */], },
-]; };
-function Haptic_tsickle_Closure_declarations() {
-    /** @type {?} */
-    Haptic.decorators;
-    /**
-     * @nocollapse
-     * @type {?}
-     */
-    Haptic.ctorParameters;
-    /** @type {?} */
-    Haptic.prototype._p;
-}
-//# sourceMappingURL=haptic.js.map
-
-/***/ }),
-/* 37 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return RootNode; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "b", function() { return SplitPane; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__ion__ = __webpack_require__(4);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__util_util__ = __webpack_require__(2);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__config_config__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__platform_platform__ = __webpack_require__(3);
-var __extends = (this && this.__extends) || (function () {
-    var extendStatics = Object.setPrototypeOf ||
-        ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
-        function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
-    return function (d, b) {
-        extendStatics(d, b);
-        function __() { this.constructor = d; }
-        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
-    };
-})();
-
-
-
-
-
-var /** @type {?} */ QUERY = {
-    xs: '(min-width: 0px)',
-    sm: '(min-width: 576px)',
-    md: '(min-width: 768px)',
-    lg: '(min-width: 992px)',
-    xl: '(min-width: 1200px)',
-    never: ''
-};
-/**
- * @hidden
- * @abstract
- */
-var RootNode = (function () {
-    function RootNode() {
-    }
-    /**
-     * @abstract
-     * @return {?}
-     */
-    RootNode.prototype.getElementRef = function () { };
-    /**
-     * @abstract
-     * @return {?}
-     */
-    RootNode.prototype.initPane = function () { };
-    /**
-     * @abstract
-     * @param {?} visible
-     * @return {?}
-     */
-    RootNode.prototype.paneChanged = function (visible) { };
-    return RootNode;
-}());
-
-/**
- * \@name SplitPane
- *
- * \@description
- * SplitPane is a component that makes it possible to create multi-view layout.
- * Similar to iPad apps, SplitPane allows UI elements, like Menus, to be
- * displayed as the viewport increases.
- *
- * If the devices screen size is below a certain size, the SplitPane will
- * collapse and the menu will become hidden again. This is especially useful when
- * creating an app that will be served over a browser or deployed through the app
- * store to phones and tablets.
- *
- * \@usage
- * To use SplitPane, simply add the component around your root component.
- * In this example, we'll be using a sidemenu layout, similar to what is
- * provided from the sidemenu starter template.
- *
- *  ```html
- *  <ion-split-pane>
- *    <!--  our side menu  -->
- *    <ion-menu [content]="content">
- *      <ion-header>
- *        <ion-toolbar>
- *          <ion-title>Menu</ion-title>
- *        </ion-toolbar>
- *      </ion-header>
- *    </ion-menu>
- *
- *    <!-- the main content -->
- *    <ion-nav [root]="root" main #content></ion-nav>
- *  </ion-split-pane>
- *  ```
- *
- *  Here, SplitPane will look for the element with the `main` attribute and make
- *  that the central component on larger screens. The `main` component can be any
- *  Ionic component (`ion-nav` or `ion-tabs`) except `ion-menu`.
- *
- *  ### Setting breakpoints
- *
- *  By default, SplitPane will expand when the screen is larger than 768px.
- *  If you want to customize this, use the `when` input. The `when` input can
- *  accept any valid media query, as it uses `matchMedia()` underneath.
- *
- *  ```
- *  <ion-split-pane when="(min-width: 475px)">
- *
- *    <!--  our side menu  -->
- *    <ion-menu [content]="content">
- *    ....
- *    </ion-menu>
- *
- *    <!-- the main content -->
- *    <ion-nav [root]="root" main #content></ion-nav>
- *  </ion-split-pane>
- *  ```
- *
- *  SplitPane also provides some predefined media queries that can be used.
- *
- *  ```html
- *  <!-- could be "xs", "sm", "md", "lg", or "xl" -->
- *  <ion-split-pane when="lg">
- *  ...
- *  </ion-split-pane>
- *  ```
- *
- *
- *  | Size | Value                 | Description                                                           |
- *  |------|-----------------------|-----------------------------------------------------------------------|
- *  | `xs` | `(min-width: 0px)`    | Show the split-pane when the min-width is 0px (meaning, always)       |
- *  | `sm` | `(min-width: 576px)`  | Show the split-pane when the min-width is 576px                       |
- *  | `md` | `(min-width: 768px)`  | Show the split-pane when the min-width is 768px (default break point) |
- *  | `lg` | `(min-width: 992px)`  | Show the split-pane when the min-width is 992px                       |
- *  | `xl` | `(min-width: 1200px)` | Show the split-pane when the min-width is 1200px                      |
- *
- *  You can also pass in boolean values that will trigger SplitPane when the value
- *  or expression evaluates to true.
- *
- *
- *  ```html
- *  <ion-split-pane [when]="isLarge">
- *  ...
- *  </ion-split-pane>
- *  ```
- *
- *  ```ts
- *  class MyClass {
- *    public isLarge = false;
- *    constructor(){}
- *  }
- *  ```
- *
- *  Or
- *
- *  ```html
- *  <ion-split-pane [when]="shouldShow()">
- *  ...
- *  </ion-split-pane>
- *  ```
- *
- *  ```ts
- *  class MyClass {
- *    constructor(){}
- *    shouldShow(){
- *      if(conditionA){
- *        return true
- *      } else {
- *        return false
- *      }
- *    }
- *  }
- *  ```
- *
- */
-var SplitPane = (function (_super) {
-    __extends(SplitPane, _super);
-    /**
-     * @param {?} _zone
-     * @param {?} _plt
-     * @param {?} config
-     * @param {?} elementRef
-     * @param {?} renderer
-     */
-    function SplitPane(_zone, _plt, config, elementRef, renderer) {
-        var _this = _super.call(this, config, elementRef, renderer, 'split-pane') || this;
-        _this._zone = _zone;
-        _this._plt = _plt;
-        _this._init = false;
-        _this._visible = false;
-        _this._isEnabled = true;
-        _this._mediaQuery = QUERY['md'];
-        /**
-         * @hidden
-         */
-        _this.sideContent = null;
-        /**
-         * @hidden
-         */
-        _this.mainContent = null;
-        /**
-         * \@output {any} Expression to be called when the split-pane visibility has changed
-         */
-        _this.ionChange = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["w" /* EventEmitter */]();
-        return _this;
-    }
-    Object.defineProperty(SplitPane.prototype, "_setchildren", {
-        /**
-         * @hidden
-         * @param {?} query
-         * @return {?}
-         */
-        set: function (query) {
-            var _this = this;
-            var /** @type {?} */ children = this._children = query.filter((function (child) { return child !== _this; }));
-            children.forEach(function (child) {
-                var /** @type {?} */ isMain = child.initPane();
-                _this._setPaneCSSClass(child.getElementRef(), isMain);
-            });
-        },
-        enumerable: true,
-        configurable: true
-    });
-    Object.defineProperty(SplitPane.prototype, "when", {
-        /**
-         * @return {?}
-         */
-        get: function () {
-            return this._mediaQuery;
-        },
-        /**
-         * \@input {string | boolean} When the split-pane should be shown.
-         * Can be a CSS media query expression, or a shortcut expression.
-         * Can also be a boolean expression.
-         * @param {?} query
-         * @return {?}
-         */
-        set: function (query) {
-            if (typeof query === 'boolean') {
-                this._mediaQuery = query;
-            }
-            else {
-                var /** @type {?} */ defaultQuery = QUERY[query];
-                this._mediaQuery = (defaultQuery)
-                    ? defaultQuery
-                    : query;
-            }
-            this._update();
-        },
-        enumerable: true,
-        configurable: true
-    });
-    Object.defineProperty(SplitPane.prototype, "enabled", {
-        /**
-         * @return {?}
-         */
-        get: function () {
-            return this._isEnabled;
-        },
-        /**
-         * \@input {boolean} If `false`, the split-pane is disabled, ie. the side pane will
-         * never be displayed. Default `true`.
-         * @param {?} val
-         * @return {?}
-         */
-        set: function (val) {
-            this._isEnabled = Object(__WEBPACK_IMPORTED_MODULE_2__util_util__["o" /* isTrueProperty */])(val);
-            this._update();
-        },
-        enumerable: true,
-        configurable: true
-    });
-    /**
-     * @hidden
-     * @param {?} node
-     * @param {?} isMain
-     * @param {?} callback
-     * @return {?}
-     */
-    SplitPane.prototype._register = function (node, isMain, callback) {
-        if (this.getElementRef().nativeElement !== node.getElementRef().nativeElement.parentNode) {
-            return false;
-        }
-        this._setPaneCSSClass(node.getElementRef(), isMain);
-        if (callback) {
-            this.ionChange.subscribe(callback);
-        }
-        if (isMain) {
-            if (this.mainContent) {
-                console.error('split pane: main content was already set');
-            }
-            this.mainContent = node;
-        }
-        return true;
-    };
-    /**
-     * @hidden
-     * @return {?}
-     */
-    SplitPane.prototype.ngAfterViewInit = function () {
-        this._init = true;
-        this._update();
-    };
-    /**
-     * @hidden
-     * @return {?}
-     */
-    SplitPane.prototype._update = function () {
-        var _this = this;
-        if (!this._init) {
-            return;
-        }
-        // Unlisten
-        this._rmListener && this._rmListener();
-        this._rmListener = null;
-        // Check if the split-pane is disabled
-        if (!this._isEnabled) {
-            this._setVisible(false);
-            return;
-        }
-        var /** @type {?} */ query = this._mediaQuery;
-        if (typeof query === 'boolean') {
-            this._setVisible(query);
-            return;
-        }
-        if (query && query.length > 0) {
-            // Listen
-            var /** @type {?} */ callback_1 = function (query) { return _this._setVisible(query.matches); };
-            var /** @type {?} */ mediaList_1 = this._plt.win().matchMedia(query);
-            mediaList_1.addListener(callback_1);
-            this._setVisible(mediaList_1.matches);
-            this._rmListener = function () {
-                mediaList_1.removeListener(callback_1);
-            };
-        }
-        else {
-            this._setVisible(false);
-        }
-    };
-    /**
-     * @hidden
-     * @return {?}
-     */
-    SplitPane.prototype._updateChildren = function () {
-        this.mainContent = null;
-        this.sideContent = null;
-        var /** @type {?} */ visible = this._visible;
-        this._children.forEach(function (child) { return child.paneChanged && child.paneChanged(visible); });
-    };
-    /**
-     * @hidden
-     * @param {?} visible
-     * @return {?}
-     */
-    SplitPane.prototype._setVisible = function (visible) {
-        var _this = this;
-        if (this._visible === visible) {
-            return;
-        }
-        this._visible = visible;
-        this.setElementClass('split-pane-visible', visible);
-        this._updateChildren();
-        this._zone.run(function () {
-            _this.ionChange.emit(_this);
-        });
-    };
-    /**
-     * @hidden
-     * @return {?}
-     */
-    SplitPane.prototype.isVisible = function () {
-        return this._visible;
-    };
-    /**
-     * @hidden
-     * @param {?} className
-     * @param {?} add
-     * @return {?}
-     */
-    SplitPane.prototype.setElementClass = function (className, add) {
-        this._renderer.setElementClass(this._elementRef.nativeElement, className, add);
-    };
-    /**
-     * @hidden
-     * @param {?} elementRef
-     * @param {?} isMain
-     * @return {?}
-     */
-    SplitPane.prototype._setPaneCSSClass = function (elementRef, isMain) {
-        var /** @type {?} */ ele = elementRef.nativeElement;
-        this._renderer.setElementClass(ele, 'split-pane-main', isMain);
-        this._renderer.setElementClass(ele, 'split-pane-side', !isMain);
-    };
-    /**
-     * @hidden
-     * @return {?}
-     */
-    SplitPane.prototype.ngOnDestroy = function () {
-        (void 0) /* assert */;
-        this._rmListener && this._rmListener();
-        this._rmListener = null;
-    };
-    /**
-     * @hidden
-     * @return {?}
-     */
-    SplitPane.prototype.initPane = function () {
-        return true;
-    };
-    return SplitPane;
-}(__WEBPACK_IMPORTED_MODULE_1__ion__["a" /* Ion */]));
-
-SplitPane.decorators = [
-    { type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["t" /* Directive */], args: [{
-                selector: 'ion-split-pane',
-                providers: [{ provide: RootNode, useExisting: Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_20" /* forwardRef */])(function () { return SplitPane; }) }]
-            },] },
-];
-/**
- * @nocollapse
- */
-SplitPane.ctorParameters = function () { return [
-    { type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["P" /* NgZone */], },
-    { type: __WEBPACK_IMPORTED_MODULE_4__platform_platform__["a" /* Platform */], },
-    { type: __WEBPACK_IMPORTED_MODULE_3__config_config__["a" /* Config */], },
-    { type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["u" /* ElementRef */], },
-    { type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["_0" /* Renderer */], },
-]; };
-SplitPane.propDecorators = {
-    '_setchildren': [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["s" /* ContentChildren */], args: [RootNode, { descendants: false },] },],
-    'when': [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["E" /* Input */] },],
-    'enabled': [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["E" /* Input */] },],
-    'ionChange': [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["S" /* Output */] },],
-};
-function SplitPane_tsickle_Closure_declarations() {
-    /** @type {?} */
-    SplitPane.decorators;
-    /**
-     * @nocollapse
-     * @type {?}
-     */
-    SplitPane.ctorParameters;
-    /** @type {?} */
-    SplitPane.propDecorators;
-    /** @type {?} */
-    SplitPane.prototype._init;
-    /** @type {?} */
-    SplitPane.prototype._visible;
-    /** @type {?} */
-    SplitPane.prototype._isEnabled;
-    /** @type {?} */
-    SplitPane.prototype._rmListener;
-    /** @type {?} */
-    SplitPane.prototype._mediaQuery;
-    /** @type {?} */
-    SplitPane.prototype._children;
-    /**
-     * @hidden
-     * @type {?}
-     */
-    SplitPane.prototype.sideContent;
-    /**
-     * @hidden
-     * @type {?}
-     */
-    SplitPane.prototype.mainContent;
-    /**
-     * \@output {any} Expression to be called when the split-pane visibility has changed
-     * @type {?}
-     */
-    SplitPane.prototype.ionChange;
-    /** @type {?} */
-    SplitPane.prototype._zone;
-    /** @type {?} */
-    SplitPane.prototype._plt;
-}
-//# sourceMappingURL=split-pane.js.map
-
-/***/ }),
-/* 38 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return Navbar; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__app_app__ = __webpack_require__(7);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__config_config__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__util_util__ = __webpack_require__(2);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__navigation_nav_controller__ = __webpack_require__(21);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__toolbar_base__ = __webpack_require__(151);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__navigation_view_controller__ = __webpack_require__(5);
-var __extends = (this && this.__extends) || (function () {
-    var extendStatics = Object.setPrototypeOf ||
-        ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
-        function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
-    return function (d, b) {
-        extendStatics(d, b);
-        function __() { this.constructor = d; }
-        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
-    };
-})();
-
-
-
-
-
-
-
-/**
- * \@name Navbar
- * \@description
- * Navbar acts as the navigational toolbar, which also comes with a back
- * button. A navbar can contain a `ion-title`, any number of buttons,
- * a segment, or a searchbar. Navbars must be placed within an
- * `<ion-header>` in order for them to be placed above the content.
- * It's important to note that navbar's are part of the dynamic navigation
- * stack. If you need a static toolbar, use ion-toolbar.
- *
- * \@usage
- * ```html
- * <ion-header>
- *
- *   <ion-navbar>
- *     <button ion-button icon-only menuToggle>
- *       <ion-icon name="menu"></ion-icon>
- *     </button>
- *
- *     <ion-title>
- *       Page Title
- *     </ion-title>
- *
- *     <ion-buttons end>
- *       <button ion-button icon-only (click)="openModal()">
- *         <ion-icon name="options"></ion-icon>
- *       </button>
- *     </ion-buttons>
- *   </ion-navbar>
- *
- * </ion-header>
- * ```
- *
- * \@demo /docs/demos/src/navbar/
- * @see {\@link ../../toolbar/Toolbar/ Toolbar API Docs}
- */
-var Navbar = (function (_super) {
-    __extends(Navbar, _super);
-    /**
-     * @param {?} _app
-     * @param {?} viewCtrl
-     * @param {?} navCtrl
-     * @param {?} config
-     * @param {?} elementRef
-     * @param {?} renderer
-     */
-    function Navbar(_app, viewCtrl, navCtrl, config, elementRef, renderer) {
-        var _this = _super.call(this, config, elementRef, renderer) || this;
-        _this._app = _app;
-        _this.navCtrl = navCtrl;
-        /**
-         * @hidden
-         */
-        _this._hidden = false;
-        /**
-         * @hidden
-         */
-        _this._hideBb = false;
-        viewCtrl && viewCtrl._setNavbar(_this);
-        _this._bbIcon = config.get('backButtonIcon');
-        _this._sbPadding = config.getBoolean('statusbarPadding');
-        _this._backText = config.get('backButtonText', 'Back');
-        return _this;
-    }
-    Object.defineProperty(Navbar.prototype, "hideBackButton", {
-        /**
-         * \@input {boolean} If true, the back button will be hidden.
-         * @return {?}
-         */
-        get: function () {
-            return this._hideBb;
-        },
-        /**
-         * @param {?} val
-         * @return {?}
-         */
-        set: function (val) {
-            this._hideBb = Object(__WEBPACK_IMPORTED_MODULE_3__util_util__["o" /* isTrueProperty */])(val);
-        },
-        enumerable: true,
-        configurable: true
-    });
-    /**
-     * @param {?} ev
-     * @return {?}
-     */
-    Navbar.prototype.backButtonClick = function (ev) {
-        ev.preventDefault();
-        ev.stopPropagation();
-        this.navCtrl && this.navCtrl.pop(null, null);
-    };
-    /**
-     * Set the text of the Back Button in the Nav Bar. Defaults to "Back".
-     * @param {?} text
-     * @return {?}
-     */
-    Navbar.prototype.setBackButtonText = function (text) {
-        this._backText = text;
-    };
-    /**
-     * @hidden
-     * @return {?}
-     */
-    Navbar.prototype.didEnter = function () {
-        try {
-            this._app.setTitle(this.getTitleText());
-        }
-        catch (e) {
-            console.error(e);
-        }
-    };
-    /**
-     * @hidden
-     * @param {?} isHidden
-     * @return {?}
-     */
-    Navbar.prototype.setHidden = function (isHidden) {
-        // used to display none/block the navbar
-        this._hidden = isHidden;
-    };
-    return Navbar;
-}(__WEBPACK_IMPORTED_MODULE_5__toolbar_base__["a" /* ToolbarBase */]));
-
-Navbar.decorators = [
-    { type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */], args: [{
-                selector: 'ion-navbar',
-                template: '<div class="toolbar-background" [ngClass]="\'toolbar-background-\' + _mode"></div>' +
-                    '<button (click)="backButtonClick($event)" ion-button="bar-button" class="back-button" [ngClass]="\'back-button-\' + _mode" [hidden]="_hideBb">' +
-                    '<ion-icon class="back-button-icon" [ngClass]="\'back-button-icon-\' + _mode" [name]="_bbIcon"></ion-icon>' +
-                    '<span class="back-button-text" [ngClass]="\'back-button-text-\' + _mode">{{_backText}}</span>' +
-                    '</button>' +
-                    '<ng-content select="[menuToggle],ion-buttons[left]"></ng-content>' +
-                    '<ng-content select="ion-buttons[start]"></ng-content>' +
-                    '<ng-content select="ion-buttons[end],ion-buttons[right]"></ng-content>' +
-                    '<div class="toolbar-content" [ngClass]="\'toolbar-content-\' + _mode">' +
-                    '<ng-content></ng-content>' +
-                    '</div>',
-                host: {
-                    '[hidden]': '_hidden',
-                    'class': 'toolbar',
-                    '[class.statusbar-padding]': '_sbPadding'
-                }
-            },] },
-];
-/**
- * @nocollapse
- */
-Navbar.ctorParameters = function () { return [
-    { type: __WEBPACK_IMPORTED_MODULE_1__app_app__["a" /* App */], },
-    { type: __WEBPACK_IMPORTED_MODULE_6__navigation_view_controller__["a" /* ViewController */], decorators: [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["R" /* Optional */] },] },
-    { type: __WEBPACK_IMPORTED_MODULE_4__navigation_nav_controller__["a" /* NavController */], decorators: [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["R" /* Optional */] },] },
-    { type: __WEBPACK_IMPORTED_MODULE_2__config_config__["a" /* Config */], },
-    { type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["u" /* ElementRef */], },
-    { type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["_0" /* Renderer */], },
-]; };
-Navbar.propDecorators = {
-    'hideBackButton': [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["E" /* Input */] },],
-};
-function Navbar_tsickle_Closure_declarations() {
-    /** @type {?} */
-    Navbar.decorators;
-    /**
-     * @nocollapse
-     * @type {?}
-     */
-    Navbar.ctorParameters;
-    /** @type {?} */
-    Navbar.propDecorators;
-    /**
-     * @hidden
-     * @type {?}
-     */
-    Navbar.prototype._backText;
-    /**
-     * @hidden
-     * @type {?}
-     */
-    Navbar.prototype._bbIcon;
-    /**
-     * @hidden
-     * @type {?}
-     */
-    Navbar.prototype._hidden;
-    /**
-     * @hidden
-     * @type {?}
-     */
-    Navbar.prototype._hideBb;
-    /**
-     * @hidden
-     * @type {?}
-     */
-    Navbar.prototype._sbPadding;
-    /** @type {?} */
-    Navbar.prototype._app;
-    /** @type {?} */
-    Navbar.prototype.navCtrl;
-}
-//# sourceMappingURL=navbar.js.map
-
-/***/ }),
-/* 39 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
 /* unused harmony export NgLocaleLocalization */
 /* unused harmony export NgLocalization */
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "b", function() { return CommonModule; });
@@ -38338,7 +36224,7 @@ function Navbar_tsickle_Closure_declarations() {
 /* unused harmony export NgTemplateOutlet */
 /* unused harmony export NgComponentOutlet */
 /* unused harmony export AsyncPipe */
-/* unused harmony export DatePipe */
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "c", function() { return DatePipe; });
 /* unused harmony export I18nPluralPipe */
 /* unused harmony export I18nSelectPipe */
 /* unused harmony export JsonPipe */
@@ -38349,7 +36235,7 @@ function Navbar_tsickle_Closure_declarations() {
 /* unused harmony export SlicePipe */
 /* unused harmony export UpperCasePipe */
 /* unused harmony export TitleCasePipe */
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "h", function() { return PLATFORM_BROWSER_ID; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "i", function() { return PLATFORM_BROWSER_ID; });
 /* unused harmony export ɵPLATFORM_SERVER_ID */
 /* unused harmony export ɵPLATFORM_WORKER_APP_ID */
 /* unused harmony export ɵPLATFORM_WORKER_UI_ID */
@@ -38358,13 +36244,13 @@ function Navbar_tsickle_Closure_declarations() {
 /* unused harmony export isPlatformWorkerApp */
 /* unused harmony export isPlatformWorkerUi */
 /* unused harmony export VERSION */
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "g", function() { return PlatformLocation; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "h", function() { return PlatformLocation; });
 /* unused harmony export LOCATION_INITIALIZED */
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "e", function() { return LocationStrategy; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "f", function() { return LocationStrategy; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return APP_BASE_HREF; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "c", function() { return HashLocationStrategy; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "f", function() { return PathLocationStrategy; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "d", function() { return Location; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "d", function() { return HashLocationStrategy; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "g", function() { return PathLocationStrategy; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "e", function() { return Location; });
 /* unused harmony export ɵa */
 /* unused harmony export ɵb */
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
@@ -42336,6 +40222,2120 @@ var VERSION = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["_12" /* Version *
 
 //# sourceMappingURL=common.es5.js.map
 
+
+/***/ }),
+/* 31 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return PageTransition; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__animations_animation__ = __webpack_require__(11);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__transition__ = __webpack_require__(27);
+var __extends = (this && this.__extends) || (function () {
+    var extendStatics = Object.setPrototypeOf ||
+        ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
+        function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
+    return function (d, b) {
+        extendStatics(d, b);
+        function __() { this.constructor = d; }
+        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+    };
+})();
+
+
+/**
+ * @hidden
+ */
+var PageTransition = (function (_super) {
+    __extends(PageTransition, _super);
+    function PageTransition() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    /**
+     * @return {?}
+     */
+    PageTransition.prototype.init = function () {
+        var _this = this;
+        if (this.enteringView) {
+            this.enteringPage = new __WEBPACK_IMPORTED_MODULE_0__animations_animation__["a" /* Animation */](this.plt, this.enteringView.pageRef());
+            this.add(this.enteringPage.beforeAddClass('show-page'));
+            // Resize content before transition starts
+            this.beforeAddRead(function () {
+                _this.enteringView.readReady.emit();
+            });
+            this.beforeAddWrite(function () {
+                _this.enteringView.writeReady.emit();
+            });
+        }
+    };
+    /**
+     * @return {?}
+     */
+    PageTransition.prototype.destroy = function () {
+        _super.prototype.destroy.call(this);
+        this.enteringPage && this.enteringPage.destroy();
+        this.enteringPage = null;
+    };
+    return PageTransition;
+}(__WEBPACK_IMPORTED_MODULE_1__transition__["a" /* Transition */]));
+
+function PageTransition_tsickle_Closure_declarations() {
+    /** @type {?} */
+    PageTransition.prototype.enteringPage;
+}
+//# sourceMappingURL=page-transition.js.map
+
+/***/ }),
+/* 32 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+var isArray_1 = __webpack_require__(105);
+var isObject_1 = __webpack_require__(106);
+var isFunction_1 = __webpack_require__(50);
+var tryCatch_1 = __webpack_require__(107);
+var errorObject_1 = __webpack_require__(51);
+var UnsubscriptionError_1 = __webpack_require__(207);
+/**
+ * Represents a disposable resource, such as the execution of an Observable. A
+ * Subscription has one important method, `unsubscribe`, that takes no argument
+ * and just disposes the resource held by the subscription.
+ *
+ * Additionally, subscriptions may be grouped together through the `add()`
+ * method, which will attach a child Subscription to the current Subscription.
+ * When a Subscription is unsubscribed, all its children (and its grandchildren)
+ * will be unsubscribed as well.
+ *
+ * @class Subscription
+ */
+var Subscription = (function () {
+    /**
+     * @param {function(): void} [unsubscribe] A function describing how to
+     * perform the disposal of resources when the `unsubscribe` method is called.
+     */
+    function Subscription(unsubscribe) {
+        /**
+         * A flag to indicate whether this Subscription has already been unsubscribed.
+         * @type {boolean}
+         */
+        this.closed = false;
+        this._parent = null;
+        this._parents = null;
+        this._subscriptions = null;
+        if (unsubscribe) {
+            this._unsubscribe = unsubscribe;
+        }
+    }
+    /**
+     * Disposes the resources held by the subscription. May, for instance, cancel
+     * an ongoing Observable execution or cancel any other type of work that
+     * started when the Subscription was created.
+     * @return {void}
+     */
+    Subscription.prototype.unsubscribe = function () {
+        var hasErrors = false;
+        var errors;
+        if (this.closed) {
+            return;
+        }
+        var _a = this, _parent = _a._parent, _parents = _a._parents, _unsubscribe = _a._unsubscribe, _subscriptions = _a._subscriptions;
+        this.closed = true;
+        this._parent = null;
+        this._parents = null;
+        // null out _subscriptions first so any child subscriptions that attempt
+        // to remove themselves from this subscription will noop
+        this._subscriptions = null;
+        var index = -1;
+        var len = _parents ? _parents.length : 0;
+        // if this._parent is null, then so is this._parents, and we
+        // don't have to remove ourselves from any parent subscriptions.
+        while (_parent) {
+            _parent.remove(this);
+            // if this._parents is null or index >= len,
+            // then _parent is set to null, and the loop exits
+            _parent = ++index < len && _parents[index] || null;
+        }
+        if (isFunction_1.isFunction(_unsubscribe)) {
+            var trial = tryCatch_1.tryCatch(_unsubscribe).call(this);
+            if (trial === errorObject_1.errorObject) {
+                hasErrors = true;
+                errors = errors || (errorObject_1.errorObject.e instanceof UnsubscriptionError_1.UnsubscriptionError ?
+                    flattenUnsubscriptionErrors(errorObject_1.errorObject.e.errors) : [errorObject_1.errorObject.e]);
+            }
+        }
+        if (isArray_1.isArray(_subscriptions)) {
+            index = -1;
+            len = _subscriptions.length;
+            while (++index < len) {
+                var sub = _subscriptions[index];
+                if (isObject_1.isObject(sub)) {
+                    var trial = tryCatch_1.tryCatch(sub.unsubscribe).call(sub);
+                    if (trial === errorObject_1.errorObject) {
+                        hasErrors = true;
+                        errors = errors || [];
+                        var err = errorObject_1.errorObject.e;
+                        if (err instanceof UnsubscriptionError_1.UnsubscriptionError) {
+                            errors = errors.concat(flattenUnsubscriptionErrors(err.errors));
+                        }
+                        else {
+                            errors.push(err);
+                        }
+                    }
+                }
+            }
+        }
+        if (hasErrors) {
+            throw new UnsubscriptionError_1.UnsubscriptionError(errors);
+        }
+    };
+    /**
+     * Adds a tear down to be called during the unsubscribe() of this
+     * Subscription.
+     *
+     * If the tear down being added is a subscription that is already
+     * unsubscribed, is the same reference `add` is being called on, or is
+     * `Subscription.EMPTY`, it will not be added.
+     *
+     * If this subscription is already in an `closed` state, the passed
+     * tear down logic will be executed immediately.
+     *
+     * @param {TeardownLogic} teardown The additional logic to execute on
+     * teardown.
+     * @return {Subscription} Returns the Subscription used or created to be
+     * added to the inner subscriptions list. This Subscription can be used with
+     * `remove()` to remove the passed teardown logic from the inner subscriptions
+     * list.
+     */
+    Subscription.prototype.add = function (teardown) {
+        if (!teardown || (teardown === Subscription.EMPTY)) {
+            return Subscription.EMPTY;
+        }
+        if (teardown === this) {
+            return this;
+        }
+        var subscription = teardown;
+        switch (typeof teardown) {
+            case 'function':
+                subscription = new Subscription(teardown);
+            case 'object':
+                if (subscription.closed || typeof subscription.unsubscribe !== 'function') {
+                    return subscription;
+                }
+                else if (this.closed) {
+                    subscription.unsubscribe();
+                    return subscription;
+                }
+                else if (typeof subscription._addParent !== 'function' /* quack quack */) {
+                    var tmp = subscription;
+                    subscription = new Subscription();
+                    subscription._subscriptions = [tmp];
+                }
+                break;
+            default:
+                throw new Error('unrecognized teardown ' + teardown + ' added to Subscription.');
+        }
+        var subscriptions = this._subscriptions || (this._subscriptions = []);
+        subscriptions.push(subscription);
+        subscription._addParent(this);
+        return subscription;
+    };
+    /**
+     * Removes a Subscription from the internal list of subscriptions that will
+     * unsubscribe during the unsubscribe process of this Subscription.
+     * @param {Subscription} subscription The subscription to remove.
+     * @return {void}
+     */
+    Subscription.prototype.remove = function (subscription) {
+        var subscriptions = this._subscriptions;
+        if (subscriptions) {
+            var subscriptionIndex = subscriptions.indexOf(subscription);
+            if (subscriptionIndex !== -1) {
+                subscriptions.splice(subscriptionIndex, 1);
+            }
+        }
+    };
+    Subscription.prototype._addParent = function (parent) {
+        var _a = this, _parent = _a._parent, _parents = _a._parents;
+        if (!_parent || _parent === parent) {
+            // If we don't have a parent, or the new parent is the same as the
+            // current parent, then set this._parent to the new parent.
+            this._parent = parent;
+        }
+        else if (!_parents) {
+            // If there's already one parent, but not multiple, allocate an Array to
+            // store the rest of the parent Subscriptions.
+            this._parents = [parent];
+        }
+        else if (_parents.indexOf(parent) === -1) {
+            // Only add the new parent to the _parents list if it's not already there.
+            _parents.push(parent);
+        }
+    };
+    Subscription.EMPTY = (function (empty) {
+        empty.closed = true;
+        return empty;
+    }(new Subscription()));
+    return Subscription;
+}());
+exports.Subscription = Subscription;
+function flattenUnsubscriptionErrors(errors) {
+    return errors.reduce(function (errs, err) { return errs.concat((err instanceof UnsubscriptionError_1.UnsubscriptionError) ? err.errors : err); }, []);
+}
+//# sourceMappingURL=Subscription.js.map
+
+/***/ }),
+/* 33 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+var __extends = (this && this.__extends) || function (d, b) {
+    for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p];
+    function __() { this.constructor = d; }
+    d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+};
+var Observable_1 = __webpack_require__(6);
+var Subscriber_1 = __webpack_require__(29);
+var Subscription_1 = __webpack_require__(32);
+var ObjectUnsubscribedError_1 = __webpack_require__(219);
+var SubjectSubscription_1 = __webpack_require__(220);
+var rxSubscriber_1 = __webpack_require__(52);
+/**
+ * @class SubjectSubscriber<T>
+ */
+var SubjectSubscriber = (function (_super) {
+    __extends(SubjectSubscriber, _super);
+    function SubjectSubscriber(destination) {
+        _super.call(this, destination);
+        this.destination = destination;
+    }
+    return SubjectSubscriber;
+}(Subscriber_1.Subscriber));
+exports.SubjectSubscriber = SubjectSubscriber;
+/**
+ * @class Subject<T>
+ */
+var Subject = (function (_super) {
+    __extends(Subject, _super);
+    function Subject() {
+        _super.call(this);
+        this.observers = [];
+        this.closed = false;
+        this.isStopped = false;
+        this.hasError = false;
+        this.thrownError = null;
+    }
+    Subject.prototype[rxSubscriber_1.rxSubscriber] = function () {
+        return new SubjectSubscriber(this);
+    };
+    Subject.prototype.lift = function (operator) {
+        var subject = new AnonymousSubject(this, this);
+        subject.operator = operator;
+        return subject;
+    };
+    Subject.prototype.next = function (value) {
+        if (this.closed) {
+            throw new ObjectUnsubscribedError_1.ObjectUnsubscribedError();
+        }
+        if (!this.isStopped) {
+            var observers = this.observers;
+            var len = observers.length;
+            var copy = observers.slice();
+            for (var i = 0; i < len; i++) {
+                copy[i].next(value);
+            }
+        }
+    };
+    Subject.prototype.error = function (err) {
+        if (this.closed) {
+            throw new ObjectUnsubscribedError_1.ObjectUnsubscribedError();
+        }
+        this.hasError = true;
+        this.thrownError = err;
+        this.isStopped = true;
+        var observers = this.observers;
+        var len = observers.length;
+        var copy = observers.slice();
+        for (var i = 0; i < len; i++) {
+            copy[i].error(err);
+        }
+        this.observers.length = 0;
+    };
+    Subject.prototype.complete = function () {
+        if (this.closed) {
+            throw new ObjectUnsubscribedError_1.ObjectUnsubscribedError();
+        }
+        this.isStopped = true;
+        var observers = this.observers;
+        var len = observers.length;
+        var copy = observers.slice();
+        for (var i = 0; i < len; i++) {
+            copy[i].complete();
+        }
+        this.observers.length = 0;
+    };
+    Subject.prototype.unsubscribe = function () {
+        this.isStopped = true;
+        this.closed = true;
+        this.observers = null;
+    };
+    Subject.prototype._trySubscribe = function (subscriber) {
+        if (this.closed) {
+            throw new ObjectUnsubscribedError_1.ObjectUnsubscribedError();
+        }
+        else {
+            return _super.prototype._trySubscribe.call(this, subscriber);
+        }
+    };
+    Subject.prototype._subscribe = function (subscriber) {
+        if (this.closed) {
+            throw new ObjectUnsubscribedError_1.ObjectUnsubscribedError();
+        }
+        else if (this.hasError) {
+            subscriber.error(this.thrownError);
+            return Subscription_1.Subscription.EMPTY;
+        }
+        else if (this.isStopped) {
+            subscriber.complete();
+            return Subscription_1.Subscription.EMPTY;
+        }
+        else {
+            this.observers.push(subscriber);
+            return new SubjectSubscription_1.SubjectSubscription(this, subscriber);
+        }
+    };
+    Subject.prototype.asObservable = function () {
+        var observable = new Observable_1.Observable();
+        observable.source = this;
+        return observable;
+    };
+    Subject.create = function (destination, source) {
+        return new AnonymousSubject(destination, source);
+    };
+    return Subject;
+}(Observable_1.Observable));
+exports.Subject = Subject;
+/**
+ * @class AnonymousSubject<T>
+ */
+var AnonymousSubject = (function (_super) {
+    __extends(AnonymousSubject, _super);
+    function AnonymousSubject(destination, source) {
+        _super.call(this);
+        this.destination = destination;
+        this.source = source;
+    }
+    AnonymousSubject.prototype.next = function (value) {
+        var destination = this.destination;
+        if (destination && destination.next) {
+            destination.next(value);
+        }
+    };
+    AnonymousSubject.prototype.error = function (err) {
+        var destination = this.destination;
+        if (destination && destination.error) {
+            this.destination.error(err);
+        }
+    };
+    AnonymousSubject.prototype.complete = function () {
+        var destination = this.destination;
+        if (destination && destination.complete) {
+            this.destination.complete();
+        }
+    };
+    AnonymousSubject.prototype._subscribe = function (subscriber) {
+        var source = this.source;
+        if (source) {
+            return this.source.subscribe(subscriber);
+        }
+        else {
+            return Subscription_1.Subscription.EMPTY;
+        }
+    };
+    return AnonymousSubject;
+}(Subject));
+exports.AnonymousSubject = AnonymousSubject;
+//# sourceMappingURL=Subject.js.map
+
+/***/ }),
+/* 34 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return PORTAL_DEFAULT; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "c", function() { return PORTAL_MODAL; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "b", function() { return PORTAL_LOADING; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "d", function() { return PORTAL_TOAST; });
+var /** @type {?} */ PORTAL_DEFAULT = 1;
+var /** @type {?} */ PORTAL_MODAL = 2;
+var /** @type {?} */ PORTAL_LOADING = 3;
+var /** @type {?} */ PORTAL_TOAST = 4;
+//# sourceMappingURL=app-constants.js.map
+
+/***/ }),
+/* 35 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return Button; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__config_config__ = __webpack_require__(1);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ion__ = __webpack_require__(4);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__util_util__ = __webpack_require__(2);
+var __extends = (this && this.__extends) || (function () {
+    var extendStatics = Object.setPrototypeOf ||
+        ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
+        function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
+    return function (d, b) {
+        extendStatics(d, b);
+        function __() { this.constructor = d; }
+        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+    };
+})();
+
+
+
+
+/**
+ * \@name Button
+ * \@module ionic
+ * \@description
+ * Buttons are simple components in Ionic. They can consist of text and icons
+ * and be enhanced by a wide range of attributes.
+ *
+ * \@usage
+ *
+ * ```html
+ *
+ *  <!-- Colors -->
+ *  <button ion-button>Default</button>
+ *
+ *  <button ion-button color="secondary">Secondary</button>
+ *
+ *  <button ion-button color="danger">Danger</button>
+ *
+ *  <button ion-button color="light">Light</button>
+ *
+ *  <button ion-button color="dark">Dark</button>
+ *
+ *  <!-- Shapes -->
+ *  <button ion-button full>Full Button</button>
+ *
+ *  <button ion-button block>Block Button</button>
+ *
+ *  <button ion-button round>Round Button</button>
+ *
+ *  <!-- Outline -->
+ *  <button ion-button full outline>Outline + Full</button>
+ *
+ *  <button ion-button block outline>Outline + Block</button>
+ *
+ *  <button ion-button round outline>Outline + Round</button>
+ *
+ *  <!-- Icons -->
+ *  <button ion-button icon-start>
+ *    <ion-icon name="star"></ion-icon>
+ *    Left Icon
+ *  </button>
+ *
+ *  <button ion-button icon-end>
+ *    Right Icon
+ *    <ion-icon name="star"></ion-icon>
+ *  </button>
+ *
+ *  <button ion-button icon-only>
+ *    <ion-icon name="star"></ion-icon>
+ *  </button>
+ *
+ *  <!-- Sizes -->
+ *  <button ion-button large>Large</button>
+ *
+ *  <button ion-button>Default</button>
+ *
+ *  <button ion-button small>Small</button>
+ * ```
+ *
+ * \@advanced
+ *
+ * ```html
+ *
+ * <!-- Bind the color and outline inputs to an expression -->
+ * <button ion-button [color]="isDanger ? 'danger' : 'primary'" [outline]="isOutline">
+ *   Danger (Solid)
+ * </button>
+ *
+ * <!-- Bind the color and round inputs to an expression -->
+ * <button ion-button [color]="myColor" [round]="isRound">
+ *   Secondary (Round)
+ * </button>
+ *
+ * <!-- Bind the color and clear inputs to an expression -->
+ * <button ion-button [color]="isSecondary ? 'secondary' : 'primary'"  [clear]="isClear">
+ *   Primary (Clear)
+ * </button>
+ *
+ * <!-- Bind the color, outline and round inputs to an expression -->
+ * <button ion-button [color]="myColor2" [outline]="isOutline" [round]="isRound">
+ *   Dark (Solid + Round)
+ * </button>
+ *
+ * <!-- Bind the click event to a method -->
+ * <button ion-button (click)="logEvent($event)">
+ *   Click me!
+ * </button>
+ * ```
+ *
+ * ```ts
+ * \@Component({
+ *   templateUrl: 'main.html'
+ * })
+ * class E2EPage {
+ *   isDanger: boolean = true;
+ *   isSecondary: boolean = false;
+ *   isRound: boolean = true;
+ *   isOutline: boolean = false;
+ *   isClear: boolean = true;
+ *   myColor: string = 'secondary';
+ *   myColor2: string = 'dark';
+ *
+ *   logEvent(event) {
+ *     console.log(event)
+ *   }
+ * }
+ *
+ * ```
+ *
+ * \@demo /docs/demos/src/button/
+ * @see {\@link /docs/components#buttons Button Component Docs}
+ * @see {\@link /docs/components#fabs FabButton Docs}
+ * @see {\@link ../../fab/FabButton FabButton API Docs}
+ * @see {\@link ../../fab/FabContainer FabContainer API Docs}
+ */
+var Button = (function (_super) {
+    __extends(Button, _super);
+    /**
+     * @param {?} ionButton
+     * @param {?} config
+     * @param {?} elementRef
+     * @param {?} renderer
+     */
+    function Button(ionButton, config, elementRef, renderer) {
+        var _this = _super.call(this, config, elementRef, renderer) || this;
+        /**
+         * @hidden
+         */
+        _this._role = 'button';
+        /**
+         * @hidden
+         */
+        _this._style = 'default';
+        _this._mode = config.get('mode');
+        if (config.get('hoverCSS') === false) {
+            _this.setElementClass('disable-hover', true);
+        }
+        if (ionButton.trim().length > 0) {
+            _this.setRole(ionButton);
+        }
+        return _this;
+    }
+    Object.defineProperty(Button.prototype, "large", {
+        /**
+         * \@input {boolean} If true, activates the large button size.
+         * @param {?} val
+         * @return {?}
+         */
+        set: function (val) {
+            this._attr('_size', 'large', val);
+        },
+        enumerable: true,
+        configurable: true
+    });
+    Object.defineProperty(Button.prototype, "small", {
+        /**
+         * \@input {boolean} If true, activates the small button size.
+         * @param {?} val
+         * @return {?}
+         */
+        set: function (val) {
+            this._attr('_size', 'small', val);
+        },
+        enumerable: true,
+        configurable: true
+    });
+    Object.defineProperty(Button.prototype, "default", {
+        /**
+         * \@input {boolean} If true, activates the default button size. Normally the default, useful for buttons in an item.
+         * @param {?} val
+         * @return {?}
+         */
+        set: function (val) {
+            this._attr('_size', 'default', val);
+        },
+        enumerable: true,
+        configurable: true
+    });
+    Object.defineProperty(Button.prototype, "outline", {
+        /**
+         * \@input {boolean} If true, activates a transparent button style with a border.
+         * @param {?} val
+         * @return {?}
+         */
+        set: function (val) {
+            this._attr('_style', 'outline', val);
+        },
+        enumerable: true,
+        configurable: true
+    });
+    Object.defineProperty(Button.prototype, "clear", {
+        /**
+         * \@input {boolean} If true, activates a transparent button style without a border.
+         * @param {?} val
+         * @return {?}
+         */
+        set: function (val) {
+            this._attr('_style', 'clear', val);
+        },
+        enumerable: true,
+        configurable: true
+    });
+    Object.defineProperty(Button.prototype, "solid", {
+        /**
+         * \@input {boolean} If true, activates a solid button style. Normally the default, useful for buttons in a toolbar.
+         * @param {?} val
+         * @return {?}
+         */
+        set: function (val) {
+            this._attr('_style', 'solid', val);
+        },
+        enumerable: true,
+        configurable: true
+    });
+    Object.defineProperty(Button.prototype, "round", {
+        /**
+         * \@input {boolean} If true, activates a button with rounded corners.
+         * @param {?} val
+         * @return {?}
+         */
+        set: function (val) {
+            this._attr('_shape', 'round', val);
+        },
+        enumerable: true,
+        configurable: true
+    });
+    Object.defineProperty(Button.prototype, "block", {
+        /**
+         * \@input {boolean} If true, activates a button style that fills the available width.
+         * @param {?} val
+         * @return {?}
+         */
+        set: function (val) {
+            this._attr('_display', 'block', val);
+        },
+        enumerable: true,
+        configurable: true
+    });
+    Object.defineProperty(Button.prototype, "full", {
+        /**
+         * \@input {boolean} If true, activates a button style that fills the available width without
+         * a left and right border.
+         * @param {?} val
+         * @return {?}
+         */
+        set: function (val) {
+            this._attr('_display', 'full', val);
+        },
+        enumerable: true,
+        configurable: true
+    });
+    Object.defineProperty(Button.prototype, "strong", {
+        /**
+         * \@input {boolean} If true, activates a button with a heavier font weight.
+         * @param {?} val
+         * @return {?}
+         */
+        set: function (val) {
+            this._attr('_decorator', 'strong', val);
+        },
+        enumerable: true,
+        configurable: true
+    });
+    Object.defineProperty(Button.prototype, "mode", {
+        /**
+         * \@input {string} The mode determines which platform styles to use.
+         * Possible values are: `"ios"`, `"md"`, or `"wp"`.
+         * For more information, see [Platform Styles](/docs/theming/platform-specific-styles).
+         * @param {?} val
+         * @return {?}
+         */
+        set: function (val) {
+            this._assignCss(false);
+            this._mode = val;
+            this._assignCss(true);
+        },
+        enumerable: true,
+        configurable: true
+    });
+    /**
+     * @hidden
+     * @param {?} type
+     * @param {?} attrName
+     * @param {?} attrValue
+     * @return {?}
+     */
+    Button.prototype._attr = function (type, attrName, attrValue) {
+        if (type === '_style') {
+            this._updateColor(this._color, false);
+        }
+        this._setClass(((this))[type], false);
+        if (Object(__WEBPACK_IMPORTED_MODULE_3__util_util__["o" /* isTrueProperty */])(attrValue)) {
+            ((this))[type] = attrName;
+            this._setClass(attrName, true);
+        }
+        else {
+            // Special handling for '_style' which defaults to 'default'.
+            ((this))[type] = (type === '_style' ? 'default' : null);
+            this._setClass(((this))[type], true);
+        }
+        if (type === '_style') {
+            this._updateColor(this._color, true);
+        }
+    };
+    Object.defineProperty(Button.prototype, "color", {
+        /**
+         * \@input {string} The color to use from your Sass `$colors` map.
+         * Default options are: `"primary"`, `"secondary"`, `"danger"`, `"light"`, and `"dark"`.
+         * For more information, see [Theming your App](/docs/theming/theming-your-app).
+         * @param {?} val
+         * @return {?}
+         */
+        set: function (val) {
+            this._updateColor(this._color, false);
+            this._updateColor(val, true);
+            this._color = val;
+        },
+        enumerable: true,
+        configurable: true
+    });
+    /**
+     * @hidden
+     * @return {?}
+     */
+    Button.prototype.ngAfterContentInit = function () {
+        this._init = true;
+        this._assignCss(true);
+    };
+    /**
+     * @hidden
+     * @param {?} val
+     * @return {?}
+     */
+    Button.prototype.setRole = function (val) {
+        this._assignCss(false);
+        this._role = val;
+        this._assignCss(true);
+    };
+    /**
+     * @hidden
+     * @param {?} assignCssClass
+     * @return {?}
+     */
+    Button.prototype._assignCss = function (assignCssClass) {
+        var /** @type {?} */ role = this._role;
+        if (role) {
+            this.setElementClass(role, assignCssClass); // button
+            this.setElementClass(role + "-" + this._mode, assignCssClass); // button
+            this._setClass(this._style, assignCssClass); // button-clear
+            this._setClass(this._shape, assignCssClass); // button-round
+            this._setClass(this._display, assignCssClass); // button-full
+            this._setClass(this._size, assignCssClass); // button-small
+            this._setClass(this._decorator, assignCssClass); // button-strong
+            this._updateColor(this._color, assignCssClass); // button-secondary, bar-button-secondary
+        }
+    };
+    /**
+     * @hidden
+     * @param {?} type
+     * @param {?} assignCssClass
+     * @return {?}
+     */
+    Button.prototype._setClass = function (type, assignCssClass) {
+        if (type && this._init) {
+            type = type.toLocaleLowerCase();
+            this.setElementClass(this._role + "-" + type, assignCssClass);
+            this.setElementClass(this._role + "-" + type + "-" + this._mode, assignCssClass);
+        }
+    };
+    /**
+     * @hidden
+     * @param {?} color
+     * @param {?} isAdd
+     * @return {?}
+     */
+    Button.prototype._updateColor = function (color, isAdd) {
+        if (color && this._init) {
+            // The class should begin with the button role
+            // button, bar-button
+            var /** @type {?} */ className = this._role;
+            // If the role is not a bar-button, don't apply the solid style
+            var /** @type {?} */ style = this._style;
+            style = (this._role !== 'bar-button' && style === 'solid' ? 'default' : style);
+            className += (style !== null && style !== '' && style !== 'default' ? '-' + style.toLowerCase() : '');
+            if (color !== null && color !== '') {
+                this.setElementClass(className + "-" + this._mode + "-" + color, isAdd);
+            }
+        }
+    };
+    return Button;
+}(__WEBPACK_IMPORTED_MODULE_2__ion__["a" /* Ion */]));
+
+Button.decorators = [
+    { type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */], args: [{
+                selector: '[ion-button]',
+                template: '<span class="button-inner">' +
+                    '<ng-content></ng-content>' +
+                    '</span>' +
+                    '<div class="button-effect"></div>',
+                changeDetection: __WEBPACK_IMPORTED_MODULE_0__angular_core__["j" /* ChangeDetectionStrategy */].OnPush,
+                encapsulation: __WEBPACK_IMPORTED_MODULE_0__angular_core__["_16" /* ViewEncapsulation */].None,
+            },] },
+];
+/**
+ * @nocollapse
+ */
+Button.ctorParameters = function () { return [
+    { type: undefined, decorators: [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["g" /* Attribute */], args: ['ion-button',] },] },
+    { type: __WEBPACK_IMPORTED_MODULE_1__config_config__["a" /* Config */], },
+    { type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["u" /* ElementRef */], },
+    { type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["_0" /* Renderer */], },
+]; };
+Button.propDecorators = {
+    'large': [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["E" /* Input */] },],
+    'small': [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["E" /* Input */] },],
+    'default': [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["E" /* Input */] },],
+    'outline': [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["E" /* Input */] },],
+    'clear': [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["E" /* Input */] },],
+    'solid': [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["E" /* Input */] },],
+    'round': [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["E" /* Input */] },],
+    'block': [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["E" /* Input */] },],
+    'full': [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["E" /* Input */] },],
+    'strong': [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["E" /* Input */] },],
+    'mode': [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["E" /* Input */] },],
+    'color': [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["E" /* Input */] },],
+};
+function Button_tsickle_Closure_declarations() {
+    /** @type {?} */
+    Button.decorators;
+    /**
+     * @nocollapse
+     * @type {?}
+     */
+    Button.ctorParameters;
+    /** @type {?} */
+    Button.propDecorators;
+    /**
+     * @hidden
+     * @type {?}
+     */
+    Button.prototype._role;
+    /**
+     * @hidden
+     * @type {?}
+     */
+    Button.prototype._size;
+    /**
+     * @hidden
+     * @type {?}
+     */
+    Button.prototype._style;
+    /**
+     * @hidden
+     * @type {?}
+     */
+    Button.prototype._shape;
+    /**
+     * @hidden
+     * @type {?}
+     */
+    Button.prototype._display;
+    /**
+     * @hidden
+     * @type {?}
+     */
+    Button.prototype._decorator;
+    /**
+     * @hidden
+     * @type {?}
+     */
+    Button.prototype._init;
+}
+//# sourceMappingURL=button.js.map
+
+/***/ }),
+/* 36 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return Keyboard; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__config_config__ = __webpack_require__(1);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__dom_controller__ = __webpack_require__(9);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__util_dom__ = __webpack_require__(10);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__key__ = __webpack_require__(18);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__platform__ = __webpack_require__(3);
+
+
+
+
+
+
+/**
+ * \@name Keyboard
+ * \@description
+ * The `Keyboard` class allows you to work with the keyboard events provided
+ * by the Ionic keyboard plugin.
+ *
+ * \@usage
+ * ```ts
+ * export class MyClass {
+ *   constructor(public keyboard: Keyboard) {
+ *
+ *   }
+ * }
+ * ```
+ */
+var Keyboard = (function () {
+    /**
+     * @param {?} config
+     * @param {?} _plt
+     * @param {?} _zone
+     * @param {?} _dom
+     */
+    function Keyboard(config, _plt, _zone, _dom) {
+        this._plt = _plt;
+        this._zone = _zone;
+        this._dom = _dom;
+        this.willShow = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["w" /* EventEmitter */]();
+        this.willHide = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["w" /* EventEmitter */]();
+        this.didShow = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["w" /* EventEmitter */]();
+        this.didHide = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["w" /* EventEmitter */]();
+        this.eventsAvailable = false;
+        this.focusOutline(config.get('focusOutline'));
+        var win = _plt.win();
+        if (config.getBoolean('keyboardResizes', false)) {
+            this.listenV2(win);
+        }
+        else {
+            this.listenV1(win);
+        }
+    }
+    /**
+     * @param {?} win
+     * @return {?}
+     */
+    Keyboard.prototype.listenV2 = function (win) {
+        var _this = this;
+        var /** @type {?} */ platform = this._plt;
+        platform.registerListener(win, 'keyboardWillShow', function () {
+            _this._zone.run(function () {
+                _this.willShow.emit();
+            });
+        }, { zone: false, passive: true });
+        platform.registerListener(win, 'keyboardWillHide', function () {
+            _this._zone.run(function () {
+                _this.willHide.emit();
+            });
+        }, { zone: false, passive: true });
+        platform.registerListener(win, 'keyboardDidShow', function () {
+            _this._zone.run(function () {
+                _this.didShow.emit();
+            });
+        }, { zone: false, passive: true });
+        platform.registerListener(win, 'keyboardDidHide', function () {
+            _this._zone.run(function () {
+                _this.didHide.emit();
+            });
+        }, { zone: false, passive: true });
+        this.eventsAvailable = true;
+    };
+    /**
+     * @param {?} win
+     * @return {?}
+     */
+    Keyboard.prototype.listenV1 = function (win) {
+        var _this = this;
+        var /** @type {?} */ platform = this._plt;
+        platform.registerListener(win, 'native.keyboardhide', function () {
+            _this.blurActiveInput(true);
+        }, { zone: false, passive: true });
+        platform.registerListener(win, 'native.keyboardshow', function () {
+            _this.blurActiveInput(false);
+        }, { zone: false, passive: true });
+    };
+    /**
+     * @param {?} shouldBlur
+     * @return {?}
+     */
+    Keyboard.prototype.blurActiveInput = function (shouldBlur) {
+        var _this = this;
+        var /** @type {?} */ platform = this._plt;
+        platform.cancelTimeout(this._tmr);
+        if (shouldBlur) {
+            this._tmr = platform.timeout(function () {
+                // this custom cordova plugin event fires when the keyboard will hide
+                // useful when the virtual keyboard is closed natively
+                // https://github.com/ionic-team/ionic-plugin-keyboard
+                if (_this.isOpen()) {
+                    platform.focusOutActiveElement();
+                }
+            }, 80);
+        }
+    };
+    /**
+     * Check to see if the keyboard is open or not.
+     *
+     * ```ts
+     * export class MyClass {
+     *   constructor(public keyboard: Keyboard) {
+     *
+     *   }
+     *
+     *   keyboardCheck() {
+     *     console.log('The keyboard is open:', this.keyboard.isOpen());
+     *   }
+     * }
+     * ```
+     *
+     * @return {?}
+     */
+    Keyboard.prototype.isOpen = function () {
+        return this.hasFocusedTextInput();
+    };
+    /**
+     * When the keyboard is closed, call any methods you want.
+     *
+     * ```ts
+     * export class MyClass {
+     *   constructor(public keyboard: Keyboard) {
+     *     this.keyboard.onClose(this.closeCallback);
+     *   }
+     *   closeCallback() {
+     *     // call what ever functionality you want on keyboard close
+     *     console.log('Closing time');
+     *   }
+     * }
+     * ```
+     *
+     * @param {?} callback
+     * @param {?=} pollingInternval
+     * @param {?=} pollingChecksMax
+     * @return {?}
+     */
+    Keyboard.prototype.onClose = function (callback, pollingInternval, pollingChecksMax) {
+        if (pollingInternval === void 0) { pollingInternval = KEYBOARD_CLOSE_POLLING; }
+        if (pollingChecksMax === void 0) { pollingChecksMax = KEYBOARD_POLLING_CHECKS_MAX; }
+        (void 0) /* console.debug */;
+        var /** @type {?} */ self = this;
+        var /** @type {?} */ checks = 0;
+        var /** @type {?} */ promise = null;
+        if (!callback) {
+            // a callback wasn't provided, so let's return a promise instead
+            promise = new Promise(function (resolve) { callback = resolve; });
+        }
+        /**
+         * @return {?}
+         */
+        function checkKeyboard() {
+            (void 0) /* console.debug */;
+            if (!self.isOpen() || checks > pollingChecksMax) {
+                self._plt.timeout(function () {
+                    self._zone.run(function () {
+                        (void 0) /* console.debug */;
+                        callback();
+                    });
+                }, 400);
+            }
+            else {
+                self._plt.timeout(checkKeyboard, pollingInternval);
+            }
+            checks++;
+        }
+        self._plt.timeout(checkKeyboard, pollingInternval);
+        return promise;
+    };
+    /**
+     * Programmatically close the keyboard.
+     * @return {?}
+     */
+    Keyboard.prototype.close = function () {
+        var _this = this;
+        this._dom.read(function () {
+            if (_this.isOpen()) {
+                // only focus out when a text input has focus
+                (void 0) /* console.debug */;
+                _this._dom.write(function () {
+                    _this._plt.focusOutActiveElement();
+                });
+            }
+        });
+    };
+    /**
+     * @hidden
+     * @param {?} setting
+     * @return {?}
+     */
+    Keyboard.prototype.focusOutline = function (setting) {
+        /* Focus Outline
+         * --------------------------------------------------
+         * By default, when a keydown event happens from a tab key, then
+         * the 'focus-outline' css class is added to the body element
+         * so focusable elements have an outline. On a mousedown or
+         * touchstart event, then the 'focus-outline' css class is removed.
+         *
+         * Config default overrides:
+         * focusOutline: true     - Always add the focus-outline
+         * focusOutline: false    - Do not add the focus-outline
+         */
+        var /** @type {?} */ self = this;
+        var /** @type {?} */ platform = self._plt;
+        var /** @type {?} */ doc = platform.doc();
+        var /** @type {?} */ isKeyInputEnabled = false;
+        var /** @type {?} */ unRegMouse;
+        var /** @type {?} */ unRegTouch;
+        var /** @type {?} */ evOpts = { passive: true, zone: false };
+        /**
+         * @return {?}
+         */
+        function cssClass() {
+            self._dom.write(function () {
+                ((platform.doc().body.classList))[isKeyInputEnabled ? 'add' : 'remove']('focus-outline');
+            });
+        }
+        if (setting === true) {
+            isKeyInputEnabled = true;
+            return cssClass();
+        }
+        else if (setting === false) {
+            return;
+        }
+        /**
+         * @param {?} ev
+         * @return {?}
+         */
+        function keyDown(ev) {
+            if (!isKeyInputEnabled && ev.keyCode === __WEBPACK_IMPORTED_MODULE_4__key__["g" /* KEY_TAB */]) {
+                isKeyInputEnabled = true;
+                enableKeyInput();
+            }
+        }
+        /**
+         * @return {?}
+         */
+        function pointerDown() {
+            isKeyInputEnabled = false;
+            enableKeyInput();
+        }
+        /**
+         * @return {?}
+         */
+        function enableKeyInput() {
+            cssClass();
+            unRegMouse && unRegMouse();
+            unRegTouch && unRegTouch();
+            if (isKeyInputEnabled) {
+                // listen for when a mousedown or touchstart event happens
+                unRegMouse = platform.registerListener(doc, 'mousedown', pointerDown, evOpts);
+                unRegTouch = platform.registerListener(doc, 'touchstart', pointerDown, evOpts);
+            }
+        }
+        // always listen for tab keydown events
+        platform.registerListener(platform.doc(), 'keydown', keyDown, evOpts);
+    };
+    /**
+     * @return {?}
+     */
+    Keyboard.prototype.hasFocusedTextInput = function () {
+        var /** @type {?} */ activeEle = this._plt.getActiveElement();
+        if (Object(__WEBPACK_IMPORTED_MODULE_3__util_dom__["e" /* isTextInput */])(activeEle)) {
+            return (activeEle.parentElement.querySelector(':focus') === activeEle);
+        }
+        return false;
+    };
+    return Keyboard;
+}());
+
+Keyboard.decorators = [
+    { type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["B" /* Injectable */] },
+];
+/**
+ * @nocollapse
+ */
+Keyboard.ctorParameters = function () { return [
+    { type: __WEBPACK_IMPORTED_MODULE_1__config_config__["a" /* Config */], },
+    { type: __WEBPACK_IMPORTED_MODULE_5__platform__["a" /* Platform */], },
+    { type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["P" /* NgZone */], },
+    { type: __WEBPACK_IMPORTED_MODULE_2__dom_controller__["a" /* DomController */], },
+]; };
+function Keyboard_tsickle_Closure_declarations() {
+    /** @type {?} */
+    Keyboard.decorators;
+    /**
+     * @nocollapse
+     * @type {?}
+     */
+    Keyboard.ctorParameters;
+    /** @type {?} */
+    Keyboard.prototype._tmr;
+    /** @type {?} */
+    Keyboard.prototype.willShow;
+    /** @type {?} */
+    Keyboard.prototype.willHide;
+    /** @type {?} */
+    Keyboard.prototype.didShow;
+    /** @type {?} */
+    Keyboard.prototype.didHide;
+    /** @type {?} */
+    Keyboard.prototype.eventsAvailable;
+    /** @type {?} */
+    Keyboard.prototype._plt;
+    /** @type {?} */
+    Keyboard.prototype._zone;
+    /** @type {?} */
+    Keyboard.prototype._dom;
+}
+var /** @type {?} */ KEYBOARD_CLOSE_POLLING = 150;
+var /** @type {?} */ KEYBOARD_POLLING_CHECKS_MAX = 100;
+//# sourceMappingURL=keyboard.js.map
+
+/***/ }),
+/* 37 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return Haptic; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__platform_platform__ = __webpack_require__(3);
+
+
+/**
+ * \@name Haptic
+ * \@description
+ * The `Haptic` class interacts with a haptic engine on the device, if
+ * available. Generally, Ionic components use this under the hood, but you're
+ * welcome to get a bit crazy with it if you fancy.
+ *
+ * Currently, this uses the Taptic engine on iOS.
+ *
+ * \@usage
+ * ```ts
+ * export class MyClass{
+ *  constructor(haptic: Haptic){
+ *    haptic.selection();
+ *  }
+ * }
+ *
+ * ```
+ */
+var Haptic = (function () {
+    /**
+     * @param {?} plt
+     */
+    function Haptic(plt) {
+        var _this = this;
+        if (plt) {
+            plt.ready().then(function () {
+                _this._p = plt.win().TapticEngine;
+            });
+        }
+    }
+    /**
+     * Check to see if the Haptic Plugin is available
+     *
+     * @return {?}
+     */
+    Haptic.prototype.available = function () {
+        return !!this._p;
+    };
+    /**
+     * Trigger a selection changed haptic event. Good for one-time events
+     * (not for gestures)
+     * @return {?}
+     */
+    Haptic.prototype.selection = function () {
+        this._p && this._p.selection();
+    };
+    /**
+     * Tell the haptic engine that a gesture for a selection change is starting.
+     * @return {?}
+     */
+    Haptic.prototype.gestureSelectionStart = function () {
+        this._p && this._p.gestureSelectionStart();
+    };
+    /**
+     * Tell the haptic engine that a selection changed during a gesture.
+     * @return {?}
+     */
+    Haptic.prototype.gestureSelectionChanged = function () {
+        this._p && this._p.gestureSelectionChanged();
+    };
+    /**
+     * Tell the haptic engine we are done with a gesture. This needs to be
+     * called lest resources are not properly recycled.
+     * @return {?}
+     */
+    Haptic.prototype.gestureSelectionEnd = function () {
+        this._p && this._p.gestureSelectionEnd();
+    };
+    /**
+     * Use this to indicate success/failure/warning to the user.
+     * options should be of the type `{ type: 'success' }` (or `warning`/`error`)
+     * @param {?} options
+     * @return {?}
+     */
+    Haptic.prototype.notification = function (options) {
+        this._p && this._p.notification(options);
+    };
+    /**
+     * Use this to indicate success/failure/warning to the user.
+     * options should be of the type `{ style: 'light' }` (or `medium`/`heavy`)
+     * @param {?} options
+     * @return {?}
+     */
+    Haptic.prototype.impact = function (options) {
+        this._p && this._p.impact(options);
+    };
+    return Haptic;
+}());
+
+Haptic.decorators = [
+    { type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["B" /* Injectable */] },
+];
+/**
+ * @nocollapse
+ */
+Haptic.ctorParameters = function () { return [
+    { type: __WEBPACK_IMPORTED_MODULE_1__platform_platform__["a" /* Platform */], },
+]; };
+function Haptic_tsickle_Closure_declarations() {
+    /** @type {?} */
+    Haptic.decorators;
+    /**
+     * @nocollapse
+     * @type {?}
+     */
+    Haptic.ctorParameters;
+    /** @type {?} */
+    Haptic.prototype._p;
+}
+//# sourceMappingURL=haptic.js.map
+
+/***/ }),
+/* 38 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return RootNode; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "b", function() { return SplitPane; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__ion__ = __webpack_require__(4);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__util_util__ = __webpack_require__(2);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__config_config__ = __webpack_require__(1);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__platform_platform__ = __webpack_require__(3);
+var __extends = (this && this.__extends) || (function () {
+    var extendStatics = Object.setPrototypeOf ||
+        ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
+        function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
+    return function (d, b) {
+        extendStatics(d, b);
+        function __() { this.constructor = d; }
+        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+    };
+})();
+
+
+
+
+
+var /** @type {?} */ QUERY = {
+    xs: '(min-width: 0px)',
+    sm: '(min-width: 576px)',
+    md: '(min-width: 768px)',
+    lg: '(min-width: 992px)',
+    xl: '(min-width: 1200px)',
+    never: ''
+};
+/**
+ * @hidden
+ * @abstract
+ */
+var RootNode = (function () {
+    function RootNode() {
+    }
+    /**
+     * @abstract
+     * @return {?}
+     */
+    RootNode.prototype.getElementRef = function () { };
+    /**
+     * @abstract
+     * @return {?}
+     */
+    RootNode.prototype.initPane = function () { };
+    /**
+     * @abstract
+     * @param {?} visible
+     * @return {?}
+     */
+    RootNode.prototype.paneChanged = function (visible) { };
+    return RootNode;
+}());
+
+/**
+ * \@name SplitPane
+ *
+ * \@description
+ * SplitPane is a component that makes it possible to create multi-view layout.
+ * Similar to iPad apps, SplitPane allows UI elements, like Menus, to be
+ * displayed as the viewport increases.
+ *
+ * If the devices screen size is below a certain size, the SplitPane will
+ * collapse and the menu will become hidden again. This is especially useful when
+ * creating an app that will be served over a browser or deployed through the app
+ * store to phones and tablets.
+ *
+ * \@usage
+ * To use SplitPane, simply add the component around your root component.
+ * In this example, we'll be using a sidemenu layout, similar to what is
+ * provided from the sidemenu starter template.
+ *
+ *  ```html
+ *  <ion-split-pane>
+ *    <!--  our side menu  -->
+ *    <ion-menu [content]="content">
+ *      <ion-header>
+ *        <ion-toolbar>
+ *          <ion-title>Menu</ion-title>
+ *        </ion-toolbar>
+ *      </ion-header>
+ *    </ion-menu>
+ *
+ *    <!-- the main content -->
+ *    <ion-nav [root]="root" main #content></ion-nav>
+ *  </ion-split-pane>
+ *  ```
+ *
+ *  Here, SplitPane will look for the element with the `main` attribute and make
+ *  that the central component on larger screens. The `main` component can be any
+ *  Ionic component (`ion-nav` or `ion-tabs`) except `ion-menu`.
+ *
+ *  ### Setting breakpoints
+ *
+ *  By default, SplitPane will expand when the screen is larger than 768px.
+ *  If you want to customize this, use the `when` input. The `when` input can
+ *  accept any valid media query, as it uses `matchMedia()` underneath.
+ *
+ *  ```
+ *  <ion-split-pane when="(min-width: 475px)">
+ *
+ *    <!--  our side menu  -->
+ *    <ion-menu [content]="content">
+ *    ....
+ *    </ion-menu>
+ *
+ *    <!-- the main content -->
+ *    <ion-nav [root]="root" main #content></ion-nav>
+ *  </ion-split-pane>
+ *  ```
+ *
+ *  SplitPane also provides some predefined media queries that can be used.
+ *
+ *  ```html
+ *  <!-- could be "xs", "sm", "md", "lg", or "xl" -->
+ *  <ion-split-pane when="lg">
+ *  ...
+ *  </ion-split-pane>
+ *  ```
+ *
+ *
+ *  | Size | Value                 | Description                                                           |
+ *  |------|-----------------------|-----------------------------------------------------------------------|
+ *  | `xs` | `(min-width: 0px)`    | Show the split-pane when the min-width is 0px (meaning, always)       |
+ *  | `sm` | `(min-width: 576px)`  | Show the split-pane when the min-width is 576px                       |
+ *  | `md` | `(min-width: 768px)`  | Show the split-pane when the min-width is 768px (default break point) |
+ *  | `lg` | `(min-width: 992px)`  | Show the split-pane when the min-width is 992px                       |
+ *  | `xl` | `(min-width: 1200px)` | Show the split-pane when the min-width is 1200px                      |
+ *
+ *  You can also pass in boolean values that will trigger SplitPane when the value
+ *  or expression evaluates to true.
+ *
+ *
+ *  ```html
+ *  <ion-split-pane [when]="isLarge">
+ *  ...
+ *  </ion-split-pane>
+ *  ```
+ *
+ *  ```ts
+ *  class MyClass {
+ *    public isLarge = false;
+ *    constructor(){}
+ *  }
+ *  ```
+ *
+ *  Or
+ *
+ *  ```html
+ *  <ion-split-pane [when]="shouldShow()">
+ *  ...
+ *  </ion-split-pane>
+ *  ```
+ *
+ *  ```ts
+ *  class MyClass {
+ *    constructor(){}
+ *    shouldShow(){
+ *      if(conditionA){
+ *        return true
+ *      } else {
+ *        return false
+ *      }
+ *    }
+ *  }
+ *  ```
+ *
+ */
+var SplitPane = (function (_super) {
+    __extends(SplitPane, _super);
+    /**
+     * @param {?} _zone
+     * @param {?} _plt
+     * @param {?} config
+     * @param {?} elementRef
+     * @param {?} renderer
+     */
+    function SplitPane(_zone, _plt, config, elementRef, renderer) {
+        var _this = _super.call(this, config, elementRef, renderer, 'split-pane') || this;
+        _this._zone = _zone;
+        _this._plt = _plt;
+        _this._init = false;
+        _this._visible = false;
+        _this._isEnabled = true;
+        _this._mediaQuery = QUERY['md'];
+        /**
+         * @hidden
+         */
+        _this.sideContent = null;
+        /**
+         * @hidden
+         */
+        _this.mainContent = null;
+        /**
+         * \@output {any} Expression to be called when the split-pane visibility has changed
+         */
+        _this.ionChange = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["w" /* EventEmitter */]();
+        return _this;
+    }
+    Object.defineProperty(SplitPane.prototype, "_setchildren", {
+        /**
+         * @hidden
+         * @param {?} query
+         * @return {?}
+         */
+        set: function (query) {
+            var _this = this;
+            var /** @type {?} */ children = this._children = query.filter((function (child) { return child !== _this; }));
+            children.forEach(function (child) {
+                var /** @type {?} */ isMain = child.initPane();
+                _this._setPaneCSSClass(child.getElementRef(), isMain);
+            });
+        },
+        enumerable: true,
+        configurable: true
+    });
+    Object.defineProperty(SplitPane.prototype, "when", {
+        /**
+         * @return {?}
+         */
+        get: function () {
+            return this._mediaQuery;
+        },
+        /**
+         * \@input {string | boolean} When the split-pane should be shown.
+         * Can be a CSS media query expression, or a shortcut expression.
+         * Can also be a boolean expression.
+         * @param {?} query
+         * @return {?}
+         */
+        set: function (query) {
+            if (typeof query === 'boolean') {
+                this._mediaQuery = query;
+            }
+            else {
+                var /** @type {?} */ defaultQuery = QUERY[query];
+                this._mediaQuery = (defaultQuery)
+                    ? defaultQuery
+                    : query;
+            }
+            this._update();
+        },
+        enumerable: true,
+        configurable: true
+    });
+    Object.defineProperty(SplitPane.prototype, "enabled", {
+        /**
+         * @return {?}
+         */
+        get: function () {
+            return this._isEnabled;
+        },
+        /**
+         * \@input {boolean} If `false`, the split-pane is disabled, ie. the side pane will
+         * never be displayed. Default `true`.
+         * @param {?} val
+         * @return {?}
+         */
+        set: function (val) {
+            this._isEnabled = Object(__WEBPACK_IMPORTED_MODULE_2__util_util__["o" /* isTrueProperty */])(val);
+            this._update();
+        },
+        enumerable: true,
+        configurable: true
+    });
+    /**
+     * @hidden
+     * @param {?} node
+     * @param {?} isMain
+     * @param {?} callback
+     * @return {?}
+     */
+    SplitPane.prototype._register = function (node, isMain, callback) {
+        if (this.getElementRef().nativeElement !== node.getElementRef().nativeElement.parentNode) {
+            return false;
+        }
+        this._setPaneCSSClass(node.getElementRef(), isMain);
+        if (callback) {
+            this.ionChange.subscribe(callback);
+        }
+        if (isMain) {
+            if (this.mainContent) {
+                console.error('split pane: main content was already set');
+            }
+            this.mainContent = node;
+        }
+        return true;
+    };
+    /**
+     * @hidden
+     * @return {?}
+     */
+    SplitPane.prototype.ngAfterViewInit = function () {
+        this._init = true;
+        this._update();
+    };
+    /**
+     * @hidden
+     * @return {?}
+     */
+    SplitPane.prototype._update = function () {
+        var _this = this;
+        if (!this._init) {
+            return;
+        }
+        // Unlisten
+        this._rmListener && this._rmListener();
+        this._rmListener = null;
+        // Check if the split-pane is disabled
+        if (!this._isEnabled) {
+            this._setVisible(false);
+            return;
+        }
+        var /** @type {?} */ query = this._mediaQuery;
+        if (typeof query === 'boolean') {
+            this._setVisible(query);
+            return;
+        }
+        if (query && query.length > 0) {
+            // Listen
+            var /** @type {?} */ callback_1 = function (query) { return _this._setVisible(query.matches); };
+            var /** @type {?} */ mediaList_1 = this._plt.win().matchMedia(query);
+            mediaList_1.addListener(callback_1);
+            this._setVisible(mediaList_1.matches);
+            this._rmListener = function () {
+                mediaList_1.removeListener(callback_1);
+            };
+        }
+        else {
+            this._setVisible(false);
+        }
+    };
+    /**
+     * @hidden
+     * @return {?}
+     */
+    SplitPane.prototype._updateChildren = function () {
+        this.mainContent = null;
+        this.sideContent = null;
+        var /** @type {?} */ visible = this._visible;
+        this._children.forEach(function (child) { return child.paneChanged && child.paneChanged(visible); });
+    };
+    /**
+     * @hidden
+     * @param {?} visible
+     * @return {?}
+     */
+    SplitPane.prototype._setVisible = function (visible) {
+        var _this = this;
+        if (this._visible === visible) {
+            return;
+        }
+        this._visible = visible;
+        this.setElementClass('split-pane-visible', visible);
+        this._updateChildren();
+        this._zone.run(function () {
+            _this.ionChange.emit(_this);
+        });
+    };
+    /**
+     * @hidden
+     * @return {?}
+     */
+    SplitPane.prototype.isVisible = function () {
+        return this._visible;
+    };
+    /**
+     * @hidden
+     * @param {?} className
+     * @param {?} add
+     * @return {?}
+     */
+    SplitPane.prototype.setElementClass = function (className, add) {
+        this._renderer.setElementClass(this._elementRef.nativeElement, className, add);
+    };
+    /**
+     * @hidden
+     * @param {?} elementRef
+     * @param {?} isMain
+     * @return {?}
+     */
+    SplitPane.prototype._setPaneCSSClass = function (elementRef, isMain) {
+        var /** @type {?} */ ele = elementRef.nativeElement;
+        this._renderer.setElementClass(ele, 'split-pane-main', isMain);
+        this._renderer.setElementClass(ele, 'split-pane-side', !isMain);
+    };
+    /**
+     * @hidden
+     * @return {?}
+     */
+    SplitPane.prototype.ngOnDestroy = function () {
+        (void 0) /* assert */;
+        this._rmListener && this._rmListener();
+        this._rmListener = null;
+    };
+    /**
+     * @hidden
+     * @return {?}
+     */
+    SplitPane.prototype.initPane = function () {
+        return true;
+    };
+    return SplitPane;
+}(__WEBPACK_IMPORTED_MODULE_1__ion__["a" /* Ion */]));
+
+SplitPane.decorators = [
+    { type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["t" /* Directive */], args: [{
+                selector: 'ion-split-pane',
+                providers: [{ provide: RootNode, useExisting: Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_20" /* forwardRef */])(function () { return SplitPane; }) }]
+            },] },
+];
+/**
+ * @nocollapse
+ */
+SplitPane.ctorParameters = function () { return [
+    { type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["P" /* NgZone */], },
+    { type: __WEBPACK_IMPORTED_MODULE_4__platform_platform__["a" /* Platform */], },
+    { type: __WEBPACK_IMPORTED_MODULE_3__config_config__["a" /* Config */], },
+    { type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["u" /* ElementRef */], },
+    { type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["_0" /* Renderer */], },
+]; };
+SplitPane.propDecorators = {
+    '_setchildren': [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["s" /* ContentChildren */], args: [RootNode, { descendants: false },] },],
+    'when': [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["E" /* Input */] },],
+    'enabled': [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["E" /* Input */] },],
+    'ionChange': [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["S" /* Output */] },],
+};
+function SplitPane_tsickle_Closure_declarations() {
+    /** @type {?} */
+    SplitPane.decorators;
+    /**
+     * @nocollapse
+     * @type {?}
+     */
+    SplitPane.ctorParameters;
+    /** @type {?} */
+    SplitPane.propDecorators;
+    /** @type {?} */
+    SplitPane.prototype._init;
+    /** @type {?} */
+    SplitPane.prototype._visible;
+    /** @type {?} */
+    SplitPane.prototype._isEnabled;
+    /** @type {?} */
+    SplitPane.prototype._rmListener;
+    /** @type {?} */
+    SplitPane.prototype._mediaQuery;
+    /** @type {?} */
+    SplitPane.prototype._children;
+    /**
+     * @hidden
+     * @type {?}
+     */
+    SplitPane.prototype.sideContent;
+    /**
+     * @hidden
+     * @type {?}
+     */
+    SplitPane.prototype.mainContent;
+    /**
+     * \@output {any} Expression to be called when the split-pane visibility has changed
+     * @type {?}
+     */
+    SplitPane.prototype.ionChange;
+    /** @type {?} */
+    SplitPane.prototype._zone;
+    /** @type {?} */
+    SplitPane.prototype._plt;
+}
+//# sourceMappingURL=split-pane.js.map
+
+/***/ }),
+/* 39 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return Navbar; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__app_app__ = __webpack_require__(7);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__config_config__ = __webpack_require__(1);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__util_util__ = __webpack_require__(2);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__navigation_nav_controller__ = __webpack_require__(21);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__toolbar_base__ = __webpack_require__(151);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__navigation_view_controller__ = __webpack_require__(5);
+var __extends = (this && this.__extends) || (function () {
+    var extendStatics = Object.setPrototypeOf ||
+        ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
+        function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
+    return function (d, b) {
+        extendStatics(d, b);
+        function __() { this.constructor = d; }
+        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+    };
+})();
+
+
+
+
+
+
+
+/**
+ * \@name Navbar
+ * \@description
+ * Navbar acts as the navigational toolbar, which also comes with a back
+ * button. A navbar can contain a `ion-title`, any number of buttons,
+ * a segment, or a searchbar. Navbars must be placed within an
+ * `<ion-header>` in order for them to be placed above the content.
+ * It's important to note that navbar's are part of the dynamic navigation
+ * stack. If you need a static toolbar, use ion-toolbar.
+ *
+ * \@usage
+ * ```html
+ * <ion-header>
+ *
+ *   <ion-navbar>
+ *     <button ion-button icon-only menuToggle>
+ *       <ion-icon name="menu"></ion-icon>
+ *     </button>
+ *
+ *     <ion-title>
+ *       Page Title
+ *     </ion-title>
+ *
+ *     <ion-buttons end>
+ *       <button ion-button icon-only (click)="openModal()">
+ *         <ion-icon name="options"></ion-icon>
+ *       </button>
+ *     </ion-buttons>
+ *   </ion-navbar>
+ *
+ * </ion-header>
+ * ```
+ *
+ * \@demo /docs/demos/src/navbar/
+ * @see {\@link ../../toolbar/Toolbar/ Toolbar API Docs}
+ */
+var Navbar = (function (_super) {
+    __extends(Navbar, _super);
+    /**
+     * @param {?} _app
+     * @param {?} viewCtrl
+     * @param {?} navCtrl
+     * @param {?} config
+     * @param {?} elementRef
+     * @param {?} renderer
+     */
+    function Navbar(_app, viewCtrl, navCtrl, config, elementRef, renderer) {
+        var _this = _super.call(this, config, elementRef, renderer) || this;
+        _this._app = _app;
+        _this.navCtrl = navCtrl;
+        /**
+         * @hidden
+         */
+        _this._hidden = false;
+        /**
+         * @hidden
+         */
+        _this._hideBb = false;
+        viewCtrl && viewCtrl._setNavbar(_this);
+        _this._bbIcon = config.get('backButtonIcon');
+        _this._sbPadding = config.getBoolean('statusbarPadding');
+        _this._backText = config.get('backButtonText', 'Back');
+        return _this;
+    }
+    Object.defineProperty(Navbar.prototype, "hideBackButton", {
+        /**
+         * \@input {boolean} If true, the back button will be hidden.
+         * @return {?}
+         */
+        get: function () {
+            return this._hideBb;
+        },
+        /**
+         * @param {?} val
+         * @return {?}
+         */
+        set: function (val) {
+            this._hideBb = Object(__WEBPACK_IMPORTED_MODULE_3__util_util__["o" /* isTrueProperty */])(val);
+        },
+        enumerable: true,
+        configurable: true
+    });
+    /**
+     * @param {?} ev
+     * @return {?}
+     */
+    Navbar.prototype.backButtonClick = function (ev) {
+        ev.preventDefault();
+        ev.stopPropagation();
+        this.navCtrl && this.navCtrl.pop(null, null);
+    };
+    /**
+     * Set the text of the Back Button in the Nav Bar. Defaults to "Back".
+     * @param {?} text
+     * @return {?}
+     */
+    Navbar.prototype.setBackButtonText = function (text) {
+        this._backText = text;
+    };
+    /**
+     * @hidden
+     * @return {?}
+     */
+    Navbar.prototype.didEnter = function () {
+        try {
+            this._app.setTitle(this.getTitleText());
+        }
+        catch (e) {
+            console.error(e);
+        }
+    };
+    /**
+     * @hidden
+     * @param {?} isHidden
+     * @return {?}
+     */
+    Navbar.prototype.setHidden = function (isHidden) {
+        // used to display none/block the navbar
+        this._hidden = isHidden;
+    };
+    return Navbar;
+}(__WEBPACK_IMPORTED_MODULE_5__toolbar_base__["a" /* ToolbarBase */]));
+
+Navbar.decorators = [
+    { type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */], args: [{
+                selector: 'ion-navbar',
+                template: '<div class="toolbar-background" [ngClass]="\'toolbar-background-\' + _mode"></div>' +
+                    '<button (click)="backButtonClick($event)" ion-button="bar-button" class="back-button" [ngClass]="\'back-button-\' + _mode" [hidden]="_hideBb">' +
+                    '<ion-icon class="back-button-icon" [ngClass]="\'back-button-icon-\' + _mode" [name]="_bbIcon"></ion-icon>' +
+                    '<span class="back-button-text" [ngClass]="\'back-button-text-\' + _mode">{{_backText}}</span>' +
+                    '</button>' +
+                    '<ng-content select="[menuToggle],ion-buttons[left]"></ng-content>' +
+                    '<ng-content select="ion-buttons[start]"></ng-content>' +
+                    '<ng-content select="ion-buttons[end],ion-buttons[right]"></ng-content>' +
+                    '<div class="toolbar-content" [ngClass]="\'toolbar-content-\' + _mode">' +
+                    '<ng-content></ng-content>' +
+                    '</div>',
+                host: {
+                    '[hidden]': '_hidden',
+                    'class': 'toolbar',
+                    '[class.statusbar-padding]': '_sbPadding'
+                }
+            },] },
+];
+/**
+ * @nocollapse
+ */
+Navbar.ctorParameters = function () { return [
+    { type: __WEBPACK_IMPORTED_MODULE_1__app_app__["a" /* App */], },
+    { type: __WEBPACK_IMPORTED_MODULE_6__navigation_view_controller__["a" /* ViewController */], decorators: [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["R" /* Optional */] },] },
+    { type: __WEBPACK_IMPORTED_MODULE_4__navigation_nav_controller__["a" /* NavController */], decorators: [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["R" /* Optional */] },] },
+    { type: __WEBPACK_IMPORTED_MODULE_2__config_config__["a" /* Config */], },
+    { type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["u" /* ElementRef */], },
+    { type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["_0" /* Renderer */], },
+]; };
+Navbar.propDecorators = {
+    'hideBackButton': [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["E" /* Input */] },],
+};
+function Navbar_tsickle_Closure_declarations() {
+    /** @type {?} */
+    Navbar.decorators;
+    /**
+     * @nocollapse
+     * @type {?}
+     */
+    Navbar.ctorParameters;
+    /** @type {?} */
+    Navbar.propDecorators;
+    /**
+     * @hidden
+     * @type {?}
+     */
+    Navbar.prototype._backText;
+    /**
+     * @hidden
+     * @type {?}
+     */
+    Navbar.prototype._bbIcon;
+    /**
+     * @hidden
+     * @type {?}
+     */
+    Navbar.prototype._hidden;
+    /**
+     * @hidden
+     * @type {?}
+     */
+    Navbar.prototype._hideBb;
+    /**
+     * @hidden
+     * @type {?}
+     */
+    Navbar.prototype._sbPadding;
+    /** @type {?} */
+    Navbar.prototype._app;
+    /** @type {?} */
+    Navbar.prototype.navCtrl;
+}
+//# sourceMappingURL=navbar.js.map
 
 /***/ }),
 /* 40 */
@@ -48512,7 +48512,7 @@ var VERSION = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["_12" /* Version *
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ion__ = __webpack_require__(4);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__overlay_portal__ = __webpack_require__(114);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__platform_platform__ = __webpack_require__(3);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__app_constants__ = __webpack_require__(33);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__app_constants__ = __webpack_require__(34);
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = Object.setPrototypeOf ||
         ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
@@ -51054,7 +51054,7 @@ var /** @type {?} */ pickerIds = -1;
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__util_util__ = __webpack_require__(2);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__config_config__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__platform_dom_controller__ = __webpack_require__(9);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__tap_click_haptic__ = __webpack_require__(36);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__tap_click_haptic__ = __webpack_require__(37);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__picker_options__ = __webpack_require__(235);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__platform_platform__ = __webpack_require__(3);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__util_dom__ = __webpack_require__(10);
@@ -52759,7 +52759,7 @@ var /** @type {?} */ loadingIds = -1;
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__platform_platform__ = __webpack_require__(3);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__transitions_transition_controller__ = __webpack_require__(43);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__navigation_view_controller__ = __webpack_require__(5);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__split_pane_split_pane__ = __webpack_require__(37);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__split_pane_split_pane__ = __webpack_require__(38);
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = Object.setPrototypeOf ||
         ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
@@ -57749,7 +57749,7 @@ var /** @type {?} */ SWIPER_EFFECTS = {
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return Tabs; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_rxjs_Subject__ = __webpack_require__(32);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_rxjs_Subject__ = __webpack_require__(33);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_rxjs_Subject___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_rxjs_Subject__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_add_operator_takeUntil__ = __webpack_require__(140);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_add_operator_takeUntil___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_rxjs_add_operator_takeUntil__);
@@ -57758,11 +57758,11 @@ var /** @type {?} */ SWIPER_EFFECTS = {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__navigation_deep_linker__ = __webpack_require__(14);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__ion__ = __webpack_require__(4);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__util_util__ = __webpack_require__(2);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__platform_keyboard__ = __webpack_require__(35);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__platform_keyboard__ = __webpack_require__(36);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__navigation_nav_controller__ = __webpack_require__(21);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__navigation_nav_util__ = __webpack_require__(20);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__navigation_url_serializer__ = __webpack_require__(40);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__split_pane_split_pane__ = __webpack_require__(37);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__split_pane_split_pane__ = __webpack_require__(38);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__platform_platform__ = __webpack_require__(3);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__tab_highlight__ = __webpack_require__(94);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__navigation_view_controller__ = __webpack_require__(5);
@@ -64530,7 +64530,7 @@ function InfiniteScrollContent_tsickle_Closure_declarations() {
 /* unused harmony export getScrollData */
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_forms__ = __webpack_require__(15);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_Subject__ = __webpack_require__(32);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_Subject__ = __webpack_require__(33);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_Subject___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_rxjs_Subject__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_rxjs_add_operator_takeUntil__ = __webpack_require__(140);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_rxjs_add_operator_takeUntil___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_rxjs_add_operator_takeUntil__);
@@ -66277,7 +66277,7 @@ function Reorder_tsickle_Closure_declarations() {
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return Loading; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__util_util__ = __webpack_require__(2);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__app_app_constants__ = __webpack_require__(33);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__app_app_constants__ = __webpack_require__(34);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__loading_component__ = __webpack_require__(74);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__loading_transitions__ = __webpack_require__(240);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__navigation_view_controller__ = __webpack_require__(5);
@@ -66581,13 +66581,13 @@ function LoadingController_tsickle_Closure_declarations() {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__platform_dom_controller__ = __webpack_require__(9);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__gestures_gesture_controller__ = __webpack_require__(8);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__util_util__ = __webpack_require__(2);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__platform_keyboard__ = __webpack_require__(35);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__platform_keyboard__ = __webpack_require__(36);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__menu_gestures__ = __webpack_require__(241);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__app_menu_controller__ = __webpack_require__(26);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__nav_nav__ = __webpack_require__(75);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__platform_platform__ = __webpack_require__(3);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__gestures_ui_event_manager__ = __webpack_require__(22);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__split_pane_split_pane__ = __webpack_require__(37);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__split_pane_split_pane__ = __webpack_require__(38);
 
 
 
@@ -67559,9 +67559,9 @@ function MenuClose_tsickle_Closure_declarations() {
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return MenuToggle; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__button_button__ = __webpack_require__(34);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__button_button__ = __webpack_require__(35);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__app_menu_controller__ = __webpack_require__(26);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__toolbar_navbar__ = __webpack_require__(38);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__toolbar_navbar__ = __webpack_require__(39);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__navigation_view_controller__ = __webpack_require__(5);
 
 
@@ -69019,7 +69019,7 @@ function RadioButton_tsickle_Closure_declarations() {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__config_config__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__platform_dom_controller__ = __webpack_require__(9);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__util_form__ = __webpack_require__(16);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__tap_click_haptic__ = __webpack_require__(36);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__tap_click_haptic__ = __webpack_require__(37);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__util_base_input__ = __webpack_require__(23);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__item_item__ = __webpack_require__(17);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__platform_platform__ = __webpack_require__(3);
@@ -73470,7 +73470,7 @@ function TabButton_tsickle_Closure_declarations() {
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return Toast; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__util_util__ = __webpack_require__(2);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__app_app_constants__ = __webpack_require__(33);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__app_app_constants__ = __webpack_require__(34);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__toast_component__ = __webpack_require__(95);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__toast_transitions__ = __webpack_require__(251);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__navigation_view_controller__ = __webpack_require__(5);
@@ -73743,7 +73743,7 @@ function ToastController_tsickle_Closure_declarations() {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__platform_dom_controller__ = __webpack_require__(9);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__util_form__ = __webpack_require__(16);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__gestures_gesture_controller__ = __webpack_require__(8);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__tap_click_haptic__ = __webpack_require__(36);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__tap_click_haptic__ = __webpack_require__(37);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__util_util__ = __webpack_require__(2);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__util_base_input__ = __webpack_require__(23);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__item_item__ = __webpack_require__(17);
@@ -74223,10 +74223,10 @@ function Header_tsickle_Closure_declarations() {
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ToolbarItem; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__button_button__ = __webpack_require__(34);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__button_button__ = __webpack_require__(35);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__config_config__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ion__ = __webpack_require__(4);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__navbar__ = __webpack_require__(38);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__navbar__ = __webpack_require__(39);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__toolbar__ = __webpack_require__(48);
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = Object.setPrototypeOf ||
@@ -74321,7 +74321,7 @@ function ToolbarItem_tsickle_Closure_declarations() {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__config_config__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ion__ = __webpack_require__(4);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__navbar__ = __webpack_require__(38);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__navbar__ = __webpack_require__(39);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__toolbar__ = __webpack_require__(48);
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = Object.setPrototypeOf ||
@@ -77269,7 +77269,7 @@ Observable_1.Observable.of = of_1.of;
 /* unused harmony export ɵResourceLoaderImpl */
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_compiler__ = __webpack_require__(205);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_common__ = __webpack_require__(39);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_common__ = __webpack_require__(30);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_platform_browser__ = __webpack_require__(24);
 var __extends = (this && this.__extends) || function (d, b) {
     for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p];
@@ -77352,7 +77352,7 @@ var INTERNAL_BROWSER_DYNAMIC_PLATFORM_PROVIDERS = [
         useValue: { providers: [{ provide: __WEBPACK_IMPORTED_MODULE_0__angular_compiler__["a" /* ResourceLoader */], useClass: ResourceLoaderImpl }] },
         multi: true
     },
-    { provide: __WEBPACK_IMPORTED_MODULE_1__angular_core__["U" /* PLATFORM_ID */], useValue: __WEBPACK_IMPORTED_MODULE_2__angular_common__["h" /* ɵPLATFORM_BROWSER_ID */] },
+    { provide: __WEBPACK_IMPORTED_MODULE_1__angular_core__["U" /* PLATFORM_ID */], useValue: __WEBPACK_IMPORTED_MODULE_2__angular_common__["i" /* ɵPLATFORM_BROWSER_ID */] },
 ];
 /**
  * @license
@@ -104572,7 +104572,7 @@ exports.InnerSubscriber = InnerSubscriber;
 "use strict";
 
 var multicast_1 = __webpack_require__(217);
-var Subject_1 = __webpack_require__(32);
+var Subject_1 = __webpack_require__(33);
 function shareSubjectFactory() {
     return new Subject_1.Subject();
 }
@@ -104669,10 +104669,10 @@ var __extends = (this && this.__extends) || function (d, b) {
     function __() { this.constructor = d; }
     d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
 };
-var Subject_1 = __webpack_require__(32);
+var Subject_1 = __webpack_require__(33);
 var Observable_1 = __webpack_require__(6);
 var Subscriber_1 = __webpack_require__(29);
-var Subscription_1 = __webpack_require__(31);
+var Subscription_1 = __webpack_require__(32);
 /**
  * @class ConnectableObservable<T>
  */
@@ -104877,7 +104877,7 @@ var __extends = (this && this.__extends) || function (d, b) {
     function __() { this.constructor = d; }
     d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
 };
-var Subscription_1 = __webpack_require__(31);
+var Subscription_1 = __webpack_require__(32);
 /**
  * We need this JSDoc comment for affecting ESDoc.
  * @ignore
@@ -104970,7 +104970,7 @@ function QueryParams_tsickle_Closure_declarations() {
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return IOSTransition; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__animations_animation__ = __webpack_require__(11);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__util_util__ = __webpack_require__(2);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__page_transition__ = __webpack_require__(30);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__page_transition__ = __webpack_require__(31);
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = Object.setPrototypeOf ||
         ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
@@ -105155,7 +105155,7 @@ var IOSTransition = (function (_super) {
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return MDTransition; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__animations_animation__ = __webpack_require__(11);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__util_util__ = __webpack_require__(2);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__page_transition__ = __webpack_require__(30);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__page_transition__ = __webpack_require__(31);
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = Object.setPrototypeOf ||
         ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
@@ -105235,7 +105235,7 @@ var MDTransition = (function (_super) {
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return WPTransition; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__animations_animation__ = __webpack_require__(11);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__util_util__ = __webpack_require__(2);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__page_transition__ = __webpack_require__(30);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__page_transition__ = __webpack_require__(31);
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = Object.setPrototypeOf ||
         ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
@@ -107669,7 +107669,7 @@ __WEBPACK_IMPORTED_MODULE_1__app_menu_controller__["a" /* MenuController */].reg
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ModalImpl; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__util_util__ = __webpack_require__(2);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__app_app_constants__ = __webpack_require__(33);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__app_app_constants__ = __webpack_require__(34);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__modal_component__ = __webpack_require__(76);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__modal_transitions__ = __webpack_require__(244);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__navigation_view_controller__ = __webpack_require__(5);
@@ -107774,7 +107774,7 @@ function ModalImpl_tsickle_Closure_declarations() {
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ModalMDSlideIn; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "b", function() { return ModalMDSlideOut; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__animations_animation__ = __webpack_require__(11);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__transitions_page_transition__ = __webpack_require__(30);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__transitions_page_transition__ = __webpack_require__(31);
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = Object.setPrototypeOf ||
         ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
@@ -107991,7 +107991,7 @@ function PopoverImpl_tsickle_Closure_declarations() {
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return PopoverMdPopIn; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "b", function() { return PopoverMdPopOut; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__animations_animation__ = __webpack_require__(11);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__transitions_page_transition__ = __webpack_require__(30);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__transitions_page_transition__ = __webpack_require__(31);
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = Object.setPrototypeOf ||
         ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
@@ -113263,7 +113263,7 @@ var IonicErrorHandler = (function (_super) {
 /* unused harmony export IonicPageModule */
 /* unused harmony export provideLocationStrategy */
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_common__ = __webpack_require__(39);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_common__ = __webpack_require__(30);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_platform_browser__ = __webpack_require__(24);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_forms__ = __webpack_require__(15);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__components_app_app__ = __webpack_require__(7);
@@ -113275,8 +113275,8 @@ var IonicErrorHandler = (function (_super) {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__util_form__ = __webpack_require__(16);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__gestures_gesture_controller__ = __webpack_require__(8);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__gestures_gesture_config__ = __webpack_require__(194);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__tap_click_haptic__ = __webpack_require__(36);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__platform_keyboard__ = __webpack_require__(35);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__tap_click_haptic__ = __webpack_require__(37);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__platform_keyboard__ = __webpack_require__(36);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__util_module_loader__ = __webpack_require__(77);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_16__util_ng_module_loader__ = __webpack_require__(154);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_17__platform_platform__ = __webpack_require__(3);
@@ -113294,7 +113294,7 @@ var IonicErrorHandler = (function (_super) {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_29__components_avatar_avatar__ = __webpack_require__(119);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_30__components_backdrop_backdrop__ = __webpack_require__(62);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_31__components_badge_badge__ = __webpack_require__(120);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_32__components_button_button__ = __webpack_require__(34);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_32__components_button_button__ = __webpack_require__(35);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_33__components_card_card__ = __webpack_require__(121);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_34__components_card_card_content__ = __webpack_require__(122);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_35__components_card_card_header__ = __webpack_require__(123);
@@ -113362,7 +113362,7 @@ var IonicErrorHandler = (function (_super) {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_97__components_slides_slide__ = __webpack_require__(171);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_98__components_slides_slides__ = __webpack_require__(88);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_99__components_spinner_spinner__ = __webpack_require__(175);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_100__components_split_pane_split_pane__ = __webpack_require__(37);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_100__components_split_pane_split_pane__ = __webpack_require__(38);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_101__components_tabs_tab__ = __webpack_require__(176);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_102__components_tabs_tab_button__ = __webpack_require__(177);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_103__components_tabs_tab_highlight__ = __webpack_require__(94);
@@ -113376,7 +113376,7 @@ var IonicErrorHandler = (function (_super) {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_111__components_toolbar_toolbar__ = __webpack_require__(48);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_112__components_toolbar_toolbar_item__ = __webpack_require__(183);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_113__components_toolbar_toolbar_title__ = __webpack_require__(184);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_114__components_toolbar_navbar__ = __webpack_require__(38);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_114__components_toolbar_navbar__ = __webpack_require__(39);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_115__components_typography_typography__ = __webpack_require__(186);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_116__components_virtual_scroll_virtual_footer__ = __webpack_require__(96);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_117__components_virtual_scroll_virtual_header__ = __webpack_require__(97);
@@ -113599,7 +113599,7 @@ var IonicModule = (function () {
                 __WEBPACK_IMPORTED_MODULE_13__tap_click_haptic__["a" /* Haptic */],
                 __WEBPACK_IMPORTED_MODULE_14__platform_keyboard__["a" /* Keyboard */],
                 __WEBPACK_IMPORTED_MODULE_64__components_loading_loading_controller__["a" /* LoadingController */],
-                __WEBPACK_IMPORTED_MODULE_1__angular_common__["d" /* Location */],
+                __WEBPACK_IMPORTED_MODULE_1__angular_common__["e" /* Location */],
                 __WEBPACK_IMPORTED_MODULE_67__components_app_menu_controller__["a" /* MenuController */],
                 __WEBPACK_IMPORTED_MODULE_70__components_modal_modal_controller__["a" /* ModalController */],
                 __WEBPACK_IMPORTED_MODULE_16__util_ng_module_loader__["a" /* NgModuleLoader */],
@@ -113609,9 +113609,9 @@ var IonicModule = (function () {
                 __WEBPACK_IMPORTED_MODULE_107__components_toast_toast_controller__["a" /* ToastController */],
                 __WEBPACK_IMPORTED_MODULE_21__transitions_transition_controller__["a" /* TransitionController */],
                 { provide: __WEBPACK_IMPORTED_MODULE_15__util_module_loader__["b" /* ModuleLoader */], useFactory: __WEBPACK_IMPORTED_MODULE_15__util_module_loader__["c" /* provideModuleLoader */], deps: [__WEBPACK_IMPORTED_MODULE_16__util_ng_module_loader__["a" /* NgModuleLoader */], __WEBPACK_IMPORTED_MODULE_0__angular_core__["D" /* Injector */]] },
-                { provide: __WEBPACK_IMPORTED_MODULE_1__angular_common__["e" /* LocationStrategy */], useFactory: provideLocationStrategy, deps: [__WEBPACK_IMPORTED_MODULE_1__angular_common__["g" /* PlatformLocation */], [new __WEBPACK_IMPORTED_MODULE_0__angular_core__["A" /* Inject */](__WEBPACK_IMPORTED_MODULE_1__angular_common__["a" /* APP_BASE_HREF */]), new __WEBPACK_IMPORTED_MODULE_0__angular_core__["R" /* Optional */]()], __WEBPACK_IMPORTED_MODULE_6__config_config__["a" /* Config */]] },
+                { provide: __WEBPACK_IMPORTED_MODULE_1__angular_common__["f" /* LocationStrategy */], useFactory: provideLocationStrategy, deps: [__WEBPACK_IMPORTED_MODULE_1__angular_common__["h" /* PlatformLocation */], [new __WEBPACK_IMPORTED_MODULE_0__angular_core__["A" /* Inject */](__WEBPACK_IMPORTED_MODULE_1__angular_common__["a" /* APP_BASE_HREF */]), new __WEBPACK_IMPORTED_MODULE_0__angular_core__["R" /* Optional */]()], __WEBPACK_IMPORTED_MODULE_6__config_config__["a" /* Config */]] },
                 { provide: __WEBPACK_IMPORTED_MODULE_22__navigation_url_serializer__["b" /* UrlSerializer */], useFactory: __WEBPACK_IMPORTED_MODULE_22__navigation_url_serializer__["d" /* setupUrlSerializer */], deps: [__WEBPACK_IMPORTED_MODULE_4__components_app_app__["a" /* App */], __WEBPACK_IMPORTED_MODULE_22__navigation_url_serializer__["a" /* DeepLinkConfigToken */]] },
-                { provide: __WEBPACK_IMPORTED_MODULE_7__navigation_deep_linker__["a" /* DeepLinker */], useFactory: __WEBPACK_IMPORTED_MODULE_7__navigation_deep_linker__["b" /* setupDeepLinker */], deps: [__WEBPACK_IMPORTED_MODULE_4__components_app_app__["a" /* App */], __WEBPACK_IMPORTED_MODULE_22__navigation_url_serializer__["b" /* UrlSerializer */], __WEBPACK_IMPORTED_MODULE_1__angular_common__["d" /* Location */], __WEBPACK_IMPORTED_MODULE_15__util_module_loader__["b" /* ModuleLoader */], __WEBPACK_IMPORTED_MODULE_0__angular_core__["p" /* ComponentFactoryResolver */]] },
+                { provide: __WEBPACK_IMPORTED_MODULE_7__navigation_deep_linker__["a" /* DeepLinker */], useFactory: __WEBPACK_IMPORTED_MODULE_7__navigation_deep_linker__["b" /* setupDeepLinker */], deps: [__WEBPACK_IMPORTED_MODULE_4__components_app_app__["a" /* App */], __WEBPACK_IMPORTED_MODULE_22__navigation_url_serializer__["b" /* UrlSerializer */], __WEBPACK_IMPORTED_MODULE_1__angular_common__["e" /* Location */], __WEBPACK_IMPORTED_MODULE_15__util_module_loader__["b" /* ModuleLoader */], __WEBPACK_IMPORTED_MODULE_0__angular_core__["p" /* ComponentFactoryResolver */]] },
             ]
         };
     };
@@ -113913,8 +113913,8 @@ function IonicPageModule_tsickle_Closure_declarations() {
  */
 function provideLocationStrategy(platformLocationStrategy, baseHref, config) {
     return config.get('locationStrategy') === 'path' ?
-        new __WEBPACK_IMPORTED_MODULE_1__angular_common__["f" /* PathLocationStrategy */](platformLocationStrategy, baseHref) :
-        new __WEBPACK_IMPORTED_MODULE_1__angular_common__["c" /* HashLocationStrategy */](platformLocationStrategy, baseHref);
+        new __WEBPACK_IMPORTED_MODULE_1__angular_common__["g" /* PathLocationStrategy */](platformLocationStrategy, baseHref) :
+        new __WEBPACK_IMPORTED_MODULE_1__angular_common__["d" /* HashLocationStrategy */](platformLocationStrategy, baseHref);
 }
 //# sourceMappingURL=module.js.map
 
@@ -114111,7 +114111,7 @@ var Observable_1 = __webpack_require__(6);
 var tryCatch_1 = __webpack_require__(107);
 var isFunction_1 = __webpack_require__(50);
 var errorObject_1 = __webpack_require__(51);
-var Subscription_1 = __webpack_require__(31);
+var Subscription_1 = __webpack_require__(32);
 var toString = Object.prototype.toString;
 function isNodeStyleEventEmitter(sourceObj) {
     return !!sourceObj && typeof sourceObj.addListener === 'function' && typeof sourceObj.removeListener === 'function';

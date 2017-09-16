@@ -39436,16 +39436,73 @@ page-map #map_canvas {
 
 page-map .dp-infowindow {
   color: #222;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-flow: row wrap;
+  -ms-flex-flow: row wrap;
+  flex-flow: row wrap;
 }
 
-page-map .dp-infowindow img {
-  width: 100%;
+page-map .dp-infowindow > * {
+  -webkit-box-flex: 1;
+  -webkit-flex: 1 100%;
+  -ms-flex: 1 100%;
+  flex: 1 100%;
+}
+
+page-map .dp-infowindow .img-wrap {
+  -webkit-box-ordinal-group: 2;
+  -webkit-order: 1;
+  -ms-flex-order: 1;
+  order: 1;
+  -webkit-box-flex: 0;
+  -webkit-flex: 0 auto;
+  -ms-flex: 0 auto;
+  flex: 0 auto;
+}
+
+page-map .dp-infowindow .img-wrap img {
+  width: 100px;
   background: rgba(0, 0, 0, 0.7);
 }
 
+page-map .dp-infowindow .text-wrap {
+  -webkit-box-ordinal-group: 3;
+  -webkit-order: 2;
+  -ms-flex-order: 2;
+  order: 2;
+  -webkit-box-flex: 3;
+  -webkit-flex: 3 0px;
+  -ms-flex: 3 0px;
+  flex: 3 0px;
+  padding: 0 10px;
+}
+
+page-map .dp-infowindow .text-wrap h2, page-map .dp-infowindow .text-wrap h4, page-map .dp-infowindow .text-wrap p {
+  margin: 0 0 4px;
+}
+
+page-map .dp-infowindow .text-wrap h2 {
+  font-size: 1.6rem;
+}
+
+page-map .dp-infowindow .text-wrap h4 {
+  font-size: 1.4rem;
+}
+
+page-map .dp-infowindow .text-wrap p {
+  font-size: 1.2rem;
+}
+
 page-map .dp-infowindow button {
-  display: block;
-  width: 100%;
+  -webkit-box-ordinal-group: 4;
+  -webkit-order: 3;
+  -ms-flex-order: 3;
+  order: 3;
   font-size: 18px;
   padding: 10px;
   background: #d8702d;

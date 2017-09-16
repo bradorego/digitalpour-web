@@ -8,8 +8,9 @@ webpackJsonp([0],{
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(25);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ionic_native_geolocation__ = __webpack_require__(100);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__providers_stores__ = __webpack_require__(49);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__menu_menuPage__ = __webpack_require__(102);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_common__ = __webpack_require__(30);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__providers_stores__ = __webpack_require__(49);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__menu_menuPage__ = __webpack_require__(102);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -24,14 +25,16 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
+
 var MapPage = (function () {
-    function MapPage(platform, storesData, navCtrl, _loadingCtrl, app, geolocation) {
+    function MapPage(platform, storesData, navCtrl, _loadingCtrl, app, geolocation, _datePipe) {
         this.platform = platform;
         this.storesData = storesData;
         this.navCtrl = navCtrl;
         this._loadingCtrl = _loadingCtrl;
         this.app = app;
         this.geolocation = geolocation;
+        this._datePipe = _datePipe;
         this._coords = { lat: 43.074751, lng: -89.384141 }; /// assume madison if no location data woo
         this._currentLocationCircle = {};
     }
@@ -44,7 +47,7 @@ var MapPage = (function () {
     };
     MapPage.prototype.ionViewDidLoad = function () {
         var _this = this;
-        this.app.setTitle('Map');
+        this.app.setTitle('Map - Digital Pour');
         this.storesData.getMapData(this._coords).subscribe(function (data) {
             var map = new google.maps.Map(_this.mapElement.nativeElement, {
                 center: { lat: 43.074640, lng: -89.384103 },
@@ -85,7 +88,7 @@ var MapPage = (function () {
                     position: { lat: item.lat, lng: item.lng },
                     map: map,
                     title: item.name,
-                    html: "<div class='dp-infowindow'><div class=\"center\"><img src=\"" + item.imgUrl + "\" /></div>\n            <h2>" + item.name + " " + (item.distance ? "(" + item.distance + ")" : "") + "</h2>\n            <h4>" + item.address + "</h4>\n            <h5>" + item.todayOpen + " - " + item.todayClose + "</h5>\n            <h5>" + (item.wifiPass ? "WiFi Password: " + item.wifiPass : "") + "</h5>\n            <button class=\"map-button\">See Menu</button></div>"
+                    html: "<div class='dp-infowindow'>\n            <div class=\"img-wrap\"><img src=\"" + item.imgUrl + "\" /></div>\n            <div class=\"text-wrap\">\n              <h2>" + item.name + " " + (item.distance ? "(" + item.distance + ")" : "") + "</h2>\n              <h4>" + item.address + "</h4>\n              <p>" + _this._datePipe.transform(item.todayOpen, 'shortTime') + " - " + _this._datePipe.transform(item.todayClose, 'shortTime') + "</p>\n              <p>" + (item.wifi ? "WiFi Password: " + item.wifi : "") + "</p>\n            </div>\n            <button class=\"map-button\">See Menu</button>\n          </div>"
                 });
                 marker.addListener('click', function () {
                     infoWindow.close();
@@ -99,7 +102,7 @@ var MapPage = (function () {
                             domObj.addEventListener("click", function (e) {
                                 e.stopPropagation();
                                 e.preventDefault();
-                                _this.app.getRootNavs()[0].push(__WEBPACK_IMPORTED_MODULE_4__menu_menuPage__["a" /* MenuPage */], { storeId: item.id, name: item.name }, { updateUrl: true });
+                                _this.app.getRootNavs()[0].push(__WEBPACK_IMPORTED_MODULE_5__menu_menuPage__["a" /* MenuPage */], { storeId: item.id, name: item.name }, { updateUrl: true });
                             });
                         }
                     });
@@ -152,11 +155,12 @@ MapPage = __decorate([
         selector: 'page-map',template:/*ion-inline-start:"/Users/bradorego/Development/ionic-test/test/src/pages/map/map.html"*/'<ion-header>\n  <ion-toolbar>\n    <ion-title>Map</ion-title>\n  </ion-toolbar>\n</ion-header>\n\n<ion-content class="map-page">\n  <div style="height: 100%; width: 100%" #mapCanvas id="map_canvas"></div>\n</ion-content>\n'/*ion-inline-end:"/Users/bradorego/Development/ionic-test/test/src/pages/map/map.html"*/
     }),
     __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["j" /* Platform */],
-        __WEBPACK_IMPORTED_MODULE_3__providers_stores__["a" /* StoresData */],
+        __WEBPACK_IMPORTED_MODULE_4__providers_stores__["a" /* StoresData */],
         __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavController */],
         __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* LoadingController */],
         __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["a" /* App */],
-        __WEBPACK_IMPORTED_MODULE_2__ionic_native_geolocation__["a" /* Geolocation */]])
+        __WEBPACK_IMPORTED_MODULE_2__ionic_native_geolocation__["a" /* Geolocation */],
+        __WEBPACK_IMPORTED_MODULE_3__angular_common__["c" /* DatePipe */]])
 ], MapPage);
 
 //# sourceMappingURL=map.js.map
@@ -212,7 +216,6 @@ var MenuPage = (function () {
         }
         history.replaceState({}, this.navParams.get('name'), "#/menu/" + this._id);
         this.initializeItems(this.list);
-        this.presentLoadingDefault();
     };
     MenuPage.prototype.toggleList = function (list) {
         this.initializeItems(list);
@@ -248,6 +251,7 @@ var MenuPage = (function () {
     // }
     MenuPage.prototype.initializeItems = function (list) {
         var _this = this;
+        this.presentLoadingDefault();
         this.menuProvider.loadMenu(this._id).subscribe(function (data) {
             _this._onTap = data.map(function (item) {
                 /// maybe manipulate - we'll see
@@ -256,7 +260,9 @@ var MenuPage = (function () {
             if (list === "onTap") {
                 _this.menu = _this._onTap.slice();
             }
-            _this._loading.dismiss();
+            if (_this._loading) {
+                _this._loading.dismiss();
+            }
         });
         this.menuProvider.getUpNext(this._id).subscribe(function (data) {
             _this._upNext = data.map(function (item) {
@@ -351,6 +357,7 @@ var ListPage = (function () {
         this._coords = { lat: 43.074751, lng: -89.384141 }; /// assume madison if no location data woo
     }
     ListPage.prototype.ionViewDidLoad = function () {
+        this.app.setTitle('List - Digital Pour');
         this.updateList();
         this.presentLoadingDefault();
     };
@@ -363,11 +370,6 @@ var ListPage = (function () {
         this.geolocation.getCurrentPosition().then(function (resp) {
             _this._coords = resp.coords;
             _this.stores.getListData(_this._coords, false).subscribe(function (data) {
-                data.forEach(function (item) {
-                    if (!item.todayHours) {
-                        console.log(item.todayHours);
-                    }
-                });
                 _this.storeList = data;
             });
         }, function (err) {
@@ -743,23 +745,25 @@ Object(__WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__["a" /* pl
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser__ = __webpack_require__(24);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_http__ = __webpack_require__(55);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_ionic_angular__ = __webpack_require__(25);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__ionic_native_splash_screen__ = __webpack_require__(195);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__ionic_native_geolocation__ = __webpack_require__(100);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__app_component__ = __webpack_require__(269);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__pages_map_map__ = __webpack_require__(101);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__pages_list_list__ = __webpack_require__(103);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__pages_tabs_page_tabs_page__ = __webpack_require__(202);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__pages_menu_filter__ = __webpack_require__(201);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__pages_menu_menuPage__ = __webpack_require__(102);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__providers_stores__ = __webpack_require__(49);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__providers_menu__ = __webpack_require__(200);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_common__ = __webpack_require__(30);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_ionic_angular__ = __webpack_require__(25);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__ionic_native_splash_screen__ = __webpack_require__(195);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__ionic_native_geolocation__ = __webpack_require__(100);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__app_component__ = __webpack_require__(269);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__pages_map_map__ = __webpack_require__(101);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__pages_list_list__ = __webpack_require__(103);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__pages_tabs_page_tabs_page__ = __webpack_require__(202);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__pages_menu_filter__ = __webpack_require__(201);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__pages_menu_menuPage__ = __webpack_require__(102);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__providers_stores__ = __webpack_require__(49);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__providers_menu__ = __webpack_require__(200);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+
 
 
 
@@ -782,40 +786,41 @@ var AppModule = (function () {
 AppModule = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_2__angular_core__["L" /* NgModule */])({
         declarations: [
-            __WEBPACK_IMPORTED_MODULE_6__app_component__["a" /* DigitalPourApp */],
-            __WEBPACK_IMPORTED_MODULE_7__pages_map_map__["a" /* MapPage */],
-            __WEBPACK_IMPORTED_MODULE_8__pages_list_list__["a" /* ListPage */],
-            __WEBPACK_IMPORTED_MODULE_11__pages_menu_menuPage__["a" /* MenuPage */],
-            __WEBPACK_IMPORTED_MODULE_9__pages_tabs_page_tabs_page__["a" /* TabsPage */],
-            __WEBPACK_IMPORTED_MODULE_10__pages_menu_filter__["a" /* FilterPage */]
+            __WEBPACK_IMPORTED_MODULE_7__app_component__["a" /* DigitalPourApp */],
+            __WEBPACK_IMPORTED_MODULE_8__pages_map_map__["a" /* MapPage */],
+            __WEBPACK_IMPORTED_MODULE_9__pages_list_list__["a" /* ListPage */],
+            __WEBPACK_IMPORTED_MODULE_12__pages_menu_menuPage__["a" /* MenuPage */],
+            __WEBPACK_IMPORTED_MODULE_10__pages_tabs_page_tabs_page__["a" /* TabsPage */],
+            __WEBPACK_IMPORTED_MODULE_11__pages_menu_filter__["a" /* FilterPage */]
         ],
         imports: [
             __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser__["a" /* BrowserModule */],
             __WEBPACK_IMPORTED_MODULE_1__angular_http__["b" /* HttpModule */],
-            __WEBPACK_IMPORTED_MODULE_3_ionic_angular__["d" /* IonicModule */].forRoot(__WEBPACK_IMPORTED_MODULE_6__app_component__["a" /* DigitalPourApp */], {}, {
+            __WEBPACK_IMPORTED_MODULE_4_ionic_angular__["d" /* IonicModule */].forRoot(__WEBPACK_IMPORTED_MODULE_7__app_component__["a" /* DigitalPourApp */], {}, {
                 links: [
-                    { component: __WEBPACK_IMPORTED_MODULE_9__pages_tabs_page_tabs_page__["a" /* TabsPage */], name: 'TabsPage', segment: 'tabs-page' },
-                    { component: __WEBPACK_IMPORTED_MODULE_8__pages_list_list__["a" /* ListPage */], name: 'List', segment: 'list' },
-                    { component: __WEBPACK_IMPORTED_MODULE_7__pages_map_map__["a" /* MapPage */], name: 'Map', segment: 'map' },
-                    { component: __WEBPACK_IMPORTED_MODULE_11__pages_menu_menuPage__["a" /* MenuPage */], name: 'Menu', segment: 'menu/:storeId', defaultHistory: [__WEBPACK_IMPORTED_MODULE_9__pages_tabs_page_tabs_page__["a" /* TabsPage */]] }
+                    { component: __WEBPACK_IMPORTED_MODULE_10__pages_tabs_page_tabs_page__["a" /* TabsPage */], name: 'TabsPage', segment: 'tabs-page' },
+                    { component: __WEBPACK_IMPORTED_MODULE_9__pages_list_list__["a" /* ListPage */], name: 'List', segment: 'list' },
+                    { component: __WEBPACK_IMPORTED_MODULE_8__pages_map_map__["a" /* MapPage */], name: 'Map', segment: 'map' },
+                    { component: __WEBPACK_IMPORTED_MODULE_12__pages_menu_menuPage__["a" /* MenuPage */], name: 'Menu', segment: 'menu/:storeId', defaultHistory: [__WEBPACK_IMPORTED_MODULE_10__pages_tabs_page_tabs_page__["a" /* TabsPage */]] }
                 ]
             })
         ],
-        bootstrap: [__WEBPACK_IMPORTED_MODULE_3_ionic_angular__["b" /* IonicApp */]],
+        bootstrap: [__WEBPACK_IMPORTED_MODULE_4_ionic_angular__["b" /* IonicApp */]],
         entryComponents: [
-            __WEBPACK_IMPORTED_MODULE_6__app_component__["a" /* DigitalPourApp */],
-            __WEBPACK_IMPORTED_MODULE_7__pages_map_map__["a" /* MapPage */],
-            __WEBPACK_IMPORTED_MODULE_8__pages_list_list__["a" /* ListPage */],
-            __WEBPACK_IMPORTED_MODULE_11__pages_menu_menuPage__["a" /* MenuPage */],
-            __WEBPACK_IMPORTED_MODULE_9__pages_tabs_page_tabs_page__["a" /* TabsPage */],
-            __WEBPACK_IMPORTED_MODULE_10__pages_menu_filter__["a" /* FilterPage */]
+            __WEBPACK_IMPORTED_MODULE_7__app_component__["a" /* DigitalPourApp */],
+            __WEBPACK_IMPORTED_MODULE_8__pages_map_map__["a" /* MapPage */],
+            __WEBPACK_IMPORTED_MODULE_9__pages_list_list__["a" /* ListPage */],
+            __WEBPACK_IMPORTED_MODULE_12__pages_menu_menuPage__["a" /* MenuPage */],
+            __WEBPACK_IMPORTED_MODULE_10__pages_tabs_page_tabs_page__["a" /* TabsPage */],
+            __WEBPACK_IMPORTED_MODULE_11__pages_menu_filter__["a" /* FilterPage */]
         ],
         providers: [
-            { provide: __WEBPACK_IMPORTED_MODULE_2__angular_core__["v" /* ErrorHandler */], useClass: __WEBPACK_IMPORTED_MODULE_3_ionic_angular__["c" /* IonicErrorHandler */] },
-            __WEBPACK_IMPORTED_MODULE_4__ionic_native_splash_screen__["a" /* SplashScreen */],
-            __WEBPACK_IMPORTED_MODULE_12__providers_stores__["a" /* StoresData */],
-            __WEBPACK_IMPORTED_MODULE_13__providers_menu__["a" /* MenuData */],
-            __WEBPACK_IMPORTED_MODULE_5__ionic_native_geolocation__["a" /* Geolocation */]
+            { provide: __WEBPACK_IMPORTED_MODULE_2__angular_core__["v" /* ErrorHandler */], useClass: __WEBPACK_IMPORTED_MODULE_4_ionic_angular__["c" /* IonicErrorHandler */] },
+            __WEBPACK_IMPORTED_MODULE_5__ionic_native_splash_screen__["a" /* SplashScreen */],
+            __WEBPACK_IMPORTED_MODULE_13__providers_stores__["a" /* StoresData */],
+            __WEBPACK_IMPORTED_MODULE_14__providers_menu__["a" /* MenuData */],
+            __WEBPACK_IMPORTED_MODULE_6__ionic_native_geolocation__["a" /* Geolocation */],
+            __WEBPACK_IMPORTED_MODULE_3__angular_common__["c" /* DatePipe */]
         ]
     })
 ], AppModule);
