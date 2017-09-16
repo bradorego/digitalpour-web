@@ -13,7 +13,8 @@ const STORE_URL = 'http://mobile.digitalpour.com/DashboardServer/v4/MobileApp/St
 
 @Injectable()
 export class StoresData {
-  _data: any;
+  private _data: any;
+  private _now = new Date();
   constructor(public http: Http) { }
 
   distance(lat1: number, lon1: number, lat2: number, lon2: number) {
@@ -43,40 +44,67 @@ export class StoresData {
     return this._data;
   }
 
-  getById(id: string) {
+
+  getById(id: string, coords:any = {latitude: false}) {
     return this.load(false).map((data: any) => {
+      this._now = new Date();
       let item = data.find((item:any) => {
         return item.CompanyId === id;
       });
       if (item.Id) {
-        return {
-          "id": item.CompanyId,
-          "name": item.StoreName,
-          // "distance": coords.latitude ? this.distance(coords.latitude, coords.longitude, item.Latitude, item.Longitude) : null,
-          "address": `${item.Address}, ${item.City}, ${item.State} ${item.ZipCode}`,
-          "imgUrl": item.BarLogoUrl,
-          "hours": item.StoreHours,
-          "bottles": item.HasBottles,
-          "taps": item.HasTaps
-        }
+        return this._formatItem(item, coords);
       }
+      return {};
     });
+  }
+
+  private _getTodayOpen(todayHours: any) {
+    let openChunks = todayHours.TimeOpen.split(":");
+    let open = new Date();
+    open.setHours(parseInt(openChunks[0], 10));
+    open.setMinutes(parseInt(openChunks[1], 10));
+    open.setSeconds(parseInt(openChunks[2], 10));
+    return open;
+  }
+
+  private _getTodayClose(todayHours: any) {
+    let closeChunks = todayHours.TimeClose.split(":");
+    let close = new Date();
+    close.setHours(parseInt(closeChunks[0], 10));
+    close.setMinutes(parseInt(closeChunks[1], 10));
+    close.setSeconds(parseInt(closeChunks[2], 10));
+    return close;
+  }
+
+  private _determineOpenNow(todayHours: any) { //// whoever decided to pass this as a string should perish
+    return (this._now < this._getTodayClose(todayHours) && this._now > this._getTodayOpen(todayHours));
+  }
+
+  private _formatItem(item: any, coords: any) {
+    let todayHours = item.StoreHours ? item.StoreHours[this._now.getDay()] : false;
+    return {
+      "id": item.CompanyId,
+      "name": item.StoreName,
+      "distance": coords.latitude ? this.distance(coords.latitude, coords.longitude, item.Latitude, item.Longitude) : null,
+      "lat": item.Latitude,
+      "lng": item.Longitude,
+      "address": `${item.Address}, ${item.City}, ${item.State} ${item.ZipCode}`,
+      "imgUrl": item.BarLogoUrl,
+      "hours": item.StoreHours,
+      "bottles": item.HasBottles,
+      "taps": item.HasTaps,
+      "wifi": item.WiFiPassword,
+      "todayOpen": todayHours ? this._getTodayOpen(todayHours) : false,
+      "todayClose": todayHours ? this._getTodayClose(todayHours) : false,
+      "openNow": todayHours ? this._determineOpenNow(todayHours) : false
+    };
   }
 
   getListData(coords: any, force?: boolean) {
     let listData:any = [];
     return this.load(force).map((data: any) => {
       data.forEach((item:any) => {
-        listData.push({
-          "id": item.CompanyId,
-          "name": item.StoreName,
-          "distance": coords.latitude ? this.distance(coords.latitude, coords.longitude, item.Latitude, item.Longitude) : null,
-          "address": `${item.Address}, ${item.City}, ${item.State} ${item.ZipCode}`,
-          "imgUrl": item.BarLogoUrl,
-          "hours": item.StoreHours,
-          "bottles": item.HasBottles,
-          "taps": item.HasTaps
-        });
+        listData.push(this._formatItem(item, coords));
       });
       listData.sort((a: any, b: any) => {
         if (a.distance > b.distance) {
@@ -88,21 +116,11 @@ export class StoresData {
     });
   }
 
-  getMapData(force?: boolean) {
+  getMapData(coords: any, force?: boolean) {
     let mapData:any = [];
     return this.load(force).map((data:any) => {
       data.forEach((item: any) => {
-        mapData.push({
-          "id": item.CompanyId,
-          "name": item.StoreName,
-          "lat": item.Latitude,
-          "lng": item.Longitude,
-          "address": `${item.Address}, ${item.City}, ${item.State} ${item.ZipCode}`,
-          "imgUrl": item.BarLogoUrl,
-          "hours": item.StoreHours,
-          "bottles": item.HasBottles,
-          "taps": item.HasTaps
-        });
+        mapData.push(this._formatItem(item, coords));
       });
       return mapData;
     });
