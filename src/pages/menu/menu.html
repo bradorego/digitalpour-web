@@ -20,7 +20,7 @@
 <ion-content>
   <div *ngIf="menu">
     <ion-list>
-      <ion-item *ngFor="let beverage of menu" (click)="log(beverage)">
+      <ion-item *ngFor="let beverage of menu" (click)="log(beverage)" text-wrap>
         <ion-avatar item-start>
           <img *ngIf="beverage.imgUrl" [src]="beverage.imgUrl" />
         </ion-avatar>
