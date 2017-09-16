@@ -7,6 +7,10 @@
         "type": "git",
         "url": "https://github.com/ionic-team/ionic-conference-app.git"
     },
+    "engines": {
+      "npm": "5.3.0",
+      "node": "8.1.4"
+    },
     "scripts": {
         "build": "ionic-app-scripts build",
         "clean": "ionic-app-scripts clean",
