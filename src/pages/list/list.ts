@@ -55,15 +55,19 @@ export class ListPage {
       this._coords = resp.coords;
       this.stores.getListData(this._coords, false).subscribe((data: any) => {
         this.storeList = data;
+        if (this._loading) {
+          this._loading.dismiss();
+        }
       });
     }, (err) => {
       console.error(err);
       this.stores.getListData(this._coords, false).subscribe((data: any) => {
         this.storeList = data;
+        if (this._loading) {
+          this._loading.dismiss();
+        }
       });
-    }).then(() => {
-      this._loading.dismiss();
-    });;
+    });
   }
 
   searchItems() {

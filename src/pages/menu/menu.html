@@ -28,7 +28,9 @@
         <h4 *ngIf="beverage.style">{{beverage.style}}</h4>
         <h6>{{beverage.city}}</h6>
         <h5 ion-row>
-          <ion-badge col-6 col-sm-3 *ngIf="beverage.nitro" color="light">Nitro</ion-badge>
+          <span col-6 col-sm-3>
+            <ion-badge *ngIf="beverage.nitro" color="light">Nitro</ion-badge>
+          </span>
           <span col-6 col-sm-3>
             <ion-badge>ABV</ion-badge>
             <span *ngIf="beverage.abv; else elseABV">{{beverage.abv | number:'1.1-1'}}%</span>
