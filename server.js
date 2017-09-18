@@ -3,8 +3,10 @@ var compression = require('compression');
 var logger = require('morgan');
 var bodyParser = require('body-parser');
 var cors = require('cors');
+var forceHttps = require('force-ssl-heroku');
 var app = express();
 
+app.use(forceHttps);
 app.use(compression());
 app.use(bodyParser.json());
 app.use(cors());
