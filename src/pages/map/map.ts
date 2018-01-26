@@ -109,7 +109,7 @@ export class MapPage {
               domObj.addEventListener("click", (e: Event) => {
                 e.stopPropagation();
                 e.preventDefault();
-                this.app.getRootNavs()[0].push(MenuPage, { storeId: item.id, name: item.name }, {updateUrl: true});
+                this.app.getRootNavs()[0].push(MenuPage, { storeId: item.id, name: item.name, locationId: item.locationId }, {updateUrl: true});
               });
             }
           });

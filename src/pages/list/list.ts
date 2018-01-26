@@ -84,7 +84,7 @@ export class ListPage {
   }
 
   goToSessionDetail(item: any) {
-    this.app.getRootNavs()[0].push(MenuPage, { storeId: item.id, name: item.name }, {updateUrl: true});
+    this.app.getRootNavs()[0].push(MenuPage, { storeId: item.id, name: item.name, locationId: item.locationId }, {updateUrl: true});
   }
 
   doRefresh(refresher: Refresher) {

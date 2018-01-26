@@ -7,7 +7,7 @@ import {FilterPage} from "./filter";
 
 @IonicPage({
   name: 'menu',
-  segment: 'menu/:storeId',
+  segment: 'menu/:storeId/:locationId',
   defaultHistory: ['ds-map']
 })
 @Component({
@@ -22,6 +22,7 @@ export class MenuPage {
   list = "onTap";
   private _loading: any;
   private _id: string;
+  private _locationId: string;
   private _sortBy = "tap-number";
   private _ascending = true;
 
@@ -38,8 +39,9 @@ export class MenuPage {
     this.app.setTitle(this.storeName);
     this.storeName = this.navParams.get("name");
     this._id = this.navParams.get("storeId");
+    this._locationId = this.navParams.get("locationId");
     if (!this.storeName) {
-      this.storesProvider.getById(this._id).subscribe((store: any) => {
+      this.storesProvider.getById(this._id, this._locationId).subscribe((store: any) => {
         this.storeName = store.name;
         this.app.setTitle(this.storeName);
       });
@@ -87,7 +89,7 @@ export class MenuPage {
   initializeItems(list : string) {
     this.presentLoadingDefault();
 
-    this.menuProvider.loadMenu(this._id).subscribe((data: any) => {
+    this.menuProvider.loadMenu(this._id, this._locationId).subscribe((data: any) => {
       this._onTap = data.map((item: any) => {
         /// maybe manipulate - we'll see
         return item;
@@ -99,7 +101,7 @@ export class MenuPage {
         this._loading.dismiss();
       }
     });
-    this.menuProvider.getUpNext(this._id).subscribe((data: any) => {
+    this.menuProvider.getUpNext(this._id, this._locationId).subscribe((data: any) => {
       this._upNext = data.map((item: any) => {
         /// maybe manipulate - we'll see
         return item;

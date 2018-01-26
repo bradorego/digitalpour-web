@@ -84,6 +84,7 @@ export class StoresData {
     let todayHours = item.StoreHours ? item.StoreHours[this._now.getDay()] : false;
     return {
       "id": item.CompanyId,
+      "locationId": item.LocationId,
       "name": item.StoreName,
       "distance": coords.latitude ? this.distance(coords.latitude, coords.longitude, item.Latitude, item.Longitude) : null,
       "lat": item.Latitude,

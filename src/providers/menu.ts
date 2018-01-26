@@ -31,25 +31,29 @@ export class MenuData {
   upNext: any;
   lastOnTapId: string;
   lastUpNextId: string;
+  lastOnTapLocationId: string;
+  lastUpNextLocationId: string;
   constructor(public http: Http) { }
 
-  public loadMenu(id: string): any {
-    const MENU_URL = `https://mobile.digitalpour.com/DashboardServer/v4/MobileApp/MenuItems/${id}/1/Tap?ApiKey=574725e55e002c0b7cf0cf19`;
-    if (this.data && this.lastOnTapId === id) {
+  public loadMenu(id: string, locationId: string): any {
+    const MENU_URL = `https://mobile.digitalpour.com/DashboardServer/v4/MobileApp/MenuItems/${id}/${locationId}/Tap?ApiKey=574725e55e002c0b7cf0cf19`;
+    if (this.data && (this.lastOnTapId === id) && (this.lastOnTapLocationId === locationId)) {
       return Observable.of(this.data).map(this.processData, this);
     } else {
       this.lastOnTapId = id;
+      this.lastOnTapLocationId = locationId;
       return this.http.get(MENU_URL)
         .map(this.processData, this);
     }
   }
 
-  getUpNext(id: string): any {
-    const URL = `https://mobile.digitalpour.com/DashboardServer/v4/MobileApp/MenuItems/${id}/1/KegQueue?allItems=1&ApiKey=574725e55e002c0b7cf0cf19`
-    if (this.upNext && this.lastUpNextId === id) {
+  getUpNext(id: string, locationId: string): any {
+    const URL = `https://mobile.digitalpour.com/DashboardServer/v4/MobileApp/MenuItems/${id}/${locationId}/KegQueue?allItems=1&ApiKey=574725e55e002c0b7cf0cf19`
+    if (this.upNext && (this.lastUpNextId === id) && (this.lastUpNextLocationId === locationId)) {
       return Observable.of(this.upNext).map(this.processUpNext, this);
     } else {
-      this.lastUpNextId = id
+      this.lastUpNextId = id;
+      this.lastUpNextLocationId = locationId;
       return this.http.get(URL)
         .map(this.processUpNext, this);
     }
@@ -63,7 +67,7 @@ export class MenuData {
   }
 
   sortBy (sortBy: any) {
-    let dataHold = sortBy.list === "onTap" ? this.loadMenu(this.lastOnTapId) : this.getUpNext(this.lastUpNextId);     /// please tell me this is gonna work
+    let dataHold = sortBy.list === "onTap" ? this.loadMenu(this.lastOnTapId, this.lastOnTapLocationId) : this.getUpNext(this.lastUpNextId, this.lastUpNextLocationId);     /// please tell me this is gonna work
     return dataHold.map((data: any) => {
       let result = data.slice();
       result.sort((a: any, b:any) => {
@@ -143,7 +147,6 @@ export class MenuData {
     if (data.json) {
       this.data = data.json();
     }
-
     this.data.forEach((item: any) => {
       output.push(this.formatItem(item));
     });

@@ -38,7 +38,7 @@ import {MenuData} from '../providers/menu';
         { component: TabsPage, name: 'TabsPage', segment: 'tabs-page' },
         { component: ListPage, name: 'List', segment: 'list' },
         { component: MapPage, name: 'Map', segment: 'map' },
-        { component: MenuPage, name: 'Menu', segment: 'menu/:storeId', defaultHistory: [TabsPage] }
+        { component: MenuPage, name: 'Menu', segment: 'menu/:storeId/:locationId', defaultHistory: [TabsPage] }
       ]
     })
   ],
